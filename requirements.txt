@@ -1,0 +1,11 @@
+python-dotenv>=0.9.9
+fastapi>=0.115.0
+uvicorn>=0.30.0
+groq>=1.7.0
+qdrant-client>=1.14.2
+sentence-transformers>=5.0.0
+yt-dlp>=2026.8.19
+pydantic>=2.13.5
+ffmpeg>=1.4
+kaggle>=2.2.4
+mlx-whisper>=0.4.3

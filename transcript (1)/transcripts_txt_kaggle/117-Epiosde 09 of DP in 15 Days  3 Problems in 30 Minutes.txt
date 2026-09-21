@@ -1,0 +1,548 @@
+[0s] Yeah, how are we going to see?
+[2s] How are we going to see?
+[3s] How are we going to see?
+[4s] How are we going to see?
+[4s] How are we going to see?
+[8s] How are we going to see?
+[15s] How are we going to see?
+[17s] How are we going to see?
+[19s] How are we going to see?
+[20s] How are we going to see?
+[21s] How are we going to see?
+[21s] How are we going to see?
+[22s] How are we going to see?
+[22s] How are we going to see?
+[23s] How are we going to see?
+[23s] How are we going to see?
+[24s] How are we going to see?
+[24s] How are we going to see?
+[24s] How are we going to see?
+[25s] How are we going to see?
+[25s] How are we going to see?
+[27s] How are we going to see?
+[28s] How are we going to see?
+[30s] तो आप बोल देते हैं कि false है तो यह हम लोग देख चुके थे इसका पूरा explanation, इसका recursion, इसका tabulation सब खतम हो चुका था आज जो episode 9 है ना इसी format पे मतलब इसी code में इसी function में एक एक word change करके आप तीन question solve कर सकने कितना?
+[48s] तीन question, इन तीन question को solve करने के लिए
+[50s] आपको बस ये episode 8 देखना ज़रूरी है, अगर आप ये episode 8 देखके आये है
+[55s] 5 से 10 minute में आप ये तीनो question solve कर लेंगे, एक एक line या एक एक word change करके
+[60s] सारा question, ये सारा चारो question एक ही question पर बेस्ट है, एक ही pattern पर बेस्ट आप कहा लिजिए
+[66s] जो की है ये subset sum मतलब अगर आपको ये समझ में आता है तो बदाई हो आपको ये तीनों आप समझ में आ जाएगा 5-10 मिनिट में और इस तरीके के question में इससे ज़्यादा नहीं पूछा आता है इससे ज़्यादा complex नहीं कोई company पूछती है तो चलिए जल्दी शुरू करते हैं
+[80s] तो देखिए, कल के subset sum का code यह था, यह याद है न, यह लिखे थे हम लोग, क्या किये थे, सबसे पहले तो इसमें एक array pass होता था, और इसमें एक sum pass होता था, यह sum क्या था, यह sum आपका target था, जो आपको target बनाना है, अच्छा, उसके बाद हम लोग क्या करते थे, उसके बाद हम
+[110s] recursion का base case देखते हुए हम लोग बोलते थे कि अगर dpn 0 is equal to 1
+[114s] मतलब कि जो भी sum है आपका last तक पहुंचते पहुंचते अगर sum अगर 0 हो जाता था
+[121s] sum दीरे-दीरे घटते-घटते जैसे ही आप एक element को लेते थे अपने subset में
+[125s] तो आपका sum थोड़ा कम हो जाता था
+[126s] आप अगर सारा array पार कर दिये और आपका sum 0 बन गया
+[129s] मतलब कि आप जो भी subset बनाए है न उसमें वो sum आ गया होगा
+[133s] तो हम लोग बोलते थे कि इसका answer 1 है
+[135s] बाकिक answer 0 है इसके बाद हम लोग tabulation किये थे
+[138s] मतलब loop चलाए थे और ऐसे ऐसे करके
+[141s] dpij का value निकाले थे
+[143s] अगर aij से बड़ा होता था
+[145s] मतलब कि array of i अगर sum से बड़ा होता था
+[147s] उसको नहीं लेते थे
+[148s] नहीं लेने का मतलब कि आप आगे चले जाएए
+[150s] और sum सेम रह जाएगा
+[152s] नहीं तो अगर आप उसको लेना चाहते हैं
+[154s] तो आपके पास दो तरीके का choice था
+[156s] आप उसको ले सकते हैं
+[158s] लेने का मतलब था कि i plus 1 में चले जाएए
+[160s] और अगर आप किसी element को लेंगे
+[162s] तो आपका sum उतने से कम हो जाएगा
+[164s] for example अगर आपको sum is equal to 20 चाहिए
+[167s] और आप 10 को लेने का try करते हैं
+[169s] तो आपका sum 20 से घट की क्या बन जाएगा
+[171s] 20-10 मन जाएगा तो वहीं हम लोग यहां लिखे थे
+[173s] या फिर आप उसको नहीं भी ले सकते हैं
+[176s] तो नहीं लेने का मतलब कि आप आगे चले जाएए
+[178s] और आपका sum as it is same रह जाएगा
+[180s] इन दोनों को हम लोग क्या करते थे
+[182s] और इसका क्या मतलब होता था कि
+[184s] अगर दोनों choice में से एक भी choice से answer आ रहा है
+[187s] तो मेरा answer आ जाएगा
+[189s] मतलब आपको तो बस true and false return करना था न
+[191s] कि हो सकता है कि नहीं हो सकता है
+[192s] तो वैसा था कि अगर 10th pass करने से
+[196s] और 10th fail करने से
+[197s] अगर pass करने से job लग जाए या fail करने से job लग जाए
+[200s] अगर किसी एक path में भी job लग जाए
+[202s] तो आप बोलेंगे कि हाँ भया मेरा job लग जाएगा
+[205s] उसका क्या मतलब था कि हम लोग इसको और करते थे
+[207s] last में क्या return करते थे
+[209s] dp0 and sum
+[210s] तो यह हमको उम्मीद है कि आपको याद होगा, आपको बहुत अच्छे से clear हो गया होगा, अच्छा, अब इसी code से, इसी question से हम लोगो तीन और question solve करना है, तो देखिए, पहला question क्या है, पहला question यह है, पहला question है, count subsets, count subsets with given sum, count subsets with given sum, इसका क्या मतलब है, यह question आपको क्या ब
+[239s] पताना है कि अगर हो सकता है
+[241s] तो कितने तरीके से हो सकता है
+[243s] क्या मतलब है इसका देखिए
+[244s] मान लिजिए आपका array यह है
+[246s] 1, 3, 4, और चलिए 5 है
+[249s] ठीक है
+[250s] 1, 4, इसको 2 बना देते हैं
+[252s] चलिए आपके सहुलियत के लिए
+[253s] इसको 2 बना देते हैं
+[255s] 0, 1, 2, 3, 1, 2, 4, 5 का array है
+[257s] मान लीजिए आपका sum जो है न वो 6 है
+[260s] आपका sum वो 6 है
+[261s] अब पिछले question में तो आपको बताना था कि
+[263s] भाई किसी subset से हो सकता है कि नहीं हो सकता है
+[266s] इसमें आपको बताना है कितने तरीके से हो सकता है
+[268s] मतलब कि अगर आप एक subset ऐसा बना ले
+[271s] 1 और 5, इसका sum भी 6 है, हो सकता है, लेकिन अगर आप ये subset बना ले, 4 और 2, तो भी 6 हो सकता है, तो इस question का answer, जो क्या question है, count का रोज कितने possibility होंगे, इसका answer क्या आएगा, इसका answer आएगा 2, इसका answer true or false नहीं आएगा, true or false तो वो question था, इसका answer कितना आएगा, 2, मतलब कि कितना combination
+[292s] से हो सकता है भाई मतलब कि इसको कहने मेरा स्टोरेज खातम हो गया था हाँ चलिए तुम क्या बोल रहे थे कि वो
+[298s] क्वेस्चन था कि हो सकता है कि यह क्वेस्चन कि कितने तरीके से हो सकता है मतलब कि यह
+[303s] question कुछ ऐसा है कि माल लीजिए आप 10th किए आप 10th में हैं अभी ठीक आप शुरू में 10th में हैं माल लीजिए आपके पास 3
+[310s] choices है माल लीजिए आपके पास 3 choices है 1 2 3 एक choice है आप direct 12 कर लीजिए
+[317s] एक choice है कि आप अपने पापा के दुकान में बैठ जाएए
+[320s] एक choice है कि आप अपना startup अपना शुरू कर लीजिए
+[323s] माल लीजिए तीन choice, just for explanation माल लीजिए तीन choice है
+[326s] माल लीजिए कि जो 12 वाला है ना
+[328s] इसमें आप जाके fail हो जाते हैं अपने जिंदगी में
+[343s] आप अगर बैठेंगे तो आप बहुत अमीर हो जाएंगे, अब देखिए, पिछले वाले question में न, इस scenario का answer आता true, क्यों आता, क्योंकि तीनों में से कम से कम एक भी success है क्या, हाँ, एक success है, दो success actually, लेकिन कम से कम एक है क्या, आपका answer आता true, इस question में आपका है कि भाई, कितने
+[360s] तरीके से success हो सकते हो
+[362s] इस question में आपका answer आएगा 2
+[364s] क्योंकि आप 2 तरीकों से success हो सकते हैं
+[367s] आप कितने तरीकों से
+[368s] 2 तरीकों से success हो सकते हैं
+[370s] तो यही एक छोटा सा change करना है
+[371s] आपको इसमें change क्या करना है
+[373s] देखिए
+[374s] जो आप यहाँ पे और लिखे हुए है
+[388s] आपको बताना है कितने तरीकों से हो सकता है
+[391s] बस इस और को
+[392s] मिटाके यहाँ पे क्या कर दीजिए
+[395s] प्लस कर दीजिए
+[396s] क्या कर दीजिए प्लस कर दीजिए
+[398s] अब मानिए
+[400s] कि मान लीजिए इसका value भी true आता है
+[402s] मतलब इस से इस combination से भी
+[404s] बन सकता है और इस combination
+[407s] से भी बन सकता है इस case में आपके dpi j में
+[410s] जो value store होगा न वो 2 store हो जाएगा पिछले बार
+[414s] जब हम लोग बस true false करण रहा था तो हम लोग और कर दिये
+[417s] कि भाईया एक भी अगर true है यहां true दे दो अब आपको
+[420s] value गिनवाना है तो just इस और को हटा के यहां
+[425s] पे plus कर दीजिए अगर आप plus कर देंगे न तो true false होने के
+[429s] बजाए वो value जुड़ने लगेगा एक एक एक एक करके
+[433s] value जुड़ने लगेगा मतलब की जो 10th वाला example है
+[437s] न मान लीजे आप 10th के बाद किये कि 12th और एक आपका था
+[441s] कि हम अपना start-up करेंगे 12th नहीं करेंगे
+[444s] मान लिजिए 12th के बाद
+[447s] 12th के बाद भी और path होगा कि 12th के बाद
+[449s] BTEC करना है कि MBA करना है
+[450s] 12th के बाद ना 2 तरीका है success होने का
+[454s] और start-up के बाद 3 तरीका है success होने का
+[457s] अगर हम इन दोनों को जोड़ दें
+[459s] क्या करें इन दोनों को जोड़ दें
+[461s] तो 10th के बाद कितना तरीका है success होने का
+[464s] total 5 तरीका है
+[465s] यही तो आपका answer है
+[467s] यही तो आपसे पुछा है कि कितना तरीका है
+[469s] यह नहीं पुछा है कि तरीका है कि नहीं
+[472s] वो तो पिछले में था
+[473s] उस case में आप बोलते हैं कि हाँ 12 के बाद भी true है और इसके बाद भी true है तो 10 के बाद भी true होगा नहीं
+[478s] अब 12 के बाद 2 तरीका है, start-up के बाद 3 तरीका है, 10 के बाद कितना तरीका होगा, 5 तरीका
+[485s] तो बस एक चीज़ चेंज करने से आपका same code, exactly same code किसमें convert हो जाएगा, count subset में, किसमें, count subsets में, yes, yes, count subsets में, तो यह question आपको समाज में आएक क्या करना है, पिछला वाला code, ctrl c, ctrl v, क्या बदलना है, यहाँ पे जाके, बस क्या बदलना है, और को क्या करना है, plus क्योंकि हम लो
+[509s] value को जोडने में interested है
+[511s] एक lean मदलेंगे आपका count
+[513s] subsets का पूरा काम हो चुका है
+[515s] तमाम समझ में आया कि नहीं आया
+[517s] नहीं आया तो please बताइएगा चलिए
+[519s] आगे आईए
+[520s] आगे आईए आगे आईए अगला question क्या है
+[522s] partition equal sum
+[524s] क्या है partition equal sum ये question क्या
+[526s] बुलता, आपको हम बताते हैं, आपको एक array दिया हुआ है, आपको एक array दिया हुआ रहेगा, अच्छा, देखते हैं क्या होगा, positive integers का, positive integers, positive है ना जी, एक बार हम देख लेते हैं, positive है कि क्या है, हाँ, positive integers का है, ठीक है, positive integers का है, ओके, आपको क्या बताना है, आपको true या false बत
+[556s] तोड़ सकते हैं क्या, दो भागों में तोड़ सकते हैं क्या, कितने भाग में, दो भागों में तोड़ सकते हैं क्या, for example, अगर आपका array है 1, 2, 3 और 4, मान लिजा आप एक पार्ट बनाए 1 और 4 का, एक पार्ट बनाए 2 और 3 का, अब इन दोनों का sum निकालिए, इसका sum क्या है
+[574s] 5 इसका sum क्या है 5 बस यही बताना है अगर आप इस array को 2 भाग में तोड़ सकते हैं और दोनों भाग के sum equal हो इस case में आपको क्या return करना है true return करना है बस यही है question एक और example समझिए आपका array है 1, 2, 3 क्या आप इस array को 2 भाग में तोड़ सकते हैं मतलब की ऐसा कर सकते हैं क्या 1 और 2
+[602s] एक जगा ले लिए 3 को एक जगा ले लिए
+[604s] इसका sum क्या है वेटा 3
+[607s] क्या ये दोनों equal है
+[609s] yes equal है इसका answer क्या है
+[611s] true मतलब कि
+[612s] क्या array को दो भाग में तोड़ना
+[614s] possible है जिससे की
+[616s] दोनों भाग का sum equal आ जाए
+[618s] अगर ऐसा possible है तो आपको true return करना है
+[620s] अगर ऐसा possible नहीं है
+[622s] तो आपको false return करना है, for example, अगर यहाँ पे 3 नहीं होता, यहाँ पे 10 होता, यहाँ पे क्या होता, 10 होता, अब क्या इस array को आप दो भाग में तोड़ सकते हैं, जिससे दोनों का sum equal हो, नहीं तोड़ सकते हैं, तोड़ के देख लिजिए, कोई combination कर लिजिए, नहीं हो सकता है, मत
+[650s] question कैसे connected हुआ subset sum से
+[652s] बताते हैं कैसे connected हुआ देखिए
+[654s] आपका काम क्या है आपका काम क्या है
+[656s] दो भाग में तोड़ना अच्छा
+[658s] माल लीजी ये एक array है
+[661s] 1
+[662s] 0 1 2 3
+[664s] 1 2 3 4
+[665s] आपका काम क्या है दो भागों में
+[668s] इसको तोड़ना दोनों का sum
+[670s] same होना चाहिए, तो माल लेते हैं कि इसका sum
+[672s] जो है, वो S1 है, इसका sum
+[674s] S2 है, दोनों में क्या number है
+[676s] मैं फरक पड़ता है, कुछ भी हो, कुछ भी हो
+[678s] इसमें 2 हो, इसमें 5 हो, इसमें कुछ भी हो
+[680s] कोई भी combination हो, लेकिन
+[682s] इसका sum माल लेते हैं कि S1 होगा
+[684s] इसका sum मालने ते हैं कि S2 होगा
+[685s] कब true return करना है
+[687s] जब S1 equal to S2 हो जाए
+[690s] S1 equal to S2 हो जाए
+[692s] total array का कोई sum होगा
+[694s] total array का भी कोई sum होगा
+[695s] पूरा array का sum
+[697s] 1 plus 2 plus 3 plus 4
+[700s] क्या आता है 10
+[701s] यह आता है 10 आता है
+[703s] मतलब कि S1 का value क्या होना पड़ेगा
+[708s] S1 का value क्या होना पड़ेगा
+[711s] और S2 का value भी 5 होना पड़ेगा
+[714s] S2 का value भी 5 होना पड़ेगा
+[715s] अच्छा यह तो अच्छी बात है
+[717s] मतलब कि हम लोग ऐसा नहीं कर सकते हैं क्या
+[720s] कि सबसे पहले पूरे array का sum निकाल लिए
+[723s] sum is equal to 10 माल लिए कि आप निकाल लिए
+[725s] वो तो जोड़ के निकाल लिए
+[726s] s1 को कर दिए
+[728s] sum by 2
+[729s] sum by 2
+[730s] s1 कितना बन गया
+[732s] 5
+[732s] अच्छा
+[733s] उसके बाद
+[734s] जो subset sum वाला problem था
+[736s] subset sum का problem क्या था
+[738s] कि आपको एक array मिलेगा
+[739s] और एक sum मिलेगा
+[741s] आपको बताना है true या false
+[743s] कि इसको आप कर सकते हैं
+[744s] कि नहीं कर सकते हैं
+[745s] अगर इस sum के जगा
+[747s] इस sum के जगा हम ये S1 पास कर दें
+[750s] हम ये क्या पास कर दें?
+[751s] S1 यानि कि जो array का sum by 2 है
+[754s] और true और false निकाल लें
+[756s] तो क्या आपको पता नहीं चल जाएगा
+[758s] क्या कि true and false है?
+[759s] कहने का क्या मतलब है?
+[760s] अगर आप इसका sum 10 निकाले
+[762s] और जो subset sum वाला code था
+[764s] उसमें इस sum के जगह ये sum by 2 पास कर दिये, मतलब की 5 पास कर दिये, इसका क्या मतलब है, कि देख के बताओ, कि क्या इस array का कोई ऐसा subset है, जिसका sum 5 आए, अगर ऐसा possible हो गया, मतलब की इस array का कोई एक subset है, जिसका sum क्या आजाए, 5, automatically, automatically, जो अगला part होगा, इसका sum क्या आएग
+[791s] इसका sum क्या आएगा जो भी sum है और minus 5 क्योंकि इसका तो 5 है इसका automatically sum 5 आजाएगा
+[800s] कहने का मतलब आप समझ रहे हैं अगर हम subset sum में इस array के sum by 2 को pass कर दें
+[806s] और subset sum हमको बता दिया कि हाँ sum by 2 करना possible है अगर sum by 2 करना possible है
+[812s] तो अगला part जो बनेगा उसको automatically sum sum by 2 हो जाएगा
+[815s] क्योंकि आप इस array को दो भाग में तोड़ रहे है
+[818s] total array का sum 10 है
+[819s] एक part का sum आपको पता चल गया कि 5 करना possible है
+[823s] माल लिजे 1 और 4 करना possible है
+[825s] automatically जो number बचेंगे
+[827s] उनका sum क्या हैगा
+[828s] sum minus 5
+[830s] मतलब की 10 minus 5
+[832s] जो कि क्या होगा 5
+[834s] automatically ये 5 is equal to
+[836s] ये 5 आएगा और आप true return कर सकते हैं
+[838s] तो बस यही हो गया
+[839s] क्या करना है आपको उस code को
+[842s] control C, control V करना है
+[843s] उस code में क्या pass होता था?
+[845s] array, array तो यही वाला pass हो जाएगा
+[847s] और क्या pass होता था? sum
+[849s] उस sum के जगा आपको क्या pass करना है?
+[852s] इस array का जो
+[853s] total sum है क्या?
+[855s] total sum है by 2
+[857s] pass कर दीजिए अगर वहां से answer true
+[859s] आया true कर दीजिए अगर वहां से answer
+[861s] false आया false कर दीजिए
+[863s] लेकिन एक इसमें catch है
+[866s] मान लीजिए आपको
+[867s] यह error दिया हुआ है 1
+[868s] 2 3 और 6
+[870s] 0 1 2 3
+[872s] इसका sum निकालिए 1 plus 2
+[875s] plus 3 plus 6 क्या आता है
+[877s] इसको 5 कर दीजिए इसको
+[878s] सहुलियत के लिए 5 कर दीजे, क्या कर दीजे, 5 कर दीजे, 5, 5, क्या हैगा, 3, 3, 6, और 11, अच्छा, 11 भाई 2 क्या होता है, 11 भाई 2 क्या होता है, अगर हम पुरा
+[890s] sense में देखे, 11 भाई 2 होता है, 5.5, क्या आपको लगता है कि आप इस array में आप किसी भी
+[896s] भाग को ऐसा तोड़ पाएंगी जिसका सम 5.5 आ जाए नहीं आ सकता है
+[901s] क्योंकि इस एरे में सब integer है न भाई
+[903s] integer का सम कभी भी 5.5 कैसे हो सकता है
+[906s] integer का सम तो ऐसे होगा न कि अगर total 11 है
+[909s] तो हो सकता है कि एक भाग का सम होगा 5 और दूसरे भाग का सम होगा 6
+[914s] यह आ सकता है या तो एक भाग का sum होगा 6 और एक भाग का sum होगा 5 यह किया जा सकता है ऐसा थोड़ी किया जा सकता है कि एक भाग का sum हो जाए 5.5 और दूसरे भाग का sum हो जाए 5.5 ऐसा तो possible नहीं है मतलब कि अगर total array का total sum जो आप यह total sum निकाल रहे हैं यह odd number है यह क्या number है odd number
+[938s] तो आपको लगता है कि जिन्दगी में कभी भी आप इसको by two by two करने में संभव होंगे, बिल्कुल नहीं होंगे, यह possible ही नहीं है कि integer का sum decimal में आ जाए, बिल्कुल नहीं है, अगर यह even number है, तो आपको try करना चाहिए, कि हाँ इसका by two भेजके try कर दो, लेकिन अगर यह total sum odd number है
+[958s] दुनिया में कुछ भी आप कर लेंगे
+[960s] पॉसिबल नहीं हो सकता है ये करना क्यूँ
+[962s] क्योंकि odd number है न
+[963s] odd number को आप दो भाग में कैसे तोड़ सकते हैं
+[966s] नहीं तोड़ा जा सकता है कुछ न कुछ बच जाएगा
+[968s] दो भाग में किसको तोड़ने है पॉसिबल है
+[970s] even number को odd number को
+[988s] subset sum use किये return false
+[990s] कर दीजी ये दुनिया में possible नहीं है
+[992s] अगर ऐसा नहीं है तो आप
+[994s] कर सकते हैं तो आप क्या कर सकते हैं
+[995s] अपना subset sum वाले function को
+[998s] call कर सकते हैं किसके साथ
+[999s] array और ये भी जो भी आपका
+[1002s] total sum by 2 आता है आप try करके
+[1004s] देख सकते हैं तो बस ये करिए और आपका
+[1006s] ये question भी solve हो गया, चूटकी बजाते ही, अगले question पर आईए, चलिए, ये वाला question थोड़ा interesting है, क्या, इस question का नाम है target sum, interesting नहीं है, मतलब इसमें थोड़ा आपको 10th class का math का use करना पड़ेगा, हम बताते हैं, देखिए, ये आपका array, आपको एक array दिया है, और आपको एक target भी �
+[1023s] आपका target यहाँ पे 3 दिया हुआ है आपको इसमें क्या करना है कि आपको बताना है कि कुछ use करके 3 बन जाएगा क्या नहीं आसा नहीं करना है बड़ा interesting concept है question का question आपको क्या बोलता है ना
+[1034s] इस array में 5 element है, आपको 1 दिख रहा है, अच्छा, question आपको बोलता है, हर number के आगे आगे आप 2 sign लगा सकते हैं, या तो positive या तो negative, हर number के आगे आप 2 sign लगा लिजे अपने मन से, positive या negative, अच्छा, करने के बाद, करने के बाद, आपका नएक equation जैसा बन जाएगा, for example, आप एक मन
+[1063s] पहले 1 के आगे positive लगा दीजिए ऐसे करके ये इसमें हम क्या किये पहले 1 के आगे positive ओविस्टी बात है कुछ नहीं तो positive है दूसरे 1 के आगे negative तीसरे 1 के आगे positive चौथे 1 के आगे positive पांच में one के आगे positive अच्छा इसको compute कीजिए ये क्या एक answer आपका 1-1 0 हो गया प्लस 3 इसक
+[1082s] answer 3 आगया अच्छा आप एक चीज़ और कर सकते हैं पहले 1 के
+[1086s] आगे negative बाकी सब के आगे positive ये भी a combination है हर
+[1090s] number के आगे आपको एक sign लगाना है अपने मंद से positive या
+[1093s] negative बहुत सारा बनेगा combination हम आपको कुछ-कुछ दिखा रहे
+[1096s] है अच्छा इसका answer भी 3 आएगा इसका answer भी 3 आएगा आप एक कम और कर सकते हैं 1
+[1102s] plus 1 minus 1 plus 1 plus 1 इसका answer भी 3 आएगा ऐसे करके आप आपको
+[1108s] जतना मन करें उतना आप कर सकते हैं variety of combination आप try कर
+[1112s] सकते हैं जिस combination के आगे जिस combination का answer ये 3 आता है
+[1118s] उसको आपको count करना है
+[1121s] मतलब कि
+[1122s] आप सारा combination बना लीजिए
+[1124s] सारा permutation combination
+[1125s] हर number के आगे plus लगाईए
+[1127s] हर number के आगे minus लगाईए
+[1128s] सब try करिए
+[1129s] जिस भी equation का answer
+[1131s] आपका ये target के equal आता है
+[1133s] कितने equations का answer आपका target के equal आता है
+[1136s] वो number आपको return करना है
+[1138s] true false नहीं
+[1139s] again हम वोल रहे है true false नहीं वो number
+[1141s] ऐसा कितना combination possible है
+[1143s] जिसको compute करेंगे हम
+[1145s] तो आपका answer is target के equal आएगा
+[1147s] यह आपका question है अब यह question देखने में
+[1149s] बहुत खतरनाक लगता है मतलब बहुत अलग type
+[1151s] question है कि साला यह तो नहीं पढ़ता है भी तक
+[1153s] लेकिन अगर थोड़ा सा अंदर
+[1168s] था यह आपका एरे था यही था ना एरे एक दो तीन चार और पांच यही आपका एरे है अच्छा अब हर नमबर के आगे या तो positive का sign लगेगा या तो हर नमबर के आगे negative का sign लगेगा अच्छा तो क्यों ना दो group बना लिया जाए एक group बना लिया जाए जिसमें वो number रहेंग
+[1185s] जिसके आगे हम positive का sign लगाएंगे
+[1187s] जैसे कि ये वाले equation है
+[1188s] ये वाले equation पकड़िए
+[1189s] तो ये वाले equation में न
+[1191s] 1, 2, 3, 4
+[1194s] चार number थे जिनके आगे positive का sign
+[1196s] तो इन चारों को हम इसमें घुसा देंगे
+[1197s] एक और group होगा
+[1199s] जिसके आगे हम negative का sign लगादेंगे
+[1201s] जिसके आगे हम क्या sign लगा देंगे, negative का sign लगा देंगे
+[1204s] तो यह आपका positive का group बन जाएगा
+[1206s] और यह आपका negative का group बन जाएगा
+[1209s] अच्छा, negative का group बनने का यह मतलम नहीं है
+[1212s] कि यह सारा number negative हो गया है
+[1213s] इसमें वो number जा रहा है
+[1215s] जिसका sign आप negative चुने है
+[1218s] तो इस वाले में ये रहेगा
+[1220s] एक, दो, तीन और
+[1222s] चार, हम इस equation के बारे में बात कर रहे हैं
+[1224s] equation number 2 के बारे में बात कर रहे हैं
+[1226s] negative वाले में कौन सा? सिर्फ एक
+[1228s] एक number जाएगा जिसके आगे हम लोग negative चुनेंगे
+[1230s] इसमें बस एक जाएगा
+[1231s] इसमें बस एक जाएगा, अच्छी बात, okay, very good, अब देखिए, अब आपका काम क्या है, कभी भी आपको एक्वेशन लिखते हैं, कभी भी आपको एक्वेशन compute करते हैं, इस एक्वेशन में होगा क्या, इस एक्वेशन का अगर हम थोड़ा solve करनेंगे हैं, तो सबसे पहले तो
+[1259s] जिन्मी नंबरों के आगे negative का sign लगा हुआ है, उनको जोड लीजिए, तो यहाँ पे सिर्फ एक नंबर है जिसके आगे negative का sign लगा है, एक कर देंगे, इस equation को solve करते थे जब class 2, 3 मत ऐसे ही करते थे न भाई, अगर माल लीजे को equation आपको ऐसा मिलेगा कि 100 minus 200 plus 500 minus 50, इस equation को कैसे solve
+[1278s] करते थे, जितना भी positive वाले हैं, जितना भी positive वाले हैं, उनको जोड़ लेते थे, 100 plus 500, इनका एक group बना लेते थे, एक minus का sign लगाते थे, और जितने भी negative वाले हैं, उनको जोड़ लेते थे, क्या होता था, 200 plus 50, तो ये क्या बन जाता था आपका, ये बन जाता था 600 minus का sign, और य
+[1300s] ऐसे ही solve करते हैं था न भाई, यही होता है न solve रहने गा math तो सब लोग पढ़ किया है यहां तक, ऐसे ही यहां भी solve होगा, मतलब की positive वाले group का एक sum मनेगा, positive वाले group का एक sum मनेगा, इसको हम लोग बोलेंगे की positive is equal to 4, negative वाले group का भी एक sum मनेगा, negative वाले group का भी एक sum मनेगा, �
+[1318s] अब आपका काम क्या है, अब आपका काम ये करना है, चेक करना है, positive minus negative, equal क्या होना चाहिए, आपका target होना चाहिए, जो भी आपको target दिया हुआ है, जो यहाँ पे 3 दिया हुआ है, बात समझ में आती है, सब को यही होना चाहिए, यही आप सब पूछ रहा है, यही बताना है, �
+[1336s] लेकिन positive यहाँ पे 4 है, negative यहाँ पे 1 है, अब यह जो दो part है, यह array सही निकले हैं न, array का कुछ part positive में चला गया, कुछ part negative में चला गया, array का कोई ऐसा element बचा नहीं है न, जो either of group में भी नहीं गया, array का हर एक element या तो positive में जाएगा, या तो negative में जाएगा, यही होगा न, array में
+[1360s] एक 1 इसमें मतलब array का हर एक element या तो positive में गया या तो negative में गया,
+[1365s] तो क्या हम लोग ऐसा बोल सकते हैं, कि अगर हम लोग positive plus negative कर दें,
+[1372s] इसका answer आएगा आपके array का total sum, total sum, अब देख मिलीजिए, आपके array का total sum क्या आएगा,
+[1379s] इसका array का total sum क्या हैगा
+[1382s] पांच
+[1383s] अगर आप इसको जोड़े
+[1384s] 4 और 1 को आप अगर जोड़ देंगे
+[1387s] sign का बात नहीं कर रहे हैं
+[1388s] just उसका sum को जोड़ दीजिए
+[1389s] क्या आपको 5 मिलेगा
+[1390s] obviously मिलेगा
+[1391s] क्योंकि array का हर एक element
+[1393s] या तो इधर है या तो उधर है
+[1394s] सब को जोड़ दो, क्या आएगा, total sum
+[1397s] क्या ये दो equation आ गया
+[1398s] 7th class में एक चीज पढ़े थे, दो linear equation को solve करने का
+[1402s] आईए, इन दोनों equation को जोड़ दीजिए
+[1405s] ये क्या बन जाएगा, 2 into pos
+[1407s] ये कट जाएगा, negative negative
+[1409s] minus negative plus negative कट गया
+[1411s] equal to target
+[1415s] plus total sum
+[1416s] ये equation आई, ये equation आई
+[1418s] पॉस को देख लीजिए, पॉस is equal to
+[1422s] target
+[1423s] plus
+[1425s] total sum
+[1426s] by 2, यह देखो
+[1428s] यह देखिए, इसमें हम कोई
+[1430s] rocket science नहीं किये है, class 2
+[1432s] से लेके class 7 का math सुपयोग किये है
+[1434s] फिर से एक बार आप सुनिए
+[1436s] array में number है, अच्छी बात होने दीजिए
+[1439s] कुछ number को positive वाले
+[1440s] ग्रूप में डालेंगे, कुछ नंबर को negative वाले
+[1442s] ग्रूप में डालेंगे, positive वाले ग्रूप का
+[1444s] समाएगा, positive वाले ग्रूप का समाएगा
+[1447s] negative, आपसे बोला है कि आपका
+[1449s] answer आना चाहिए target, वो कैसे
+[1450s] आता है, positive minus negative करेंगे
+[1453s] तो आपका answer target आना चाहिए, उसको हम लिखे
+[1454s] equation 1, positive और negative को
+[1457s] जोड़ देंगे, तो array का total sum आ जाएगा
+[1459s] इसको हम लिखे equation 2
+[1461s] दोनों equation को जोड़ दिए, दोनों equation को जोड़ने
+[1463s] हुआ क्या, 2 into pos आ गया
+[1465s] pos pos जुड़ गया, negative यहाँ
+[1467s] minus था, यहाँ plus था, negative कट गया
+[1469s] यह दोनों भी जुड़ गया
+[1470s] आपका last में post का value क्या आया
+[1473s] target plus total sum by 2
+[1475s] क्या target plus total sum by 2
+[1477s] कुछ-कुछ क्लिक कर रहा है
+[1479s] अगर आप इस array का
+[1482s] आप इस array का
+[1483s] total sum निकाल लेते हैं
+[1485s] कैसे सारे number को जोड के
+[1486s] आपको इसका target already दिया हुआ है
+[1489s] अच्छा
+[1489s] आप एक sum बनाते हैं
+[1492s] जिसका value आएगा
+[1493s] total sum plus
+[1495s] target by 2
+[1498s] अगर आप ये sum, अपने subset sum को pass कर देते हैं
+[1504s] subset sum कौन सा वाला, true and false वाला नहीं
+[1508s] count subset वाला, count subset वाला function
+[1510s] जिसमें लोग और नहीं कर रहे थे, जिसमें लोग प्लस कर रहे थे
+[1513s] वहां से आपको कोई answer आता है कि इसमें 4 तरीके का है
+[1517s] क्या यही आपका answer नहीं हो जाएगा
+[1519s] यही तो आपसे पुछा जा रहा है भाई कि array को दो भाग में तोड़ो
+[1523s] दो भाग में तोड़ने ही तो बोल रहा है दो ग्रूप में तोड़ने बोल रहा है
+[1525s] positive group एक negative group आप एक इसका positive का value निकाल लिए
+[1529s] target plus total sum by 2 उसको pass कर दिया अपने subset sum में
+[1534s] subset sum आपको बताया, कुछ न कुछ value बताएगा, 0, 1, 2, 3, 4, कितने तरीके से possible है, क्या वही आपका answer नहीं हो जाएगा, बिलकुल आपका answer वही हो जाएगा, सेम सवाल है ये, इसमें बस आपको थोड़ा mathematics करके value निकालना था कि क्या value है, वो जो sum का value क्या है, जब हम लोग count subsets प
+[1564s] pass करना है हमारा equation आपको बताता है कि आपको total sum plus target by two pass करना है यह pass कर दीजिए वहाँ से answer आ जाएगा आपका खेल हो जाएगा पूरी तरीके से
+[1574s] खतम, एक और चीज इसमें करनी है
+[1576s] सेम चीज दो हम लोग पहले पढ़े थे
+[1578s] अगर total sum
+[1581s] plus target
+[1583s] अगर total sum plus target
+[1585s] odd number है
+[1586s] तो क्या आपको लगता है अगर ये odd number है
+[1589s] तो ये by 2 भी odd number हो जाएगा
+[1591s] by 2 भी odd number हो जाएगा
+[1593s] तो ये possible नहीं है
+[1594s] क्योंकि जब आप odd number को by 2 करेंगे
+[1596s] तो आपका answer कुछ 5.5 आने लगेगा
+[1599s] क्या आपको लगता है कि integer array को ऐसा divide करना possible है
+[1602s] कि sum 5.5 बन जाए बिल्कुल possible नहीं है
+[1605s] अगर odd आता है क्या return करना है आख बन करके
+[1608s] 0 ऐसा possible नहीं है
+[1610s] अगर even number आता है तो आपको subset sum base को भेज देना है
+[1614s] किस value को sum के जगा इस value को
+[1617s] जो भी value वहाँ से आएगा उसको return कर दीजिएगा
+[1620s] खतम हो गया खिर बस
+[1623s] एक छोटी से बात और है मेरे दिमाग से निकली गया था
+[1625s] मान लीजे कोई ऐसा array दिया हुआ है जिसका total sum 5 है
+[1629s] और target इसका चलिए 7 कर दीजे फिर आप बुलेगा कि odd number हो गया है तो 7 कर दीजे
+[1634s] सबसे पहले आपके आज चेक करते थी कि
+[1636s] क्या total sum plus target odd तो नहीं है
+[1638s] नहीं odd नहीं है 12 है तो इसमें तो आपना run कर देंगे
+[1640s] नहीं run करना है क्यों नहीं run करना है आपको समझाते हैं देखिए
+[1643s] total sum 5 है मतलब array का total sum ही 5 है
+[1646s] अब इसको आपको दो group में divide करना है कि इसमें
+[1649s] positive और negative में, positive और negative में, आप कोई भी combination try करेंगे ना, तो देखिए इसमें क्या-क्या combination है, भूल जाहिए क्या number है, माल लीजे सारा number 1 है, 1, ये 1 है, ये आपका एरह है, तो देखिए, या तो आप positive में 0 देजिए, negative में 5 देजिए, ये हो सकता है, 1 और 4 हो सकता है, 2 और 3 हो सकता ह
+[1669s] 4 और 1 हो सकता है और 5 और 0 हो सकता है
+[1673s] यह हो सकता है और कोई positive negative combination तो नहीं हो सकता है
+[1676s] नहीं हो सकता है अच्छा अब इसमें निकालिए positive minus negative निकालिए
+[1680s] क्या answer आएगा 5
+[1683s] sorry minus 5 क्या आएगा minus 5
+[1686s] yes minus 5
+[1687s] 1 minus 4
+[1688s] 1 minus 4 क्या आता है जी
+[1691s] minus 3
+[1692s] minus 3 minus 1
+[1695s] 1
+[1696s] 3
+[1697s] 5
+[1698s] यह आपके values आएंगे, आप कोई भी equation compute करेंगे तो यह आपका values आएगा, minus 5 से 5 के बीच में, आपका target क्या है, 7, आपका target क्या है, 7, आप एक बात पर गौर कीजिए, कि साला मेरा total sum 5 है, total sum तो 5 है, positive, negative, कुछ भी होगा तो sum से तो कम होगा, total sum से तो कम होगा,
+[1718s] कम या equal होगा, ऐसा तो नहीं हो सकता है
+[1720s] कि आपका total sum जो है
+[1722s] वो 5 है, और आपका positive
+[1724s] आजाए 7 और आपका negative
+[1726s] आजाए 10, ये तो possible नहीं है, क्यों?
+[1728s] क्योंकि any case में
+[1730s] positive plus negative वाला group को
+[1732s] 5 बनना है, ये कर देंगे तो
+[1734s] 17 बन जाएगा, ये तो possible है ये नहीं
+[1737s] तो कहने का मतलब न, आप total sum को जब divide करेंगे positive और negative में, आपका जो values का range आएगा, इस value का range बहुत ध्यान से देखिए, क्या आया?
+[1746s] minus 5 से plus 5
+[1749s] क्या minus 5 से
+[1751s] plus 5
+[1753s] आपका target क्या है
+[1755s] 7 आपको लगता है
+[1756s] ये target कभी भी achievable है
+[1758s] नहीं है achievable
+[1760s] आप इसको किसी भी permutation combination से देख लीजिए
+[1763s] ऐसा हो ही नहीं सकता है
+[1765s] कि आपका total sum
+[1766s] आपका total sum अगर 5 है न
+[1768s] तो आपका जो equation का range आएगा
+[1771s] वो हमेशा किसके किसके
+[1773s] बीच में आएगा, minus of sum
+[1775s] से plus of sum के
+[1777s] बीच में आएगा, ये आपकी
+[1779s] range होगी equation की, अगर
+[1781s] आपका target sum इससे
+[1783s] बाहर है, इस range के
+[1785s] बाहर है, that is
+[1786s] impossible, that is impossible
+[1789s] to calculate an answer
+[1790s] कहने का क्या मतलब है
+[1792s] अगर आपका absolute
+[1795s] of target, absolute of
+[1797s] target greater than
+[1798s] आपका sum है, क्या? greater
+[1801s] than sum है, इस case में आपको
+[1803s] आँख बंद करके 0 return कर देना
+[1805s] चाहिए, क्यों? क्योंकि अगर
+[1807s] ऐसा है न, इसका मतलब कि
+[1809s] आपका sum तो कुछ है, sum कुछ भी हो सकता है
+[1811s] sum negative हो सकता है, sum positive हो सकता है
+[1813s] sum अगर positive है, माल लिजी
+[1815s] आपका sum जो है वो 10 है
+[1816s] total array का sum, आपके जो भी
+[1818s] equation निकलेगी आप positive negative में
+[1820s] जो मन चाहे कर लिजिए combination बैठा बैठा के
+[1823s] आपका जो equation का range आएगा
+[1825s] वो minus 10 से
+[1827s] plus 10 के बीच में आएगा
+[1829s] अगर आपके target का
+[1830s] absolute value मतलब कि
+[1833s] मान लिजिए आपका target अगर minus 20 है
+[1835s] ये भी इस से बाहर है
+[1837s] आपका target अगर 20 है
+[1839s] ये भी इस से बाहर है
+[1841s] अगर ऐसा case होता है answer निकालना impossible है इस case में आपको सीधा सीधा return zero कर देना है तो यह एक और बात है जिसका आपको ख्याल रखना पड़ेगा तो इस question में दो चीजों का ख्याल रखना है सबसे पहले तो यह जो sum है sum plus target odd नहीं होना चाहिए और आपका target मतलब की आपके target का absolute value अ�
+[1871s] इसमें लगाने की जरूरत नहीं है और return true कर देने में ही आपकी भलाई है तो ये question भी खतम हुआ तो तीनो question एक बार हम फिर करवा दे रहे हैं फिर revise करवा दे रहे हैं इसका foundation क्या था subset sum सबसे पहले क्या आया count subset sum इसमें हम लोग क्या किये और को plus कर दिये same code में खतम हो गई ब
+[1900s] तीसरा क्या था, target sum
+[1902s] target sum में लोग क्या किये
+[1904s] total sum plus target
+[1907s] by 2
+[1908s] pass कर दिये, उसमें उससे आपका answer आ गया
+[1910s] थोड़ा थोड़ा check करना है
+[1912s] इसमें क्या check करना था, odd number तो नहीं है
+[1914s] कहीं, अगर है तो return 0
+[1916s] इसमें 2 check करने थे, odd number
+[1918s] और आपका target कहीं range
+[1920s] से बाहर तो नहीं है आपके sum के
+[1922s] अगर ऐसा है तो return 0
+[1924s] कि दोनों check करके subset sum में pass
+[1926s] कर दीजिए अब answer आ जाएगा
+[1928s] तो ये तीनों question same formula
+[1930s] आपको क्या करना है control c
+[1932s] control v, एक-एक line हम बोले था
+[1934s] नवादा किये था एक-एक line, एक-एक line ज़्यादा नहीं
+[1950s] ADP में उसके आप mastery कर चुके हैं, मिलते हैं

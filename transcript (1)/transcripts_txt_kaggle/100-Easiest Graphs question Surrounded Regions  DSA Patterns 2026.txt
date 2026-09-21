@@ -1,0 +1,216 @@
+[0s] Hello, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all the same, you are all
+[30s] पहते हैं क्या होता है सरांड़ेट रीजन क्वेस्चन इसलिए थोड़ा आपको हाड लगेगा न क्योंकि क्वेस्चन जीसे समझाया हुआ है लीट को पर बहुत गंदा है मतलब लीट को
+[52s] रहेगा दोनों तरीके का हम लोग बील कर चुके हैं, इस condition दे आपको एक matrix दिया हुआ है, अच्छा, matrix का मतलब होता है, matrix 2DRA, ऐसा करके matrix दिया हुआ है, matrix क्या मतलब होता है, simple 2DRA, इसको हम लोग graph के तरह treat करते हैं, 0123, 0123, अब इस matrix में क्या क्या है, इस matrix में दो तरीके का
+[73s] character है, धान दीजेगा कि यह character matrix है, integer matrix नहीं है
+[77s] एक character है इसमें x, एक character क्या है इसमें x
+[81s] और एक character इसमें क्या है, o, एक character है o, 0 नहीं है, o है
+[85s] ठीक है, अच्छा, हम x और o लिख देते हैं, x और 0 इसमें हम
+[88s] जल्दी से बना लेते हैं, तो यह हो गया x, x, x, x
+[92s] x, o, o, x, फिर से बता रहे हैं, 0 नहीं है, o है, ठीक है, x, x, o, x, x, x, यह आपका matrix दिया हुआ है, अच्छा, आपको ना, इसमें surrounded regions खोजने हैं, खोजने क्या है, उसमें कुछ करना है, अब यह बताते हैं, इसका मतलब क्या है, surrounded regions of o, of o, देखिया, हिंदी में आपको question बतात
+[117s] इस मेना आपको बहुत सारे O दिख रहे होंगे, एक ये दिख रहा है, एक ये दिख रहा है, एक ये दिख रहा है, और एक ये दिख रहा है, ठीक बात है, अच्छा, दिखिए, सराउंडर डिजन क्या मतलब है, ये जो X है, ये जो X को आप एक monster का तरह समझिए, कि X न, धीरे
+[146s] लेता है अगर x 0 को
+[148s] कहीं पर घेर लेता है ना तो वो
+[150s] 0 को खा जाएगा कौन से 0
+[152s] इसमें बचे रहेंगे ये पूरे प्रोसेस के बाद
+[154s] कौन से 0 बचेंगे जो
+[156s] 0 edge पे है जो 0
+[158s] edge पे है जो 0
+[160s] edge पे है वो बच जाएगा
+[162s] वो बच जाएगा या भाग जाएगा उसको कहीं से help मिल जाएगा
+[165s] जो भी zero edge पे है
+[167s] edge का मतलब क्या होता है ये edge है
+[169s] ये edge है ये edge है और ये edge है
+[172s] मतलब या तो first row हो गया
+[174s] first column हो गया
+[175s] last column ये last row या last column
+[177s] edge का मतलब समझे ले ना boundary पे
+[179s] matrix के boundary पे जो जो zero है ना
+[181s] वो बच जाएगा, उसको X नहीं खा पाएगा, क्योंकि उसको कहीं से मदद पहुँच जाएगा, उसको बाहर से मदद पहुच जाएगा, लेकिन जो भी O, या जो भी 0, जो भी है, जिसको X घेर लेगा अंदर, वो उसको खा जाएगा, और वो भी X बन जाएगा, वो भी क्या
+[196s] ही काम करना है कि जो जो जीरो बचने वाले हैं जो जो जीरो बचने वाले हैं एक सेकंड तो हम आपको क्या बताए कि जो भी जीरो एज पर रहेगा न हम थोड़ा इसको डागराम को चेंज कर दिए समझाने के लिए बहतर वो बच जाएगा उसको एक्स नहीं खा पाएगा और
+[210s] जो भी 0 edge पे रहेगा वो अकेला नहीं बचेगा
+[213s] वो अपने चारो direction में move करेगा
+[216s] और जो जो 0 उससे connected है
+[220s] मतलब कि आप एक edge वाले 0 से
+[223s] जहां जहां भी जा सकते हैं
+[225s] चारो direction में आप जतना फैल सकते हैं
+[227s] वो सारे 0 बच जाएंगे
+[229s] वो सारे 0 अंत में बच जाएंगे
+[231s] कहने का क्या मतलब है देखिए
+[233s] इस matrix में शुरुवात में आपको ये 0 दिया है
+[235s] कितने 0 है एक, दो और तीन
+[237s] आपको edge पे कौन सा 0 दिख रहा है
+[239s] आपको edge पे कौन सा 0 दिख रहा है
+[241s] edge का मतलब क्या है फिर से बता रहे है
+[242s] first row मतलब ये वाला
+[244s] last row, first column और last column
+[247s] इसको edge वाले या boundary वाले 0 बोलते हैं
+[249s] तो यहाँ पे आप बोलेगा कि हमको यह वाला 0 दिख रहा है
+[252s] यह वाला 0 दिख रहा है जो कि अभी तक unvisited है
+[254s] शुरुवात में तो असा ब unvisited है
+[256s] अच्छा आप क्या करेंगे
+[257s] इसको न हम लोग कुछ और बना देंगे
+[260s] इसको हम लोग कुछ और बना देंगे, मतलब कि इसको हम लोग चलिए hash बना देते हैं, इसको हम लोग hash बना देजें, इसको हम लोग hash बना देजें, ऐसे करके hash बना दिए, ठीक है, अब यहाँ पे आपको रुकना नहीं है, यहाँ पे आपको रुकना नहीं है, क्या आप, क्य
+[290s] क्योंकि x है right में तो x को नहीं बचाना है लेकिन इसके उपर आपको क्या मिला है उसके उपर आपको एक 0 मिल गया है इसके उपर एक आपको 0 मिल गया है तो वो 0 भी बच जाएगा वो 0 क्यों बच जाएगा क्योंकि ये connected था एक 0 से जो की boundary पर था तो अगर मदद इस 0 तक पह�
+[318s] hash बना दीजे, hash क्यों बना रहे हैं, एक visited mark करने के लिए, एक visited mark करने के लिए और दिखाने के लिए कि ये बच गया है, आप hash के जब कुछ और कर सकते हैं, कोई भी character, x और 0 के अलावा, x और o के अलावा, कोई भी character यहां पर लिख दीजे, अच्छा, अब आप इस hash पे आए, क
+[346s] आप बस 0 की तरफ जा सकते थे या तो O की तरफ जा सकते थे तो यहां के बाद आप किसी को नहीं बचा रहे हैं तो आप stop कर जाएंगे, अब अब stop कर जाएंगे, ठीक है, क्या अब आपको कोई और 0 या कोई और O दिख रहा है जो कि edge पे बाकी है, नहीं, एक था ये वाला, इ
+[373s] नीचे दाय माय उनको भी ये monster से बचा लेगा अब आपका खेल खतम हो गया है अब देखिए ये वाला जो 0 था ये ना किसी भी boundary के 0 से connected नहीं है ये किसी भी boundary के 0 से connected नहीं है अब आप बोलेगा कि ऐसे है तो connected नहीं diagonal connection allowed नहीं है सिर्फ उपर नीचे करके आपको connection बनाना है त
+[398s] इससे गिरा हुआ है, x से गिरा हुआ है, तो यह जो x है अब इसको खा जाएगा, x इसको खा जाएगा, यह पुरा होने के बाद, कौन-कौन से 0 बचेंगे, यह 0 जिसको आप hash बना दी हैं, वो बच जाएंगे, क्योंकि आप यही कर रहें न, आप boundary के, boundary के 0 से DFS start कर रहे हैं,
+[414s] और वो खुद तो बचता ही है वो अपने सारे connected zeros को बचा लेता है एक तो ये बच जाएगा एक तो ये बच जाएगा तो last में आपको क्या करना है जहां जहां hash है उसको मिटा के zero कर देना है जिरो कर देना और बाकी सब को इस वाले zero को न अब आपका x खा जाएगा और इसको x
+[436s] बना देगा इसको अब x बना देगा
+[438s] बाकी सब को x बनाना है
+[440s] बाकी सब को x बना दीजी
+[442s] बाकी सब को क्या बना दीजी x
+[444s] आपका final matrix इस तरीके का दिखेगा
+[446s] दिखेगा ये वाला 0 को खा गया
+[449s] तो वो x बन गया
+[449s] ये दोनों 0 बच गए ये दोनों 0 क्यों बच गए
+[452s] क्योंकि ये वाला 0 कहां था, edge पे
+[454s] और ये इस वाले 0 को भी जाके बचा लिया
+[457s] अगर by chance यहां पे भी एक 0 होता ना
+[459s] तो ये भी बच जाता, तो ये भी बच जाता
+[461s] क्यों? क्योंकि आप यहां से यहां जाते
+[463s] यहां से उपर चले जाते
+[464s] तो कोई भी boundary का 0
+[466s] कोई भी boundary का zero, अपने आस पास के सारे zeros को बचाने की ताकत रखता है, क्योंकि उसको यहां से मदद पहुचेगी, जो zero नहीं बच पाते हैं, जो zero last तक नहीं बच पाते हैं, जैसे कि ये zero last तक नहीं बच पाया, ये x बन जाएगा, इसको आस पास के x घेर के खा जाएंगे, इ
+[496s] आपको समझ में आ गया होगा क्या करना है, आपको boundary वाले, आपको boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary वाले, boundary
+[526s] इसको हम देख चुके हैं, उसके जगह, आप क्या करिए न, हर एक zero को, हर एक zero को, क्या बना दीजिए, अपने मन का कोई character, hash, dollar, रुपया, जो मन करे, जो अलग दिखे, जो अलग, जिस आपको पता चले कि भाईया, ये बच चुका है, last में हमको इसको बचाना है, इसको हमको �
+[541s] वापस 0 में convert करना है ये कर दीजिए हर एक boundary वाले 0 से हर एक boundary वाले 0 से ये आपको करना पड़ेगा क्योंकि हर एक boundary का 0 ना multiple लोगों को बचाने की ताकत रखता हो अगर कोई boundary का 0 अल्रेडी hash बन चुका है तो मत करिए boundary पे अगर आपको 0 मिल रहा है तो वहां से आपको क्या कर
+[569s] उसको वापस 0 में या O में convert कर दीजे
+[572s] क्योंकि वो बच जाएंगे last में
+[574s] और बाकी सब को
+[576s] बाकी सब को क्या बना दीजे
+[578s] x बना दीजे
+[579s] क्योंकि जो x है वो तो x है ही
+[581s] जो 0 बच जाएंगे last में जाकि
+[583s] जो 0 hash नहीं बन पाएंगे न
+[585s] वो 0 क्या है? वो 0
+[587s] monster से surrounded है तो वो x उनको
+[589s] खा जाएगा और उनको x बना देगा
+[591s] यही बस छोटा सा इसमें
+[593s] चीज है इसका code
+[595s] just like number of islands है तो number of
+[597s] islands लिखने के लिए क्या किया रहे थे
+[599s] सबसे पहले तो एक boolean valid function लिखते थे
+[601s] सबसे पहले तो एक valid function
+[603s] valid function क्यों कि हम लोग board से आगे
+[616s] अगर i negative है और
+[618s] i n है
+[621s] और j अगर negative हो गया
+[623s] और j greater than equal to m हो गया
+[625s] तो return false
+[627s] ये valid नहीं है
+[628s] valid का मतलब प्यों वहाँ पर नहीं जाना है
+[629s] dfs में हो सकता है ना क्या बोर्ट के बाहर निकलने कुछ चुछ कर दो
+[632s] नहीं जाएंगे ऐसा नहीं है अगर
+[634s] तो return true कर दो
+[636s] return true
+[637s] x और y का array बना लेते हैं क्यों
+[639s] direction के लिए याद कि जे number of islands बताये थे
+[642s] तो striver भाई आगर trick बताये थे ना
+[643s] कि उनका एक trick था बड़ा अच्छा लगा था
+[645s] वही वाला trick कि आपको
+[646s] 4 डिरेक्शन में जाने के लिए जादा मेहनत ना करनी पड़े
+[652s] यह क्या है X coordinate चारो डिरेक्शन के और चारो डिरेक्शन का Y coordinate
+[660s] वेरी गुड आई अपना DFS लिखें बड़ा सिंपल सा DFS होगा
+[663s] वाइड DFS, DFS में क्या पास होगा आपका matrix
+[667s] आपका मतलब जो भी आपका graph दिया हुआ है किस तरीके का
+[671s] char type का आपको graph दिया हुआ है, int n, int m, int i, int j, यही होगा, ij मतलब इस पर आप हैं, सबसे पहला काम क्या बोले थे, इसको hash बना दीजिए, इस ij को hash बना दीजिए, ताकि इस पर visited का थप्पा लग जाए,
+[690s] visited का ठपपा लग जाए, hash बनाईगा, तो ऐसे करके बनाईए, अब character में करके, अब क्या करना है, इसके neighbors को देखिए, neighbors कैसे, चारो दिशाओं के neighbor को देखिए, k is equal to 0, k less than 4, k plus plus, चारो दिशाओं के neighbor को कैसे देखते हैं, int, row is equal to, i plus, i plus x of k, तो यह आपका row आ जाएगा, int, column is
+[714s] equal to j plus y of k
+[717s] तो आपको ये column मिल जाएगा
+[718s] चेक किजिए अगर ये valid है
+[720s] अगर ये row or column
+[722s] valid है अगर ये
+[724s] row or column valid है and
+[726s] अगर ये 0 है
+[727s] hash की तरफ नहीं जाना है
+[729s] hash की तरफ नहीं जाना है और
+[732s] x की तरफ भी नहीं जाना है
+[733s] array of row column
+[736s] row column equal equal to o
+[739s] यहाँ पे O लिखिएगा, बार बार बोल रहे हैं, हम भी गल्ती कर दिये थे, हम भी 0 लिखने लगे थे, याद से O लिखिएगा, confusing है, लेकिन याद से आप उठाया, capital O लिखना है, ठीक है, अगर यह ऐसा है, उस पे DFS कर दीजिए, array of n, m, row n, column, तो यह बस DFS हो जाएगा, य
+[754s] आपसे start करके आपका for बंद हो गया, यहाँ पे return कर दीजे, यहाँ पे return कर दीजे, तो यह आपका dfs हो गया, main program कैसे लिखे थे, main program कैसे लिखे थे, main program में कुछ नहीं लिखना है, main program में आपको एक void, आपको एक solve करना है, आपको एक character array दिया होगा, character array दिया होगा, ऐसा करके �
+[776s] एक array दिया होगा, इसका size निकाल लिजिए, size मतलब number of rows निकाल लिजिए, a.size निकाल लिजिए, और इसका column का size भी निकाल लिजिए, इसका column का size भी निकाल लेंगे, हम हम क्या बोले थे, आपको DFS किसे शुरू करना है, boundary वाले 0 से, किसे, boundary वाले 0 से, boundary वाले 0 मतलब की first row, first column, last
+[798s] last row और last column आईए एके करके सारे को देखते हैं सारे को देखने क्या मतलब है सबसे पहले हम लोग first row वाले 0 को देखेंगे
+[805s] first row वाले o को o को देखेंगे तो देखेंगे int i j क्या करेंगे for j is equal to 0 j less than m j plus plus ये है किसका ये क्या है
+[819s] first row, यह क्या है, first row, first row, first row मतलब i is equal to zero जब रहेगा तो वो first row को लेगा,
+[825s] i is equal to zero लेगा तो वो first row को लेगा, तो if array of zero j equal equal to o, आपको क्या करना है,
+[836s] dfs, array n, m, zero j, यह क्या हो गया, first row, last row, last row, last row मतलब, एकदम same रहेगा हर चीज,
+[849s] is equal to 0
+[850s] j less than m
+[852s] j plus plus
+[853s] last row में array of 0 नहीं
+[856s] array of n minus 1 j
+[858s] equal equal to o
+[860s] then dfs call कर दीजिए
+[862s] dfs array
+[864s] n, m, n minus 1
+[866s] and j, तो ये last row वाले 0 का
+[868s] take care हो गया
+[870s] first column
+[871s] first column
+[874s] just ultra कर दीजिए, अब i को बढ़ा हिए
+[876s] i को 0 से लेके n ले जाहिए
+[878s] हम उमीद कर देंगे आपको समझ में आ रहा हुआ
+[879s] first roll लेने क्या मतलब है
+[881s] i is equal to 0 और j सारा सारा सारा
+[883s] तो आप first roll लेंगे
+[884s] last roll लेने क्या मतलब है
+[885s] i को n-1 पे fix कर दिया और j को पुड़ा ले लिए
+[888s] first column लेने का मतलब क्या है
+[890s] j को 0 पे fix कर दिया और i सारा ले लिए
+[893s] तो वही कर रहे हैं, if array of i 0, first column है, equal equal to o, dfs,
+[903s] क्या array n, m i 0, ये हो गया, last column, last column, just same चीज़ करनी है,
+[913s] for i is equal to 0, i less than n, i plus plus, if array of i, m minus 1, m minus 1, last column, equal equal to o, dfs, array, n, m, i, m minus 1, very good,
+[931s] सारा आप boundary कर दी, सारा boundary करने से क्या होगा, जो जो भी boundary वाले 0 होंगे, वो सारे hash बन जाएंगे, उनके सारे दोस्त hash बन जाएंगे, मतलब जो जो connection है,
+[940s] जहाँ जहाँ बतलब कोई भी 0
+[942s] अगर कोई भी O अगर
+[943s] edge वाले से connected है तो वो hash बन जाएगा
+[945s] इसके बाद जो लोग बच जाएगे
+[947s] वो उनको x खा जाएगा
+[949s] इसके बाद जो लोग hash बने हुए है
+[951s] उनको आपको 0 बना देना है
+[952s] तो last step में क्या करेंगे
+[954s] पूरे array पे loop करेंगे
+[956s] i is equal to 0
+[958s] i less than n
+[959s] i plus plus
+[962s] for j is equal to 0
+[964s] j less than n
+[966s] j plus plus
+[967s] अब जो लोग hash बने हुए हैं
+[970s] जो लोग hash बने हुए हैं
+[972s] if array of i
+[975s] j equal
+[976s] equal to hash
+[977s] उनको क्या बनाना है?
+[979s] 0 वो बच्चे हुए होंगे
+[982s] वो बच्चे हुए होंगे
+[983s] o o else
+[986s] area of ij is equal to cross
+[987s] बाकी जतने है अब cross तो cross ही रहेगा
+[989s] अगर कोई 0 होगा अगर कोई 0 होगा
+[992s] जो बच गया है उसका एक ही मतलब है
+[993s] कि यह x उसको खाने वाला है
+[995s] करने के बाद return कर दीजे
+[997s] तो इसका देखिए code थोड़ा हाँ
+[998s] code थोड़ा लंबा है
+[999s] code हममान रहेंगे तोड़ा लंबा है लेकिन
+[1002s] लंबा है यहां से क्योंकि आप
+[1003s] चार्थ लूप यहां लिख रहे हैं इसे लंबा हो गया है
+[1005s] वैसे बाखी चीज यह सब तो
+[1007s] boilerplate code है boilerplate
+[1009s] boilerplate का मतलब कि बड़ा ही normal DFS का code है
+[1012s] तो यह code देख लीजे यहां से
+[1013s] ये code देख लीजिए ये DFS है
+[1016s] ये void solve है
+[1017s] ये देख लीजिए चार तरीके का loop है
+[1019s] और ये आपका last में आप जो करते हैं
+[1022s] वो है time complexity order of
+[1023s] m into n
+[1026s] space complexity में ज़्यादा कोई
+[1028s] space use नहीं हुआ है
+[1030s] DFS में space use हुआ होगा
+[1031s] DFS में space use होगा stack के लिए
+[1033s] तो वो m into n worst case में हो जाएगा
+[1035s] तो यह सरांड़ेड रीजन था बड़ा ही इजी बड़ा नकली question लेकिन बहुत फेमास question बहुत अच्छा question है तो इसको जाके करिए और मिलते हैं कल चलिए

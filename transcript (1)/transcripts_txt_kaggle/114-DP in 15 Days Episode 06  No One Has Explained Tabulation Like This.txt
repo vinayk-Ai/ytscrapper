@@ -1,0 +1,545 @@
+[30s] लेगिन ऐसा का है हुआ मतलब इसका मतलब यह है कि उस दिन जो हम लोग DP पड़े थे वो सही नहीं है या अभी जो हम code submit किये उसमें कुछ जादा ही advanced computation लग गया है उसी को आज हम लोग देखेंगे देखेंगे तो देखेंगे जब DP series शुरू हुआ था या तो जब बहुत समय
+[45s] हम आपको बोलते हुआ रहे हैं कि कोई भी DSA का question ठाके देख लीजिए कोई भी topic का कोई भी pattern का DSA question उसको solve करने के लिए दो ही तरीका है दुनिया में पहला तरीका है recursion से किसे recursion से मतलब कि आप एक function को बार बार बार बार call करते हैं और input को छोटा या change करते रहते हैं वो एक �
+[74s] दुनिया में कोई problem नहीं है जिसको
+[76s] आप recursion से नहीं कर सकते हैं और आप iterative से
+[79s] कर सकते हैं ऐसा भी कोई problem
+[80s] नहीं है जिसको आप iterative से कर सकते हैं लेकिन
+[83s] recursion से नहीं कर सकते हैं कौँ
+[84s] सा चुनना है ये depend करता है कि किसमें
+[86s] ज़्यादा आसानी पड़ रही है समझने में
+[89s] जैसे कि sum of array, अब sum of array में loop लिखना ज़्यादा असान है, i is equal to 0, i less than, i plus plus ये वाला, उसमें iterative लिखते हैं,
+[96s] Fibonaki जैसा, Fibonaki में Recursive ज़्यादा असान पढ़ा था
+[99s] क्योंकि ज़्यादा कुछ सोचना नहीं है
+[101s] N-1, N-2 का जोड़ देना है
+[103s] तो उसमें ज़्यादा असान और ज़्यादा
+[104s] convenient Recursion पढ़ा था तो Recursion लिखते हैं
+[107s] लेकिन एक बात तो तयह है
+[109s] कि कोई भी problem दोनों तरीकों से हो सकता है
+[113s] यही difference है
+[114s] अभी जो तक हम लोग DP series में problem किया है
+[116s] अभी तक हम लोग कितना
+[118s] Fibonaki कर चुके हैं, climbing stair कर चुके हैं
+[120s] house robber कर चुके हैं, zero one napsack कर चुके हैं
+[123s] चारो problem में हम लोग क्या किये थे
+[125s] सबसे पहले तो हम लोग उसका recursion लिखे थे
+[127s] अच्छा अच्छी बात थे recursion लिखे थे
+[129s] उसके बाद हम लोग देखे थे कि
+[131s] क्या इसमें overlapping सब problem है मनें कि
+[133s] same input को बार-बार कहीं repeat तो नहीं हो रहा है
+[136s] same input को बार-बार solve तो नहीं कर रहे है
+[138s] अगर ऐसा था तो हम लोग क्या किये थे
+[139s] उस input के answer को
+[143s] याद कर लिये थे
+[144s] क्या कर लिये थे
+[146s] इसी याद करने को
+[147s] याद करने को memorize करना बोलते हैं
+[150s] इसी method क्या कहला था ये method
+[153s] memoization
+[153s] जो भी spelling होता है
+[154s] इस method को memoization बोलते थे
+[156s] यही करते आ रहे थे
+[157s] लेकिन लेकिन अब dp का question भी तो dsa का question है ना भाई
+[162s] तो अगर dp का ये question dp का fibonacci या house robber recursion से हो सकता है
+[167s] तो house robber या fibonacci iterative से क्यों नहीं हो सकता है
+[172s] बिल्कुल हो सकता iterative से ऐसा तो हम बोले हैं कि ऐसा possible ही नहीं है
+[176s] कि कोई चीज recursion से हो और loop से नहीं हो तो loop से भी
+[179s] तो मतलब Fibonaki को, House Robber को, Zero One Napsack को, सब को loops लिखके भी solve करने का कोई न कोई तरीका तो होगा,
+[187s] कोई न कोई तरीका तो होगा जिससे आप iterative solve कर सकते हैं, आपको recursion लिखने के अधर बहुत ना पड़े,
+[191s] इसी iterative लिखने के method को
+[194s] DP में tabulation बोला जाता है
+[197s] क्या बोलाता है?
+[198s] tabulation बोला जाता है
+[200s] एक बात और बहुत frankly आपको बता देते हैं
+[202s] कि किसी दी interview में अगर आपसे DP का सवाल पूछ दिया
+[206s] rare chances होता है
+[207s] लेकिन अगर पूछ दिया
+[208s] तो आपसे expect ये नहीं किया जाता है
+[211s] कि आप उसका recursion लिखिए और उसको memoize कर दीजिए
+[213s] आना अच्छी बात है आपसे पूछा जाएगा
+[215s] कि क्या कर रहे हो लेकिन आपका
+[217s] final selection उसका final expectation
+[219s] आपसे पता है क्या होगा
+[220s] आपको tabulation का code लिखके
+[223s] उसको दिखाना पड़ेगा
+[224s] ऐसा Q ऐसा आपको समझ में आएगा इस lecture में लेकिन उपर उपर से बोला जाए ना
+[231s] तो memoization, memoization DP में, just आपको में recap दे रहें, memoization जो की recursion का एक form है
+[238s] और tabulation जो की iterative का एक form है, DP में दोनों का time complexity same ही होता है
+[244s] time complexity का मतलब ऐसा नहीं कि एक order of n square होगा, एक order of n होगा, नहीं
+[250s] practically अगर देखा जाए न तो tabulation में कम time लगता है
+[256s] क्यों कम time लगता है वो भी हम बता देंगे
+[258s] लेकिन realistically देखा जाए time complexity same है
+[261s] order of in इसका भी order of in उसका भी
+[262s] लेकिन अगर आप इसको real में चला के देखेंगे
+[265s] जैसा कि आप lead code के उस में देखें तो screenshot में
+[267s] tabulation में कम time लगता है
+[277s] yes, yes, कम space लगता है, मतलग
+[281s] recursion वाले problem में
+[282s] हम आपको क्या बोलेते हैं, सबसे आपकी बड़ी problem
+[283s] क्या होने वाली है memoization में
+[285s] आपका time तो कम होगा, time तो बचाएगा DP
+[287s] लेकिन DP को space चाहिए, क्यों
+[289s] क्योंकि वो जो diary आप maintain कर रहे हैं
+[292s] diary आप
+[293s] जो maintain कर रहे हैं जिस diary में आप लिख रहे हैं
+[295s] वो diary आएगा कहां से, वो diary space लगेगा न
+[298s] vector में लिखिए, array में लिखिए, hash map में लिखिए
+[301s] space चाहिए न उसको, तो dp का सबसे बड़ा खरावी था
+[304s] कि आपको space चाहिए, tabulation
+[306s] 90% cases में आपका ये problem solve कर देगा
+[309s] आपको कम space और
+[312s] realistically कम time याद रखिएगा
+[314s] realistically time complexity कम
+[316s] नहीं होगी लेकिन अगर आप उसको चलाएंगे
+[318s] ना तो आपको कम time में
+[320s] चल जाएगा इसी method को बोला जाता है
+[322s] tabulation किसी भी DP
+[323s] problem को iterative तरीके
+[326s] से solve करना उस चीज़ को क्या बोला
+[328s] आता है tabulation अब बात आती है
+[330s] कि tabulation लिखना कैसे है, अभी तक तो आप लोग
+[332s] recursion लिख रहे थे, memoization कर रहे थे, वगरा
+[334s] वगरा कर रहे थे, इसमें हम आपको
+[336s] simple सा एक चीज बता देंगे
+[338s] वो trick याद रखिएगा
+[340s] इस एक trick से आप किसी धी
+[342s] problem को, अगर आप उसका
+[344s] recursion वाला approach लिख चुके हैं
+[346s] या memoization वाला approach लिख चुके हैं, आप उसको 5 मिनट में tabulation में convert कर सकते हैं, कितना मिनट में? 5 मिनट में, 5 मिनट में tabulation, कोई formula याद नहीं करना है, कोई rule याद नहीं करना है, बस एक छोटा साथ बात समझना है, ये एक बात अगर आप समझ गए, किसी भी question को आप tabulation में convert कर सकते
+[365s] जो कि आपका final goal भी है, ठीक है, आई हम आपको Fibonaki को समझाते हैं, Fibonaki में आप लोग को recursion समझ में आ चुका है, उसी Fibonaki को आज tabulation में convert करते हैं, और देखते हैं कि कैसे फाइदा होता है, क्या फाइदा होता है, फाइदा होता भी है कि नहीं होता है, space बचता है कि नहीं ब
+[394s] recursion था, Fibonaki का recursion याद कीजिए,
+[396s] कुछ-कुछ ऐसा ही, कुछ-कुछ क्या, exactly यही लगा था,
+[399s] हाँ, Fibonaki वाले में हम बोले थे,
+[400s] कि यह DP का आप hash map ले लिजेगा, उससे फ़र्ट नहीं पड़ता है,
+[403s] diary तो diary है भाई, vector low,
+[404s] hash map low, कुछ below, vector हम इसलिए
+[406s] केस को convert कर दे, क्योंकि अब समझाने में असानी रहेगी,
+[408s] ठीक है, तो देखिए,
+[410s] Fibonaki में क्या होता था, आप function
+[412s] को call करते थे, किसके लिए, n के लिए,
+[415s] शुरुवात में, इस dp
+[416s] ने, dp क्या है, आपका diary है, तो शुरुवात
+[418s] में तो सारे answer इसके minus 1 है, मतलब
+[420s] यह आप लोग house robber में देख चुके हैं, knapsack में देख चुके हैं कि minus 1 है मतलब उसका answer अभी तक आपको नहीं मालूम है, मालूम चलेगा, अच्छी बात है, सबसे पहले आता था base case कि भईया अगर n 0 है या 1 है, any return कर दो मतलब,
+[432s] फिवो ना कि आपको बोलता था कि अगर n 0 है न, answer 0 होगा, n 1 है, answer 1 होगा, very simple, very comfortable, very good, उसके बाद आप लोग देखते थे कि अगर dp of n, minus 1 नहीं है, मतलब की, आप जिस n का answer निकालने कुछिश कर रहे है न, अगर उसका answer हो चुका है, अगर उसका answer compute हो चुका है, तो बार-ब
+[461s] के पास एक ही चाहता था कि आप recursion call कीजिए कि इसके लिए
+[464s] fun n का answer क्या होना चाहिए
+[466s] fun of n-1
+[468s] plus fun of n-2
+[469s] और जो भी answer निकले उसको dp में
+[472s] store भी कर देते थे हम लोग की आगे काम आएगा
+[474s] ये मिला जुला कि आपके Fibonacci का recursion
+[476s] code था ठीक बात है
+[477s] अब आपका goal है कि इसको आपको tabulation यादी की loop में
+[481s] अब हमको recursion नहीं लिखना है
+[482s] हमको कोई भी एक loop लिख के ये answer हमको पता करना है
+[486s] मतलब की अगर कोई आपसे पुछता है कि भाईया
+[488s] n is equal to 5 का fibonacci बताओ
+[490s] आपको एक loop लिख के उसका answer बताना है
+[493s] आपको ये recursion ये function नहीं लिखेना recursive
+[495s] वो आपका goal है किसके लिए
+[497s] tabulation के लिए ठीक है
+[498s] तो देखिए किसी भी recursion को
+[500s] एक बार आप recursion लिख लेते हैं
+[502s] एक बार आप recursion समझ लेते हैं
+[503s] उसको tabulation में convert करने का simple सा
+[506s] एक flow है एक flow chart time का है
+[508s] वो हम आपको बताते हैं देखिए
+[511s] सबसे पहले तो आईए एक input ले लिए अपने मन में एक छोटा सा input ले लिए
+[514s] कि चलिए n is equal to 4 के लिए देखते हैं
+[517s] n is equal to 5 बड़ा हो जाएगा 4 के लिए 4 के लिए ये recursion चलेगा
+[521s] तो देखिए अब आपको दीरे दीरे करके step लिखना है
+[524s] सबसे पहले तो आप एक dp array बनाएंगे
+[527s] क्या array बनाएंगे dp
+[528s] 1,2,3,0,1,2,3,4
+[532s] इतने size का एक dp array बन गया
+[534s] अच्छा
+[535s] शुरुवात में तो sub-1 है
+[540s] यह आपका dp array है
+[542s] अच्छा
+[543s] शुरुवात में sub-1 है
+[545s] अब आपको एक चीज देखनी है
+[546s] कि यह array
+[548s] आपका ये recursion function
+[549s] किस order में
+[551s] आपका ये recursion का function
+[553s] किस order में आपके इस dp array में values भर रहा है
+[557s] आपका ये recursion function
+[559s] किस order में आपके इस dp array में values भर रहा है
+[563s] और किसी एक values को उसमें भरने के लिए
+[566s] यानि किसी एक value में
+[568s] value को dp में भरने के लिए
+[570s] क्या चीज़ें use हो रही है
+[572s] क्या चीज़ा यूज हो रही है
+[573s] वो आपको note down करना पड़ेगा
+[575s] कहने का मतलब मेरा क्या है अभी हम आपको clear कर देते हैं
+[578s] शुरुवात में तो देखिए
+[580s] dpare minus 1 है लेकिन अगर आप चाहें
+[583s] तो base case का value dpare में लिख सकते
+[586s] dpare क्या है dpare answer है
+[588s] dpare बोलता है कि भईया
+[590s] अगर n 0 है उसका answer ये होगा
+[592s] n 2 है तो उसका answer ये होगा
+[594s] n अगर 4 है तो उसका answer ये होगा
+[596s] आपको last में किसका चाहिए
+[597s] आपको last में ये value चाहिए कि dp of 4 क्या होता
+[600s] यहीं चाहिए ना आपको last में
+[601s] भर जाए अच्छा
+[603s] तो देखिए
+[605s] शुरुवात में तो सारे minus 1 है
+[606s] लेकिन अगर आप चाहें तो base case का answer तो DP में डाल ही सकते हैं
+[611s] base case का मतलब n is equal to 0 का answer क्या है आपको मालूम है ना कि 0 है
+[614s] हाँ मालूम है n is equal to 1 का answer आपको मालूम है कि नहीं
+[617s] मालूम है 1 है तो ये दोनों तो आप DP में डाल ही सकते हैं
+[621s] तो डाल दीजे, तो ये दोनों आप उठा के dp में डाल दीजे, तो ये दोनों को हम बोलते हैं कि 0 और 1, अब याद रखिए, सबसे पहले क्या भरा, कौन सा slot भरा dp में, सबसे पहले dp of 0 भर गया, किस से? 0 से, ये तो आप खुदी भर दिये कि base case म को मालूम है, अच्छा, अ
+[644s] दोनों पहले में भर गया है, बाकी सब माइनस वन है, बाकी सब माइनस वन है, अब आपको देखना है कि recursion आपके इस dp को कैसे भरता है, recursion कैसे कैसे कैसे कैसे इसमें value घुसाता है, आईए वो देखते हैं, recursion को चलाईए, recursion को dry run करके चलाते हैं, समझते हैं कि recursion में हो क्या
+[660s] असली में क्या हो रहा है, देखिए, सबसे पहले recursion call होगा n is equal to 4 के लिए, lead code वाला function n is equal to 4 के लिए ही call करेगा, ठीक है, अब यह base case तो है नहीं, base case तो है नहीं, क्या आपको n is equal to 4 का answer बालूम है, नहीं, n is equal to 4 का answer अभी नहीं बालूम है, क्योंकि वो minus 1 है, तो आपको further recursion call कर
+[682s] कर देंगे, fun of 3
+[685s] plus fun of 2
+[686s] यही होगा ना, यह line का
+[688s] मतलब क्या है, return dp n is equal to
+[690s] fun of n minus 1 plus fun of n minus 2
+[692s] इस line का मतलब यह है ना भाई
+[693s] कि dp of 4 is equal to fun of 3
+[696s] जो भी answer आए, plus fun of 2
+[698s] जो भी answer आए, ठीक है, आईए
+[700s] fun of 3 को call किजिए, fun of 3
+[702s] को call किजिए, fun n is equal
+[704s] to 3, यहाँ भी same बात होगी
+[706s] ना तो n is equal to 3 base case है
+[708s] ना n is equal to 3 का अभी आपको answer पता है
+[710s] नहीं पता है, minus 1 है, नहीं पता है
+[711s] सेम बात यहाँ भी हो जाएगी
+[714s] तो यहाँ भी आप बोलेंगे कि ठीक है
+[715s] अभी हमको नहीं मालूम है, तो हम ना
+[717s] dp of 3 is equal to
+[720s] fun of 2
+[721s] plus fun of 1
+[724s] अच्छी बात है, fun of 2 को
+[726s] चलाईए, fun of 2 को चलाईए, fun n is equal to 2, यहाँ भी same problem,
+[731s] न n is equal to 2 base case है, न n is equal to 2 का अंसराइब को मालूम है,
+[735s] मतलब ना आपके DPR में है, same बात यहाँ भी हो जाएगी,
+[738s] तो आप बोलेंगे कि dp of 2 is equal to fun of, fun of क्या, n is equal to 1,
+[745s] plus fun of n is equal to 0
+[748s] गही होगा, गही होगा
+[749s] n is equal to में यह होता है
+[750s] अभी तक सब clear, अभी तक तो कोई हम नया बात नहीं बता है
+[754s] अब बहुत ध्यान से सुनिएगा
+[756s] n is equal to 1
+[757s] n is equal to 1
+[758s] n is equal to 1 का answer क्या है
+[760s] क्या n is equal to 1 का answer आपको मालूम है पहले से
+[763s] yes, आपको मालूम है
+[764s] क्या मालूम है n is equal to 1 का answer
+[766s] आपको मालूम है कि 1 होता है
+[770s] तो एक तरीके से हैं लिख सकते हैं कि
+[772s] इसको call करेंगे न
+[774s] इसका value same as dp of 1 है
+[778s] प्लस
+[778s] n is equal to 0 का भी answer आपको मालूम है
+[780s] आपके dp array में लिखा हुआ है क्या होता है
+[782s] 0 होता है
+[783s] प्लस dp of 0
+[788s] क्या अब ये
+[788s] n is equal to 2 का काम हो गया, हाँ, अब आपके dp array में आप एक चीज भरने जा रहे हैं, पहली बार कौन सा value को, dp of 2 को भरने जा रहे हैं, dp of 2 की value ultimately क्या आई, dp of 1 plus dp of 0, अब ये जाके क्या करेगा, dp of 2 में क्या भर देगा, 1 plus 0 is equal to 1, मतलब की dp of 2 change हो गया किस से, 1 से, अपने इस
+[817s] इस रे में क्या भरे आप? dp of 2. dp of 2 कैसे भरे? क्या यूज करके भरे? dp of 1 प्लस dp of 0. यही हुआ न? रिकर्जन यही क्या न? हम यहां वो लिख रहे हैं कि रिकर्जन क्या करता है? रिकर्जन क्या कर रहा है असली में? रिकर्जन क्या कर रहा है भया? कैसे भर रहा है dp रह
+[837s] कुछ तो कर रहा होगा जिससे DPR भर रहा है
+[839s] recursion यही कर रहा है
+[840s] अच्छी बात है वापस आईए
+[842s] n is equal to 2 हो गया खतम
+[843s] n is equal to 2 का काम तमाम हो गया
+[845s] n is equal to 3 में वापस आईए
+[848s] अब देखिए
+[849s] fun 2 से कुछ न कुछ आंसर आया होगा
+[854s] फन टू से कुछ न कुछ आंसर आया होगा, जो की अब dp of 2 में भी लिखा जा चुका है, इसको हम बोल सकते हैं कि ये dp of 2 बन चुका है, प्लस, fun of 1, fun of 1 अगें क्या है, base case, fun of 1 base case है, fun of 1 का आंसर अब को मालूम है, क्या है, dp of 1, इसको लिख दीजिए, dp of 1, अब देखिए,
+[872s] अब देखिए, fun of n is equal to 3 में में लोग खड़े हैं, कौन सा dp का slot भरा जा रहा है, dp of 3 भरा जा रहा है, किस से भरा जा रहा है, dp of 2 plus dp of 1, मतलब की answer इसका आएगा 2, यहाँ पे आके लिख देगा 2, again लिखिए, चौथे नंबर पे क्या भरा गया, dp of 3 is equal to, कैसे भरा गया, क
+[901s] का भी काम हो गया तमाम
+[904s] n is equal to 4 पे वापस आईए
+[905s] fun of 3 पूरा चल चुका है
+[907s] और fun of 3 का आंसर भी आप भर चुके है
+[909s] इसको लिख लिख लिजिए dp of 3
+[911s] इसका value तुवह ही हो रहेगा dp of 3
+[913s] plus fun of 2 फिर call हुआ
+[915s] fun of 2 फिर call हुआ
+[916s] लेकिन जब fun of 2 call होगा
+[919s] तो fun of 2 का answer already dp में मौजूद है
+[922s] तो कुछ और recursion आगे भी बढ़ेगा
+[924s] सीधा सीधा dp of 2 return हो जाएगा
+[926s] इसको लिख लीजिए dp of 2
+[928s] अब देखिए पांचवे नमबर पे किस dp slot को अब भर रहे है
+[933s] dp of 4 किस value से dp of 3 plus dp of 2
+[937s] मतलब की यहाँ पे क्या answer आ जाएगा
+[940s] 3 आ जाएगा, यहाँ पे answer आ जाएगा
+[942s] 3, इसको भी अपने उसमें लिख लीजिए
+[944s] अपने list में लिख लीजिए
+[946s] last number पे dp of 4 भरा गया
+[948s] और इसकी value क्या हुई
+[950s] 3 plus dp of 2
+[952s] yes, yes, yes
+[954s] ये करने के बाद
+[956s] सारा चीजें खतम और आपका recursion
+[958s] end हो जाएगा, आपका recursion क्या हो जाएगा
+[960s] end हो जाएगा, आपका final answer
+[962s] कहां पे आपको मिला है, आपका final
+[964s] answer आपको ये मिला है
+[966s] dp of 4 which is
+[968s] 3, तो आपका answer क्या होगा
+[970s] 3, अब बहुत गौर से देखिए
+[972s] अब आप ये लिख चुके हैं, ये लिखने कहर बार
+[974s] जरूत ने हम आपको समझाने के लिए कि आप सोचेंगे कैसे, हम ये बीना लिखे भी सोच सकते हैं, आप लोग एक बार लिख लीजिए, इस order में ये क्या question है, recursion क्या कर रहा है, recursion exactly यही कर रहा है, इसलिए हम बोले, recursion क्या कर रहा है, अकर आपको समझ में आ जाए ना, तो �
+[991s] iterative में convert करना बढ़ा असान है
+[993s] recursion क्या कर रहा है देखिए
+[995s] recursion सबसे पहले क्या कर रहा है
+[997s] recursion सबसे पहले तो एक dp array
+[999s] बना रहा है dp array of length
+[1001s] n plus 1 n plus 1 माल लिजे
+[1003s] क्योंकि n is equal to 4 के लिए
+[1005s] आपको 0, 1, 2, 3, 4 type का
+[1007s] index रही है तो 5 size का माल लिजे
+[1009s] ठीक है माल लिए उसके बाद
+[1011s] recursion पहला काम क्या कर रहा है
+[1013s] dp0 को 0 assign कर रहा है
+[1015s] क्या आप यह कर सकते हैं
+[1017s] बिल्कुल dp of 0 is equal to 0
+[1018s] यहाँ पे semicolon लगे तो c++ है
+[1021s] दूसरा काम क्या कर रहा है
+[1023s] dp1 is equal to 1
+[1024s] very good, very good, हो गया
+[1026s] तीसरा काम क्या कर रहा है
+[1028s] dp2 is equal to what
+[1031s] dp1 plus dp0
+[1032s] मतलब की dp2 is equal to dp1 plus dp0
+[1036s] अगला गाम क्या कर रहा है dp3 is equal to dp2 plus dp1
+[1040s] क्या एक pattern आपको notice कर रहा है
+[1043s] क्या आपको एक pattern दिखाई दे रहा है
+[1045s] हमको दिखाई दे रहा है कौन सा pattern हमको दिखाई दे रहा है
+[1047s] अगर आपका n is equal to 4 दिया हुआ है
+[1050s] अगर is equal to n is equal to 4 दिया हुआ है न तो पता है recursion क्या कर रहा है और आप इसको कैसे कर सकते हैं
+[1055s] recursion यह कर रहा है for i is equal to 2 i less than is equal to 4 i plus plus
+[1062s] और हर i dp of i is equal to dp of 2 is equal to what dp of 1 plus dp of 0
+[1071s] तो मतलब की dp of i is equal to dp of i minus 1 plus dp of i minus 2, yes, yes, exactly यही काम, exactly यही काम आपका recursion कर रहा है, line by line, हम लोग प्रूव कर चुके हैं कि recursion क्या कर रहा है, recursion exactly यही काम कर रहा है, एक बार आपको यह clear हो गया ना कि recursion कर क्या रहा है, उसके लिए loop सोचना ना बच्चों का खेल है, recursion यही क
+[1100s] कर रहा है न जी सबसे पहले रिकरजन क्या भरा dp of 0 भर दिया खुद से 0 अब भी भर दीजिए dp of 1 1 भर दिया आप भी भर दीजिए उसके बाद ये खेल खेलना शुरू किया dp of 2 हो गया dp of 1
+[1112s] 1 प्लस dp of 0 मतलब की dp of i is equal to dp of i minus 1 plus dp of i minus 2
+[1118s] इस काम को 4 तक कर दीजिए आपको dp 4 मिल जाएगा
+[1122s] last में return dp of 4 कर दीजिए बस खेल खतम यही काम तो recursion कर रहा है
+[1127s] यह काम आप भी कर सकते है इसके recursion है क्या जरूवत
+[1129s] जो हो कर रहा है आप करिये ना इसको ऐसे लिखिए इसको ऐसे लिखिए क्या लिखिना है देखिए इसको लिखिए आपको lead code में क्या मिलेगा आपको बस n मिलेगा int lead code क्या मिलेगा आपको int n okay आपका क्या काम है भाई सबसे पहले तो एक vector of int dp कितने size का n plus one size का अब recursion क्या का
+[1153s] किया था शुरू में, dp of 0 is equal to 0, dp of, हाँ, एक काम और कर लिजिए,
+[1160s] कि यहाँ पे, लिख लिजिए कि if n equal equal to 0, और n equal equal to 1,
+[1167s] return n, क्योंकि हो सकता n 0 1 दे दे, तो ठीक है, उसके लिए कर लिजिए,
+[1170s] return n, यह हो गया एक line का काम, अब, अब, अब, dp 0 is equal to 0,
+[1175s] recursion भी किया था, dp 1 is equal to 1, recursion भी यह किया था, अब dp क्या करना शुरू किया था, भाई, for int, i is equal to 2, 0, 1 हो चुका है 2 से, i less than equal to n, i plus plus, और क्या किया था, dp of i is equal to dp of i minus 1, plus dp of i minus 2,
+[1199s] खतम, recursion का answer कहां पे store था, dp of 4 में, मतलब की आपको क्या return करना है भाई, आपको क्या return, dp of n, ये लीजिए, इस code को क्या बोला जाता है English में, tabulation, tabulation, क्यों इस code को tabulation बोला जाता है, क्योंकि जो काम recursion कर रहा था, वो काम आप खुद कर लिये, बिना recursion लिखे, एक simple loop की मदद
+[1223s] से ये loop कैसे लिखना है कैसे समझ में आया जब आप recursion को
+[1227s] देखे और recursion से पूछे किस साला तुम कर क्या रहे हो करने का
+[1230s] क्या मतलब है dp of मतलब dp array को किस order में भर रहे हो
+[1235s] और dp array को भरने के लिए क्या use कर रहे हो अगर आपको वो एक
+[1239s] पता चल गया, वो ऐसा click हो गया, आप उसको यहाँ पैसा लिख लिए, तो फिर उसको loop में बदलना, यह बड़ा basic सा problem है, यह कोई 10 class का बच्चा आपको करके बता देगा, इस transformation को क्या बोला जाता है, tabulation, अभी भी यह complete नहीं, अभी भी इसमें एक और चीज़ बाकी है, वो ठ
+[1254s] पताते हैं लेकिन आप लोग के मन में डाउट यह भी आएगा कि जब tabulation इतना असान था यही करना था तो day 1 से tabulation पढ़ाए रिकर्सिव क्यों पढ़ाए अगर हम रिकर्सिव आपको नहीं पढ़ाते अगर आपको यह memoization नहीं समझ में आता अगर आपको यह dry run नहीं समझ में �
+[1276s] तो आप ये कैसे लिखते हैं ये जो हम लिखे हैं ये आप कैसे लिखते हैं ये चलाने कैसे आएगा
+[1299s] tabulation में कुछ नहीं आप कर पाएंगे ये तो बहुत frankly हम आपको बोल रहे हैं
+[1302s] अब आपको एक picture आ रहा होगा कि ठीक है recursion में यह हुआ
+[1305s] tabulation में हुआ
+[1306s] एक और इसमें improvement है जो कि tabulation में करना भी चाहिए
+[1309s] वो अभी बता देते हैं, लेकिन उम्मीद करते हैं कि ये पूरा process आपको समझ में आया होगा, कि कैसे recursion analyze किया जाता है, एक order देखा जाता है कि किस order में DPR भर रहा है, DPR भरने के लिए क्या use हो रहा है, कुछ तो होगा जो use हो रहा होगा, उसमें से एक pattern निकालके उसको loop के form म
+[1327s] लिख देता इसी का नाम tabulation है आगे आईए एक बात और बताते हैं अब एक और बात सुनिए यह बहुत important है इसको
+[1347s] आप चलाएंगे, सम्मिट हो जाएगा, कोई दिक्कत नहीं, एक दम
+[1349s] comfortable सम्मिट हो जाएगा, लेकिन
+[1351s] इसमें एक अभी छोटा सा दिक्कत है, वो क्या दिक्कत है
+[1354s] आपको हम अभी दिखाते हैं, आप
+[1356s] क्या कर रहे हैं, हम आपको बताते हैं, देखिए, आप
+[1378s] माल लीजिए n is equal to
+[1379s] n is equal to 5 है
+[1381s] n is equal to 5 है ठीक है आप ऐसा आरे बनाएंगे तब
+[1384s] 5 plus 1 6 type का आरे बनाएंगे
+[1386s] 1, 2, 3
+[1388s] 0, 1, 2
+[1389s] 3, 4 और 5 इतना size का आरे भी
+[1392s] बना आपका अब आपको देखते हैं कि
+[1394s] अच्छा सबसे पहले आप यहाँ पे
+[1396s] 0 और 1 लिख दे, dp 0 और 1 को use कर लिए, एक बात बताईए, dp of 2 निकालने के लिए आपको क्या चाहिए, dp of 2 निकालने के लिए आपको किसकी जरूरत है, इस formula के इसाब से, dp of i-1 प्लस i-2, मतलब कि आपको न, dp of 0 की जरूरत है, और dp of 1 की जरूरत है, dp of 2 निकालने के लि
+[1426s] और dp of 1 की, यही है न, यही होता न, अच्छा, और आगे बढ़िए, dp of 4 भी आप आएंगे, dp of 4 निकालने के लिए आपको किस, दो चीजों की जरूरत है, आपको dp of 3 लगेगा, और आपको dp of 2 भी लगेगा, ओके, dp of 5 जो कि आपका final answer है, उसके लिए आपको क्या लगे�
+[1444s] उसके लिए आपको dp of 4 लगेगा और dp of 3 लगेगा यही और last map return dp of 5 यह आपका answer हो जाएगा यही आप कर रहे है ना loop में अभी तक सही समझ में रहा है ना ठीक है अब हमको एक बात बताईए dp of 2 निकालने के लिए dp of 0 और dp of 1 का जरुवत था ठीक है ओके अच्छी बात है
+[1465s] dp of 3 निकालने के लिए dp of 2 और dp of 1 का जरुवत है
+[1468s] क्या dp of 3 निकालने के लिए dp of 0 का जरुवत है
+[1472s] नहीं, नहीं है
+[1473s] एक बार dp of 2 हो गया, निकल गया
+[1476s] उसका कुछ भी value आया x
+[1477s] आ गया माल लीजिए, कुछ भी
+[1479s] उसके बाद जब आप dp of 3 के तरफ आएंगे
+[1481s] तो आपको dp of 0 का जरुवत नहीं है
+[1484s] नहीं है न जरुवत आपको बस 2 और 1 का जरुवत है
+[1486s] ओके अच्छा
+[1488s] dp of 4 के लिए
+[1489s] क्या आपको dp of 1 का जरुवत है
+[1492s] नहीं
+[1493s] क्या dp of 4 के लिए आपको dp of 0 का जरुवत है
+[1496s] नहीं आपको dp of 4 के लिए केवल dp of 3
+[1499s] जो कि आप अभी निकाले हैं और dp of 2
+[1502s] जो कि आप एक step पहले निकाले थे
+[1504s] dp of 5 के लिए आपको सिर्फ दो चीजों की जरुवत थी
+[1507s] जो आप अभी निकाले पहले और जो आप इससे पहले निकाले थे
+[1510s] dp of 5 के लिए आपको dp of 0, dp of 1, dp of 2
+[1514s] किसी की जरुवत नहीं है
+[1516s] तो एक बात हमको बताइए कि जब आपको एक value निकालने के लिए केवल दो पुरानी values चाहिए
+[1523s] कितनी सिर्फ दो पुरानी values चाहिए
+[1526s] मतलब कि अगर आप dp of 5 निकाल रहे हैं आपको जरूरत की इस value की है बस
+[1531s] केवल dp of 4 और dp of 3 उसके पहले जितना भी आया हो उससे फर्क नहीं पड़ता है
+[1536s] आपको ये small input पर नहीं समझ में आएगा लेकिन imagine कि लिए n 100 है
+[1540s] तो आप ऐसा देखिए कि n is equal to 100 के लिए dp of 100 निकालने के लिए आपको केवल dp of 99 और dp of 98 की जरूत पड़ेगी
+[1551s] उससे पहले 0 to 97 में क्या है
+[1554s] एरे में उससे कोई घंटा फरक नहीं पड़ता है भाई
+[1556s] तो जब आपको फरक ही नहीं पड़ता है पिछले वैल्यू से
+[1560s] जब आपको पूरे एरे चाहिए ही नहीं
+[1562s] तो साला पूरा एरे हम लोग store क्यों कर रहे हैं
+[1565s] पूरा array store क्यों कर रहे हैं
+[1567s] आपको हर बार केवल
+[1569s] पिछला value उसके
+[1571s] पिछे का value बस दो value चाहिए
+[1573s] last का मतलब recent
+[1575s] का दो value चाहिए केवल
+[1577s] वो चाहिए बाकी के array में
+[1579s] क्या remind लिखा हुआ उससे कोई फर्क
+[1581s] नहीं पड़ता है तो जब कोई फर्क नहीं पड़ता है
+[1583s] तो एतना सारा space लेके कहें बैठे हुए हैं, space का क्या करेंगे, इतनी plot 3 है, क्यों बैठे हुए हैं, हम लोग इसमें space optimization करेंगे, क्या space optimization करेंगे, देखिए, हर बार, हर बार आपको किसका ज़रूत पड़ता है, previous value का, मतलब previous value का, और उसके भी previous value का, मतलब previous previous का, दो ही का ज़
+[1613s] वाले का dp of 0 का इसी का ज़रूत पड़ता है ना तो मतलब की जो आप का हम यहां कर रहे है ना यह array बना रहे है और dp 0 को 0
+[1621s] जो dp1 को 1, इसको
+[1623s] array मन बनाईए, इसको बस दो variable ले लिजिए,
+[1626s] क्या हम बोलना चाहरे है, आप ये कर सकते हैं, देखिए,
+[1627s] बड़ा simple सा चीज है, आप आगए, उसके बाद आप क्या किये न,
+[1632s] आप ये किये, int,
+[1635s] previous, previous,
+[1636s] previous का मतलब, देखिए, आपका
+[1638s] computation start कहां से होना है
+[1639s] आपका computation dp of 2 से start होना है
+[1642s] dp of 2 सहीं होना है जो आपका loop है
+[1644s] 0 और 1 का answer पता ही है
+[1645s] 2 के लिए
+[1647s] previous क्या है उसके just पहले
+[1649s] 1 1 1
+[1650s] तो अगर हम previous में जो भी काम
+[1653s] आप dp of 1 में लिखना चाहते थे
+[1655s] क्या लिखना चाहते थे 1
+[1656s] उसको previous में store करा दीजिए
+[1660s] और int
+[1662s] previous previous मतलब
+[1663s] एक और पहले तो dp of 2 के लिए
+[1666s] previous हो गया 1
+[1667s] dp of 2 के लिए previous का previous क्या हुआ
+[1669s] dp of 0 तो जो भी value अब dp of 0
+[1672s] में रखना चाहते थे ना 0
+[1674s] उसको यहाँ पर रख दीजिए
+[1675s] उसको यहाँ पर रख दीजिए
+[1676s] उसको यहाँ पर रख के
+[1678s] खतम हो गया खेल
+[1679s] अब देखिए क्या trick करेंगे, अब देखिए हम क्या खेल करते हैं
+[1682s] for int, i is equal to 2, i less than equal to n, i plus plus
+[1689s] ठीक है, अब आप क्या किये थे, dp of i is equal to dp of i minus 1 plus dp of i minus 2
+[1696s] dp तो अब है ही नहीं, हम तो बोल रहे हैं, आप आरे बनाए ही नहीं है
+[1699s] कोई DPRA नहीं है तो देखिए
+[1701s] answer निकालने के लिए आप तो क्या चाहिए
+[1703s] एक answer variable बना लीजिए
+[1705s] answer is equal to क्या चाहिए
+[1707s] previous plus previous का previous
+[1709s] उन दोनों को जोड़ दीजी यही तो मतलब था
+[1711s] DPRA का भी यही तो मतलब है न
+[1713s] dp of 2 का answer कैसे आता था
+[1715s] dp of 1 plus dp of 0 हम बोलें
+[1717s] कि आप start करने से पहले न, previous में एक तरीके से dp of 1 को आप माल लिजे कि यहाँ है, previous previous एक तरीके से dp of 0 है, तो इसका answer क्या आएगा, previous plus previous of previous, okay, very good, very good, answer आगया, answer आगया, अपका dp of 2 solve हो गया, लेकिन, लेकिन, इसका answer तो आगया, अब dp of 3 कैसे निका लिएगा, dp of 3 के लिए क
+[1745s] उसका एक previous जो की अब dp of 2 को होना पड़ेगा और उसका previous का previous जो की dp of 1 को होना पड़ेगा मतलब की एक बार आप answer निकाल लिए एक बार आप answer निकाल लिए यहाँ पर answer इसका निकल गया previous plus previous previous very good अब आपको values को थोड़ा change करना पड़ेगा अभी तक अभी तक अभी तक आपक
+[1772s] हुआ है dp of 0 लेके वो अभी अभी शुरू करने पे dp of 0 के बैठा हुआ है
+[1778s] previous किस पे बैठा हुआ है dp of 1 पे शुरू में शुरू का बात कर रहे हैं आप
+[1783s] decide किया था ना कि यह होगा आप अभी answer निकाले हैं ये वाला answer किसको
+[1788s] previous और previous previous को जोड़के
+[1791s] आपका answer एक तरीके से
+[1793s] क्या है अभी?
+[1794s] dp of 2
+[1795s] अब आपको अगले बार
+[1799s] dp of 3 निकालना है
+[1801s] dp of 3 को किन दो values की जरूरत पड़ती है?
+[1804s] dp of 2
+[1805s] plus dp of 1
+[1807s] यही होता था नए equation
+[1809s] मतलब की dp of 2 को क्या बनना पड़ेगा आब?
+[1813s] previous और dp of 1
+[1815s] मतलब previous
+[1816s] previous तो आप क्या करिए
+[1819s] previous previous की value को
+[1821s] previous previous की value को
+[1823s] previous previous की value को
+[1826s] previous
+[1827s] previous previous तो लब last का भी last
+[1830s] दो छोड़के
+[1830s] equal to previous यह देखिए
+[1833s] इससे क्या हुआ
+[1834s] आपके previous previous में क्या value आ गई
+[1837s] dp of 1 आ गया यहाँ पर आके
+[1839s] dp of 1 आ गया और
+[1842s] previous में आपको क्या चाहिए
+[1843s] dp of 2 जो आप अभी निकाले हैं answer में
+[1846s] मतलब की previous is equal to answer
+[1851s] ये देखिए आपका काम हो गया
+[1853s] अब जब आप अगले बार जब आप ये loop फिर चलाएंगे
+[1857s] अब i is equal to 2 पे तो चल गया
+[1858s] जब आप i is equal to 3 पे चलाएंगे ना
+[1861s] आप फिर से same काम करेंगे
+[1863s] answer is equal to previous
+[1865s] जो की अब आंसर जो की dp of 2 बन चुका था
+[1868s] प्लस प्रिवियस प्रिवियस जो की प्रिवियस मतलब जो की dp of 1 बन चुका था
+[1873s] आप ऐसे करके dp of 3 का आंसर निकाल देंगे
+[1875s] 4 पे जाएंगे सेम काम होगा
+[1877s] मतलब हर बार क्या हो रहा है देखिए
+[1878s] शुरू करने से पहले हम लोग दो चीज़े स्टोर किये
+[1881s] previous उसका भी previous
+[1884s] यहाँ पे हम लोग लिखे जो हमको dp of 0 में लिखना था
+[1887s] previous में हम लिखे जो हमको dp of 1 में लिखना था
+[1890s] अब हम अपना loop चलाना शुरू किये
+[1892s] हर बार अपना हम answer निकालते हैं इन दोनों को जोड के, answer निकालने के बाद हम एक-एक shift कर देते हैं, मतलब एक आगे कर देते हैं, हम क्या करते हैं, भाई previous, previous, तुम मन जाओ अब dp of 1, भाई previous, तुम मन जाओ अब answer, तुम मन जाओ answer, अगले बार same काम, अगले बार same काम, इसक
+[1913s] जादा समझ मैं है का लेकिन हमको जितना आता था हम समझा चुके हैं
+[1916s] इस काम से
+[1917s] ये क्यों हुआ यतना दिमाग क्यों लगाए
+[1920s] अब आपका
+[1921s] इस प्रोग्राम का space
+[1923s] complexity क्या है भाई आप कोई
+[1925s] extra space यूज़ कर रहे हैं क्या
+[1927s] नहीं कर रहे हैं कितना order
+[1929s] of one space use कर रहे हैं
+[1931s] जो आप पहले array यूज कर रहे थे
+[1933s] इतना बड़ा array यूज कर रहे थे
+[1935s] recursion में भी array यूज कर रहे थे
+[1936s] अभी भी कर रहे थे
+[1937s] लेकिन इस तरीके से
+[1939s] आप देखे कि हमको actual में चाहिए
+[1941s] क्या हमको पूरा array तो चाहिए नहीं
+[1954s] इस तरीके से आप अपने space complexity को न, order of 1 मतलब constant space, इसमें कोई भी space use नहीं हो रहा है extra, और time complexity, order of 1, यह आपका time and space, इसलिए हम आपको बोले थे कि 90% of problems में न, tabulation आपके space को खतम कर देगा, इस चीज़ को क्या बोलाता है, space optimization, यह पहचानना कि क्या पूरे dpra का हमको जरुवत भ
+[1984s] तो last के दो values को variable में करके इधर उदर छेर चार करते रहो न जी कहला अतना बड़ा array
+[1990s] maintain करना है और ये करना है तो इस चीज़ को क्या बोल आता है tabulation with space optimization
+[1996s] इसलिए आपको बोले थे कि realistically speaking tabulation को अच्छा माना जाता है किसे memoization से
+[2002s] इसलिए अच्छा माना जाता है क्योंकि Memoization में Recursion Call होता है
+[2006s] एक तो Recursion Call होगा बार-बार-बार-बार-बार उसमें समय लगता है
+[2009s] उपर से Space आपको लेना ही पड़ेगा
+[2011s] Recursion में ये trick नहीं कर सकते तो वहाँ पे लेना पड़ेगा
+[2013s] tabulation में एक तो एक ही function में पुरा काम हो जाएगा
+[2016s] लुक चलाके और आप चाहे तो
+[2018s] अपने दिमाग को यूज करके
+[2020s] space optimize कर सकते हैं
+[2021s] तो यह था Fibonacci का optimized version
+[2024s] मतलब अगर आपसे interview में पूछा राता है तो आपको
+[2026s] यह बताना पड़ेगा
+[2028s] recursion ठीक है recursion memoization ठीक है
+[2030s] लेकिन target ये होना चाहिए
+[2033s] अगर ये आपको समझ में आया है
+[2035s] तो please जाके इसको submit कीजिएगा
+[2036s] और हम आपसे चाहते हैं कि
+[2038s] और भी problems, climbing stair को try कीजिए
+[2040s] tabulation में रखने का same problem है
+[2042s] एकदम same problem है फैट्बफी वोनाकी के तरफ
+[2044s] climbing stair को please जाके try कीजिए
+[2046s] खुद से solve करने का नहीं तो हम फिर
+[2048s] आगे वाले में करवाएंगे और
+[2049s] अगर कोई भी पार्ट समझने में दिक्कत है
+[2052s] तो प्लीज बड़ा बड़ा कमेंट करिए
+[2054s] कमेंट करिएगा कि नहीं समझ माया
+[2056s] इसको हम समझाएंगे क्योंकि
+[2058s] अगर यह नहीं समझ में आता है तो आगे बढ़ने हैं कोई purpose है नहीं अभी हिसाब से ठीक है
+[2062s] तो please comment करिएगा कैसा भी है और कैसा नहीं है और चलिए मिलते हैं अगले दिन
+[2066s] थैंक यू

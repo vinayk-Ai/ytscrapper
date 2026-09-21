@@ -1,0 +1,545 @@
+[0s] This is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most important video, this is the most
+[17s] आपको कैसे आएगा, जब हमी को नहीं आता था शुरूर में, तो किसी को नहीं आएगा, मेरी गलती है, तो अभी तक हम जतना भी पढ़ा रहे थे, time और space complexity समझना बहुत इसलिए भी जरूरी है, कि आपको पता चलता है कि कौन सा algorithm कभ यूज करना है, ये इसका आदा खेल time complexity म
+[45s] उसको देखके भी पता चल जाता है, एक हिंट मिल जाता है कि कौन सा इल्गरिदम नहीं लगेगा और कौन सा लग सकता है
+[51s] इसके लिए सबसे पहले शुरू करते हैं, कहानी के तरह समझाएंगे, बहुत सिंपल में समझ में आ जाएगा
+[57s] सबसे पहले आजाओ
+[58s] इलीट कोड पे
+[60s] ठीक है हम लोग इलीट कोड पे प्रोग्राम समिट करते हैं
+[62s] या तो GFG पे करते हैं
+[64s] ऐसा है कोई वेबसाइट होता है वहाँ करते हैं
+[66s] कहीं भी कर सकते हैं अल्लाइन में
+[67s] अब देखो
+[68s] सबसे पहला बात समझो कि
+[70s] simple operation क्या होता है
+[72s] simple operation मतलब जो कि बहुत simple है करना
+[74s] for example
+[75s] a is equal to 10
+[77s] ये एक simple operation है
+[79s] print hello
+[83s] ये एक
+[84s] simple operation है
+[85s] a is equal to 10 plus 2
+[87s] a is equal to b plus c
+[90s] ये सारा क्या है ये सारा simple operation है
+[92s] simple operation का क्या मतलब है
+[94s] जिसको करने में
+[95s] चलो सीधे बाचा है मान के चलो
+[97s] एक टाइम लगता है
+[99s] एक यूनिट टाइम लगता है, ये यूनिट टाइम हो सकता है, एक MS हो, मिली सेकंड हो, एक माइक्रो सेकंड हो, एक सेकंड हो, लेकिन एक लगता है, आप समझके चलिए कि ये constant time है, तो तुरंत हो जाएगा ऐसे, चुटकी में जाते हैं, ये काम पुरा हो जाएगा, इसको कह
+[116s] जाता हैं, simple operation, कोई भी lead code जैसा और या तो GFG जैसा platform, जब आपको बोलता है कि program submit कीजिए, तो कभी-कभी देखते होंगे कि अगर आप गटिया program लिखेंगे, तो time limit exceed आता है, time limit exceeded, यह क्यों आता है, या तो यह lead code को पता कैसे चलता है, कि आपका time limit exceed हो गया है, या तो ऐसा हो
+[137s] सकता है कि lead code पूरा program को चलने के लिए कुछ समय देता हो
+[140s] ऐसा ही यह तो होगा ना lead code आपको बोलता है कि
+[143s] एक second में आपका program चलना चाहिए ऐसा होगा या तो
+[147s] number of operations number of operations permit करता होगा इसका क्या
+[152s] मतलब है number of simple operation अगर lead code limit कर दे कि
+[156s] आप 100 ही operation चला सकते हैं
+[159s] तो अगर आप 101 operation चलाने कोशिश करेंगे
+[161s] तो आपको time limit exceed आजाएगा
+[163s] या फिर आपका program को अगर 1 second लगना है
+[166s] आप 1 second 1.0001 second भी लेंगे
+[169s] तो आपका time limit exceeded आजाएगा
+[171s] यही दो तरीका हो सकता है
+[172s] ठीक है
+[173s] अब lead code पे आप general मान के चलिए
+[177s] इसका कोई exact figure नहीं है क्योंकि हम lead code में software engineer नहीं है लेकिन 10 to the power 8 simple operations आप कर सकते हैं अपने प्रोग्राम में
+[188s] generally 99% case में 10 to the power 8 simple operations आप कर सकते हैं इस चीज को करने के लिए हर language को अलग अलग time लगता है
+[198s] आपको अभी सुने होंगे कि C fast है, C++ fast है, Python slow है, Java slow है,
+[203s] हो सकता है C++ को यह करने में 1 second लगता हो, 10 to the power 8 operation करने में,
+[208s] हो सकता है Python को यह करने में 2 second लगता हो, हो सकता है JavaScript को यह करने में 3 second लगता हो,
+[213s] कोई फर्क नहीं पड़ता है
+[214s] Leetcode आपको बोलता है
+[216s] कि आप कोई भी language चुनिए
+[218s] आप C++ चुनिए, Python चुनिए,
+[221s] JavaScript चुनिए
+[221s] हम आपको उस हिसाब से time दे देंगे
+[223s] अगर आपका JavaScript है तो आपको 3 second मिलेगा
+[225s] Python में 2, C++ में 1
+[227s] लेकिन, लेकिन
+[228s] number of operations same रहता है किसी भी language के लिए
+[231s] तो lead code आपको क्या बोलता है
+[233s] आप कोई भी program लिखिए किसी भी तरीके से लिखिए
+[235s] maximum आप 10 to the power 8
+[238s] simple operation कर सकते हैं
+[239s] इसका क्या मतलब है
+[240s] कि अगर आप ऐसा program लिखते हैं
+[243s] आप लिखते हैं print
+[245s] hello
+[246s] ठीक है
+[247s] इसको lead code बोलता है कि ये एक simple operation है
+[250s] एक ही काम हो रहा है इसमें एक simple काम print हो रहा है
+[252s] ऐसा ऐसा आप 10 to the power 8 print statement लिख सकते हैं
+[257s] टोटल मिला के अगर आपको सारा print नहीं लिखना है
+[260s] तो a is equal to 10, b is equal to 20, c is equal to 30
+[265s] और a is equal to b plus c इसमें कितना statement हुआ
+[269s] इसमें कितना simple operation हुआ
+[271s] इसमें 1, 2, 3, 4, 5
+[275s] ये मिलाके हो गया 5
+[277s] तो ये lead code पे चल जाएगा
+[279s] लेकिन the moment कि आप 10 to the power 8 से
+[282s] जादा simple operation करेंगे तो आपको time limit exceed आएगा
+[285s] general rule ये होता है
+[287s] अब ये हम आपको क्यों समझाए?
+[289s] बताते हैं क्यों समझाए?
+[291s] for example, अब lead quote आप देखते हैं कि कोई भी question होता है तो उसमें input का size लिखा होता है
+[296s] input का size लिखा होता है
+[299s] for example, अगर आपको बोलता है कि आपको एक array का question है
+[303s] उसमें आपको लिखेगा size of array वो आपको बता देता है कि क्या होगा
+[306s] maximum क्या होगा
+[308s] Size of array वो आपको बोलता है कि Maximum क्या होगा
+[311s] कभी-कभी ये 1000 होता है
+[313s] कभी-कभी ये 1,00,000 होता है
+[315s] 10 to the power 5 होता है
+[317s] कभी-कभी ये 10 to the power 9 होता है
+[319s] किसी-किसी केस में 10 to the power 100
+[322s] ये 9 से भी ज़्यादा हो सकता है
+[324s] किसी-किसी केस में ये number बस 20 होता है
+[327s] ऐसा क्यों?
+[328s] ऐसा इसलिए क्योंकि अभी हम आपको क्या बोले इस नंबर को याद करके रखिए 10 to the power 8
+[334s] अब आपको हम बताते हैं
+[336s] for example आपको बोला है कि n का size 10 हो सकता है maximum
+[341s] मतलब आपका program जिस input पर रण होगा उस input का size 10 हो सकता है maximum
+[346s] अब आप कितना complexity कर सकते हैं
+[348s] यही वो hint है जो हम बोल रहे हैं कि
+[350s] input देखके समझ में आ जाता है कि algorithm कौन सा लग सकता है
+[353s] अगर 10 to the power 10 है
+[356s] क्या आप इसमें order of n का कर सकते हैं
+[359s] order of n का क्या मतलब अभी बताएंगे लेकिन अभी के लिए समझ लीजिए
+[373s] अगर आप order of n का program लिखेंगे
+[376s] तो आप n का जो worst case possible 10 है
+[379s] आप 10 operations करेंगे
+[382s] समझ में आगे order of n का मतलब
+[383s] अगर आप order of log n का program लिखेंगे
+[387s] तो आप log base to 10 जो की होता है 3 operations करेंगे worst case में
+[392s] अगर आप order of n square का program लिखेंगे
+[396s] तो आप 10 square मतलब 100 operations करेंगे
+[400s] worst case में
+[401s] अगर आप order of n cube का program लिखेंगे
+[404s] तो आप 10 to the power q
+[406s] 1000 operations करेंगे
+[408s] worst case में
+[410s] ठीक है
+[411s] अगर आप order of 2 to the power n करते हैं
+[414s] तो आप 2 to the power 10
+[417s] 1024 operations करेंगे
+[419s] worst case में
+[421s] समझ में आये
+[422s] क्या मतलब होता है order of कहने का
+[424s] अब देखिए
+[425s] example
+[426s] n is equal to 10 दिया हुआ है
+[429s] पूरा dsa का खेल क्यों खेलते हैं हम लोग की time complexity कम से कम निकालना है हम लोग को ऐसा time complexity का program लिखना है जो की pass हो जाए
+[438s] अब देखिए n अगर 10 है क्या order of n का program लिख सकते हैं हां लिख सकते हैं क्यों क्योंकि आप 10 कर रहे हैं
+[445s] maximum कितना permitted है, 10 to the power 8, 10 10 to the power 8 से कम है, yes, आप order of n लिख सकते हैं, क्या आप order of n square लिख सकते हैं, yes, 100 कम है, n cube लिख सकते हैं, 1000 हाँ लिख सकते हैं, आप order of 2 to the power n लिख सकते हैं, हाँ लिख सकते हैं, यह लिख सकते हैं, यह 1024 होता है, क्या आप order of n factorial लिख सकते हैं, n factorial मतलब 10 factorial मतल
+[474s] इसका भी कुछ न कुछ value होता है, कोई याद नहीं, लेकिन 10 to the power 8 से तो कम होता है
+[479s] आपको समझ में आ गया, क्या आप order of n to the power n का program लिख सकते हैं, तो ना भी गंदा program लिख सकते हैं क्या
+[486s] इसका value 10 to the power 10
+[488s] मतलब ये नहीं लिख सकते
+[490s] क्यों? क्योंकि
+[491s] 10 to the power 10 बड़ा है 10 to the power 8 से
+[494s] तो यहाँ पर आ क्या रुख गए?
+[496s] अगर आप इस तरीके का program
+[497s] इस time complexity का program लिखेंगे तो फसेगा
+[500s] इसके उपर आप कुछ भी लिखिए वो चल जाएगा
+[503s] समझ पारें क्या बोल रहे हैं
+[504s] ये कब चल रहा था जब आपको input दिया हुआ है n is equal to 10
+[508s] कहा है यहाँ पर
+[510s] n is equal to 10 में आप कितना गंदा program लिख सकते हैं
+[512s] यहाँ तक लिख सकते हैं
+[513s] ये वाला program तो आप नहीं लिख सकते हैं
+[515s] कितना भी आप कोशिश करिए
+[517s] अगला example पे आते हैं
+[519s] n आपको दिया हुआ है thousand
+[521s] worst case में
+[522s] क्या आप order of n का लिख सकते हैं
+[525s] thousand हा लिख सकते हैं
+[527s] order of n square लिख सकते हैं
+[529s] ये कितना हो जाएगा
+[530s] thousand का square मतलब 10 to the power 6
+[532s] अभी भी ये 10 to power 8 से कम है
+[535s] लिख सकते हैं
+[536s] क्या आप order of n cube लिख सकते हैं
+[539s] यह कितना है 10 to the power 9 यह आप नहीं लिख सकते हैं क्योंकि 10 to the power 9 10 to the power 8 से बड़ा है अगर n का input का size 1000 है उस program में तो आपको n cube से कम का program लिखना पड़ेगा
+[551s] समझ पा रहे हैं कि आप पहले सोचते हैं कि क्यों ऐसा कर रहे हैं
+[555s] मतलब क्यों n log n चलता है और क्यों n square नहीं चलता है
+[558s] वो इसलिए चलता है और नहीं चलता है
+[560s] क्यों क्योंकि 10 to the power 8 operation allowed है
+[563s] n input size है उस हिसाब से आप अपना program optimize करते हैं
+[568s] अगला example पे आईए
+[570s] n is equal to 10 to the power 5 है
+[572s] दिया हुआ है आपको
+[573s] क्या आप order of n लिख सकते हैं
+[575s] 10 to the power 5 लिख सकते हैं
+[578s] क्या आप order of n square लिख सकते हैं
+[580s] यह हो जाएगा 10 to the power 10
+[581s] नहीं लिख पाएंगे अब
+[582s] यह बड़ा है 10 to the power 8 से
+[585s] तो इसका कहने का मतलब कि
+[587s] n का value जब 10 to the power 5 हो
+[589s] तो आप n square भी नहीं लिख सकते हैं
+[591s] देखिए, उपर आप लिख पा रहे थे लेकिन
+[593s] यहाँ आप n लिख सकते हैं
+[595s] बस n लिख सकते हैं, एक और चीज़ आप कर सकते हैं
+[598s] n log n एक बहुत famous
+[599s] वो है time complexity है
+[600s] n log n, order of n log n
+[603s] लिख सकते हैं, n log n कितना होगा
+[605s] 10 to the power 5 into
+[607s] 10 to the power 5 का log
+[609s] base 2 में
+[611s] ये कितना आता है 10 to the power 5 का log आ जाएगा
+[614s] 10 करेंगे
+[616s] 30 से तो कमी होगा
+[618s] 30 से कम होगा
+[618s] 30 तक जाते हैं तो बहुत बढ़ जाता है
+[620s] इसकी value क्या होगी
+[621s] 30 into 10 to the power 5 is equal to
+[624s] 3 into 10 to the power 6
+[626s] क्या ये number 10 to the power 8 से कम है
+[629s] हाँ कम है इसी लिए
+[631s] n log n चल जाता है
+[632s] और n square नहीं चलता है
+[634s] समझ मैं क्यों n log n चलता है
+[636s] क्यों n square नहीं इसका सबका science है
+[638s] कोई जादू नहीं है कोई कहा नहीं है कि है सच चलेगा
+[640s] अब अगले example पर आई है
+[642s] n is equal to
+[643s] 10 to the power 8 है
+[645s] इस case में n चलेगा चल जाएगा
+[648s] 10 to the power 8 ही चल जाएगा
+[650s] n log n चलेगा की नहीं
+[652s] नहीं चलेगा, 10 to the power 8 into log of 10 to the power 8, अब देखो ये कुछ भी होगा, तो कुछ ना कुछ तो number होगा, 3, 4, 5, 6, 30, 80, कुछ तो, already ये number है, आप इससे कुछ भी positive number into करेंगे, तो ये 10 to the power 8 से बड़ा हो जाएगा, इसी लिए जब n का value 10 to the power 8 हो, तो सिर्फ order of n चलेगा, order of n log n में न
+[682s] जो कि 10 to the power 9 operation करेगा, नहीं नहीं चलेगा, क्योंकि ये number कम है, 10 to the power 8 से कम है, कम है, कम है, इस case में आपको log n का लिखना पड़ेगा, order of log n, n log n नहीं, सिर्फ log n, जो कि log of 10 to the power 9, इसका answer आता है 30, क्या ये चलेगा, हाँ 30 कम है 10 to the power 8 से चल जाएगा, ऐसे decide होता है कि कौन सा program म
+[707s] कौन सा आपको time complexity use करना है
+[709s] समझ में आया
+[710s] ये बहुत कम जगा available है
+[712s] बहुत कम लोगों को पता है
+[713s] बहुत कम लोग इसको सिखाते हैं
+[715s] पता नहीं क्यों
+[715s] लेकिन ये जालना चाहिए
+[716s] कि इस तरीके से होता है
+[718s] अब अगले पार्ट पे आते हैं
+[720s] अब इतना सारा हम order of n
+[722s] और order of n log n
+[724s] इसका बात कर दिये
+[725s] निकलता कैसे है?
+[727s] अब बताते हैं कैसे निकलता है
+[728s] अभी हम अब को क्या बताए कि
+[730s] simple operations
+[733s] simple operations
+[736s] simple operations में कितना time लगता है?
+[738s] 1
+[738s] इसको हम लोग order of 1 भी लखते हैं
+[740s] इसको अब मान के चली 1 लगता है
+[742s] for example
+[743s] अभी और एक बात
+[746s] order of
+[747s] जब हम लोग क्या पूलते हैं
+[749s] order of 1
+[750s] और order of n में क्या अंतर है
+[753s] order of 1 मतलब यह नहीं कि
+[755s] इसको चलने में एक टाइम
+[756s] एक यूनिट टाइम अगरा है
+[757s] साम लोग को लगता है
+[758s] सोचना भी चाहिए लेकिन
+[759s] इसका मतलब इसमें constant time लगता है
+[763s] क्या बोल रहे हैं
+[764s] फिर से समझी है बहुत important चीज है
+[765s] order of 1 का मतलब यह नहीं कि उसमें 1 time लगता है
+[769s] इसमें constant time लगता है
+[770s] इसका मतलब कि यह आपके input पे dependent नहीं है
+[779s] कहने का मतलब अगर आप print hello कर रहे हैं
+[784s] तो आपके input का size n is equal to 1 हो
+[788s] तो भी इसमें order of 1 मतलब constant time
+[790s] इसमें कुछ भी लग सकता है
+[791s] for example इसमें 3 second लग रहा है
+[793s] just for example
+[794s] तो भी इसमें 3 second लगेगा
+[796s] आपका N 100 हो जाएगा
+[798s] तो भी इसमें 3 second लगेगा
+[800s] आपका N 1000 हो जाएगा
+[802s] तो भी इसमें 3 second लगेगा
+[804s] तो ये input पे dependent नहीं है
+[806s] ये constant time है
+[807s] ये 3 second लगेगा ही लगेगा
+[809s] तुम कुछ भी करो, तुम कोई भी RL, कोई भी N लाओ, कोई भी Link List लाओ, इतना लगेगा ही लगेगा, इसके लिए इसको हम लोग बोलते हैं कि यह constant वो है, time complexity है, कभी भी आपको दिखे order of 1 मतलब constant, यह input पे dependent नहीं है, जैसे ही order of के अंदर N आ गया, N से जुड़ा वो कोई �
+[828s] भी आ गया, यह input पे dependent है, जैसे आपका input बढ़ेगा, वैसे आपका time भी इसके साथ साथ बढ़ेगा, इसका मतलब यह होता है, ठीक है, अब आजाते हैं कि निकालते कैसे हैं, order कैसे निकालते हैं, order of n जानते कैसे हैं, for example, आप एक program लिखिए, आपके program में मालीजे तीन लाइन
+[850s] है आपके प्रोग्राम में hello है आप बोलते हैं कि int a is equal to 10 है और int b is equal to 20 है और आप return कर देते हैं return a plus b यह आपका प्रोग्राम है चार लाइन का प्रोग्राम है इसमें आप एक array भी पास कर रहे हैं जिसमें n elements हो सकते हैं आपका input है इस प्रोग्राम का time complexity कैसे निकालेंगे सबसे
+[875s] पहले बात आपको पहचानना पड़ेगा कि कौन सा चीज simple operation है मतलब कौन सा चीज simple operation है
+[884s] simple operation है मतलब जो input पे dependent नहीं है अब हम बताया थे ना print hello input पे dependent नहीं है
+[890s] कि इसको आप कभी भी चलाएंगे तो same time लगेगा no matter the input
+[893s] simple operation आपको identify करना पड़ेगा और जो input पे dependent है
+[898s] इन्पुट पे dependent है
+[901s] यह दो section आपको identify करना पड़ेगा
+[903s] यहाँ पे आपको simple operation कौन दिख रहा है
+[906s] क्या यह line input पे dependent है नहीं
+[909s] यह simple है
+[910s] क्या यह आपके n पे dependent है input पे dependent नहीं
+[913s] int is equal to 10 तो वही होगा ना कभी भी आप चलाएगा तो वही होगा
+[916s] तो यह simple है
+[917s] B is equal to 20, input पे dependent है, नहीं है, कभी भी चलाओगे, same चलेगा, return A plus B भी input पे dependent नहीं है, कुछ भी pass करोगे, तो same चलेगा, तो यह 4 operation simple operation है, simple operation में time केतना लगता है, order of 1, ठीक है, अब, यह आपके program का क्या 4 independent section भी है, कहने का क्या मतलब है, यह आपका एक independent section है, यह line यहीं पे चलता ह
+[941s] यहीं पर खतम हो जाता है यह लाइन चलना यहीं से शुरू होता है और यहीं पर खतम हो जाता है
+[945s] similar with this line and similar to this line मतलब यह चार independent line है जो compiler शुरू करता चलाना और बंद कर देता है चलाना
+[953s] तो आप अपने प्रोग्राम को ऐसे देख सकते हैं, आपका जो प्रोग्राम था, अब वो ऐसा दिख रहा है, अगर हम mathematics के term में सोचे तो, पहला लाइन में order of one है, ये order of one है, ये order of one है, ये order of one है, चार independent section है आपके पास, चार लाइन, चार independent section बन गया, अब पूरे प्रोग्र
+[972s] प्रोग्राम का time complexity कैसे निकालते हैं क्या सब को जोड़ देते हैं कि order of one into आप अगर four times कर देंगे तो ऐसा तो नहीं होता है कि इसका order of four लिखते है
+[983s] order of four नहीं लिख सकते हैं क्यों क्योंकि order of four or order of one में कोई मतलब नहीं है कोई फर्क नहीं है
+[988s] फिर से समझे हो, हम क्या बोले थे, order of one का मतलब यह नहीं कि इसमें one time लगता है, order of four का मतलब यह नहीं कि इसमें four time लगता है, इसमें constant time लगता हो, कुछ भी हो, four हो, hundred हो, thousand हो, कुछ भी constant है, इसका पूरे प्रोग्राम का time complexity कैसे निकलता है, maximum of time complexity of all independent sections, इसको ध्यान से पढ़
+[1018s] अगर आपके प्रोग्राम में ऐसा चार सेक्शन है छोटा छोटा छोटा ओर ओवन इसमें लग रहा है और ओवन इसमें लग रहा है और ओवन इसमें लग रहा है पूरे प्रोग्राम का टाइम कॉंपलेक्सिटी होगा इस चारो का मैक्सिमम जो की ओडर ओवन है यही आपके �
+[1035s] पूरे प्रोग्राम का टाइम कॉंप्लेक्सिटी हो जाएगा समझ में इतना वात कि टाइम कॉंप्लेक्सिटी निकालते कैसे हैं
+[1039s] maximum of all the independent sections अगले example देखें अब धीरे जैसे से हम लोग जाएंगे आपको clear होता रहेगा
+[1047s] अब सबसे पहले इस लाइन का क्या complexity है
+[1055s] यह लूप है इसमें हम लोग जस्ट प्रिंट कर रहे हैं प्रिंट हेलो ठीक है यह यह आपका माल लेजिए इस सेक्षन है प्रोग्राम का इस सेक्षन का टाइम कॉंप्लिक्स टी कितना है घ्ञान से देखिए इसमें क्या हो रहा है आई जीरो से है आई जीरो में है आई हंड
+[1076s] तक जा रहा है मतलब 100 टाइमस ही लूप चलेगा हर बार एक बार हेलो प्रिंट कर रहे हैं तो यह लूप 100 टाइमस हेलो प्रिंट कर रहा है अब क्या यह आपके इंपुट पर डिपेंडेंट है अगर फॉर एक्जामपल आपके प्रोग्राम में एक इंपुट होता जो की 100 हो
+[1104s] अगर आपका n is equal to 10 to power 5 है,
+[1107s] तो भी इसको चलने में 100 unit लगेगा,
+[1109s] क्योंकि ये तो 100 बार चल रहा है,
+[1110s] n कुछ भी हो, ये तो 100 बार चलेगा,
+[1112s] n 1 भी हो, तो भी ये 100 बार चलेगा,
+[1114s] आप n नहीं भी पास करेंगे, तो भी ये 100 बार चलेगा,
+[1116s] तो ये क्या है? ये input पे dependent है कि input से independent है? ये independent है. ये independent है. समझ मैं independent और dependent क्या होता है? जो input के बदलने से अगर किसी section का time बढ़ जाये घट जाये तो वो dependent है. जिस section को input से कोई फर्क नहीं पड़ता है वो input independent है. तो ये independent है. अगला line देखिए.
+[1139s] for i is equal to 0
+[1141s] i less than n
+[1142s] i plus plus
+[1144s] और print
+[1146s] यहां आपको समझ में आएगा क्या बोल रहा है
+[1148s] hello
+[1150s] और loop बन अब यह देखिए
+[1151s] n आपका input है
+[1155s] अब देखिए
+[1155s] क्या n के बदलने से
+[1157s] इस for loop का time complexity बदलेगा
+[1159s] हाँ बदलेगा यह loop क्या कर रहा है
+[1162s] loop n times execute कर रहा है
+[1163s] n times क्या कर रहा है
+[1164s] एक simple operation कर रहा है
+[1166s] इस operation का तो order of 1 है
+[1169s] total ये for loop क्या कर रहा है
+[1171s] n into 0 of 1 कर रहा है
+[1173s] मतलब order of
+[1174s] n operations कर रहा है
+[1177s] simple बात है न
+[1178s] अगर n 10 है तो ये for loop 10 times चलेगा
+[1181s] n 100 है
+[1183s] तो ये for loop 100 times चलेगा
+[1185s] n 1000 है
+[1186s] तो ये for loop 1000 times चलेगा
+[1188s] input के बढ़ने या घठने से for loop का
+[1191s] वो बढ़ रहा है कि कितने बार यह फॉर्लूप चलेगा यह dependent है यह dependent है इनपुट पे इसको हम लोग कहते हैं अब देखिए
+[1201s] n times तो चल रहा है
+[1202s] यह n times चल रहा है
+[1205s] हर बार कितने complexity का काम हो रहा है
+[1207s] हर बार यह for loop n times चलेगा
+[1210s] हर बार कितने complexity का काम कर रहा है
+[1212s] order of 1 का काम कर रहा है
+[1213s] एक ही print कर रहा है
+[1216s] तो इस total का complexity क्या हो गया
+[1218s] अब आपको input into करना पड़ेगा
+[1220s] n into 1 is equal to order of n
+[1223s] इसी चीज़ को हम लोग कहते हैं कि कोई program order of n time ले रहा है मतलग
+[1227s] n times कोई काम कर रहा है और order of 1 लग रहा है हर काम को
+[1230s] तो total काम कितना कर रहे हो n into 1
+[1233s] समझ में आया कि फिर बताएं
+[1235s] loop n times चल रहा है
+[1237s] हर time एक constant काम हो रहा है
+[1239s] तो इसलिए इसका time complexity होगे order of n
+[1242s] कोई भी लूप 0 से n चलेगा
+[1244s] तो उसका time complexity हो जाएगा
+[1246s] n, समझ मैं n into 1
+[1248s] अब देखते हैं
+[1250s] इसमें एक और बात है
+[1252s] बहुत बच्चों को doubt आता है
+[1254s] हमको भी आता था
+[1256s] i less than, n नहीं चल रहा है
+[1258s] n minus 1 चल रहा है, i plus plus
+[1260s] और ये print कर रहा है
+[1261s] अब बताते हैं
+[1265s] यह print कर रहा है, अब देखिए यह loop कितने बार चल रहा है, सबसे पहले बात तो यह है कि क्या यह independent loop है या dependent loop है, तो यह dependent loop है, क्यों कि n के कारण इस loop का change हो जाएगा time, लेकिन पहला वाला loop कि अतना चल रहा था, 0 से n तक चल रहा था, तो n times चल रहा था, यह वाला loop बोल रहा ह
+[1286s] कि 0 से n-1 चल रहा है, तो मतलब n-1 टाइम्स चल रहा है, वही हो रहा न, पहला वाला लूप 0 से लेके n जा रहा था, तो ये n था, ये वाला लूप बोल रहा है कि ये है, तो ये n-1 होना चाहिए, इस लूप का total complexity क्या है, n-1 into order of 1, तो क्या इसको हम लोग लिखते हैं कि ये order
+[1303s] of n-1 है? नहीं, नहीं, नहीं, देखिए. अगर, देखिए, order of n-1, लिखना तो यही चाहिए, mathematically तो यह लिखना चाहिए, लेकिन, जब भी हम लोग order के अंदर, इसको order बोलते हैं, big O बोलते हैं, ठीक है? इसके अंदर लिखे जाने वाला कोई वी चीज, एक expression है, एक expression है, मैं �
+[1323s] मैं आतमें पढ़ते थे ना, expression है,
+[1326s] मतलब quadratic expression पढ़ते थे आप लोग A square plus BX plus C,
+[1330s] वैसा, इस expression का हम लोग जब result निकालते हैं,
+[1334s] जब हम लोग इसको analyze करते हैं कि इसमें कितना लगेगा,
+[1337s] इसमें जो highest power वाला चीज है, इसमें जो highest power है N का,
+[1342s] लोग उसको consider करते हैं इसका complexity
+[1344s] मतलब इसमें n का power क्या है
+[1347s] 1
+[1348s] 1 को आप कैसे लिख सकते हैं
+[1349s] 1 को आप लिख सकते हैं n to the power 0
+[1351s] लिख सकते हैं
+[1352s] तो इस 1 के जगह हम लिख सकते हैं n to the power 0
+[1355s] 0 और 1
+[1356s] इसमें 2 power है
+[1357s] यह है यह है
+[1359s] highest हों सा है 1
+[1360s] इसलिए इसका time complexity हो जाता है
+[1362s] order of n
+[1372s] यह सब discard हो जाएगा, क्यों? क्योंकि highest power इसका 1 है, इसलिए इसका हम लोग लिखते हैं कि इसका complexity धी order of n है, n-1 से n-2 से फर्क नहीं पड़ता है, अगर कोई आपको ऐसा बोलता कि इसका time complexity यह है, यह है, तो क्या करते हैं? ऐसा भी तो बोल सकता है न, कि इसका time complexity यह है, same काम क
+[1401s] वेर, यही वो कारण है, यही वो कारण है, इसलिए हम बोलते हैं, वीडियो लास तर देखा किजिए, यही वो कारण है, कि जब हम लोग time pump density निकालते हैं, हम क्या बोलेते हैं, कि अगर आपके पास 4, 3 section है, इसका order of 1 है, इसका order of 1 है, इसका order of 1 है, हम लोग इसका maximum ले लेते है
+[1421s] maximum लेलने का मतलब क्या होता है
+[1422s] इसको आप कैसे लिख सकते है
+[1424s] तोटल देखिए
+[1425s] time तो प्रोग्राम में sum का लग रहा है
+[1427s] आपके प्रोग्राम अगर ये 3 section 1, 2 और 3 चल रहा है
+[1430s] total तो काईदे से इनका sum होना चाहिए था
+[1433s] तो maximum क्यों होता है
+[1434s] maximum इसी कारण से होता है
+[1435s] इसको आप क्या लिखेंगे
+[1436s] n to the power 0 plus n to the power 0
+[1442s] इसमें highest power क्या है
+[1444s] इसमें highest power 0 है
+[1445s] इसलिए इसका time complexity हो जाता है
+[1447s] n to the power 0 is equal to order of 1
+[1449s] इस कारण से highest power of n को हम लोग उसका लेते हैं
+[1452s] कि ये worst complexity है
+[1453s] बाकी को ignore कर देते हैं
+[1454s] इसी कारण से maximum लिया जाता है
+[1456s] इतना आप लोग समझ गये होंगे
+[1458s] एक और चीज करके देख लेते हैं
+[1460s] फॉर एक्जामपल अगर आप प्रोग्राम लिखते हैं
+[1462s] आपके प्रोग्राम में दो लाइन है
+[1464s] print, hello
+[1466s] ये एक लाइन हो गया
+[1467s] और ये है
+[1469s] i is equal to 0, i less than n
+[1472s] i++
+[1473s] और ये अपने
+[1476s] print, world
+[1479s] यह आपका program है
+[1482s] सबसे पहले section identify कीजिए
+[1484s] section independent section मतलब
+[1485s] compiler उसको चलाएगा और खतम कर देगा
+[1488s] उस task को
+[1488s] सबसे पहला section क्या दिख रहा है
+[1491s] इसमें कितना काम हो रहा है
+[1492s] एक काम हो रहा है hello कर रहा है
+[1493s] इसका time complexity क्या है order of one
+[1496s] अब क्या यह अकेले एक section है
+[1499s] क्या हम क्या बोल रहे हैं
+[1501s] कि undo cancel
+[1503s] क्या ये line अकेला एक section है
+[1505s] नहीं नहीं अकेला section नहीं
+[1507s] क्यों क्यों क्योंकि fall loop खतम नहीं हुआ है
+[1508s] fall loop कब चलता है fall loop यहां से शुरू होता है
+[1511s] यहां खतम होता है तो ये पूरा एक section है
+[1514s] ऐसा नहीं आप बोल सकते हैं कि
+[1525s] अगर ये नहीं रहता, ये line नहीं रहता, तो क्या ये line का कोई महत्वता नहीं था, लेकिन अगर ये line नहीं रहता, तो भी ये for loop चलेगा, अगर ये for loop नहीं रहता, तो भी ये line चलेगा, इसलिए अलग-अलग section है, अगर ये line नहीं रहेगा, तो इस line का महत्वता कम हो जाए�
+[1541s] इसलिए ये एक अलग section है ये एक अलग section है समझ गए इसका time complexity क्या है अब हम लोग देख लिये थे order of n
+[1550s] total program का time complexity क्या है सब को sum कर दो भाई 1 को sum कर दो n को sum कर दो लिख दो 1 plus n
+[1558s] highest power क्या है इसका 1 है यहाँ पे into into the power 0 है highest वाला उठा लो order of n इस program का total complexity आगे order of n
+[1568s] ऐसे हम लोग ये काम करते हैं
+[1571s] एक और लास्ट एक्जांपल देख लीजिए
+[1572s] जो कि बहुत यूज होता है
+[1575s] for
+[1576s] i is equal to 0
+[1579s] i less than n
+[1580s] i plus plus
+[1581s] देखिए ये पढ़ाने के लिए हो सकता है
+[1583s] हम लगतार इसमें 2 घंटा तक बोल सकते हैं
+[1586s] लेकिन जितना जरूरी होतना बता रहे हैं
+[1588s] अब देखिए अब देखिए अब थोड़ा होगा जे लेस देन एन जे प्लस प्लस
+[1597s] प्रिंट हेलो यह आपका प्रोग्राम है अब बताईए अब इसमें क्या हो रहा है पहले पढ़ते हैं इसको एक आई लूप चल रहा है कहां से कहां तक चल रहा है सबसे पहला बाद
+[1607s] इन्पुट डिपेंडेंट है कि इन्पुट डिपेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडेंडे
+[1637s] पहले देखते हैं, ये क्या कर रहा है, सबसे पहला बात,
+[1640s] input dependent है कि independent है, dependent है, 0 से n जा रहा है,
+[1643s] n से बदलेगा या घटेगा, ये n टाइम्स चल रहा है,
+[1648s] ये वाला for loop क्या कर रहा है, ये वाला for loop अब हेलो
+[1650s] print कर रहा है, ये हेलो print कर रहा है, इसको 1, तो क्या हो
+[1655s] उपर उपर से जब देखेंगे तो क्या हो रहा है
+[1656s] i चल रहा है n times
+[1660s] हर बार क्या हो रहा है
+[1662s] j चल रहा है n times
+[1663s] j run n times
+[1666s] j हर बार order of 1 का काम कर रहा है
+[1669s] यह हो रहा है
+[1669s] इसका क्या मतलब है
+[1671s] अगर आपका n 3 है
+[1672s] 1, 2, 3
+[1676s] आपका i
+[1677s] पहले 1 का है
+[1678s] i 1 से 3 तक चलेगा
+[1681s] हर बार क्या हो रहा है
+[1683s] जे भी 3 टाइम्स चल रहा है
+[1685s] जे 3 टाइम्स चल रहा है जे भी तो इंबर चल रहा है
+[1687s] ओके आई खतम हो गया
+[1689s] इसमें क्या होगा जे फिर से चलेगा
+[1691s] जे फिर से चलेगा 3 टाइम्स
+[1693s] अच्छा आई 3 प्याया
+[1695s] जे फिर से 3 टाइम्स चल रहा है
+[1711s] यह 1, 2, 3, 4
+[1714s] Similarly
+[1716s] 1, 2, 3, 4
+[1718s] Similarly
+[1719s] 1, 2, 3, 4
+[1722s] Similarly
+[1723s] 1, 2, 3, 4
+[1725s] Number of simple operation कितना हो गया?
+[1727s] 4, 8, 12, 16
+[1731s] देख रहे हैं पैटन
+[1732s] इसका गया मतलब है
+[1733s] N is equal to 3 है
+[1735s] Number of simple operation हो गया
+[1737s] 3 into 3, 9
+[1738s] N is equal to 4 है
+[1740s] यह हो गया 4 into 4, 16, इसका time complexity क्या है, order of n square, ऐसा क्यों हुआ, क्योंकि, क्योंकि बाबू,
+[1750s] i, n times चल रहा है, हर बार ये n का काम कर रहा है, इसमें j भी चल रहा है, जो कि n times चल रहा है,
+[1758s] जे हर बार 1 का काम कर रहा है
+[1760s] तो इसका total time complexity क्या होगा बोले थे
+[1762s] into करना है पिछले बार भी किये थे
+[1764s] n into n into 1
+[1766s] is equal to n square
+[1767s] इस चीज़ का time complexity हो गया
+[1770s] n square अगर इसमें एक तीसरा
+[1772s] for loop रहता जो भी n बार चल रहा है
+[1774s] तो इसका होता n into n into n into 1
+[1776s] n cube ऐसे time complexity भड़ता है
+[1778s] तो अगर nested loop लिखते हैं, तो उसका time complexity सीधा square हो जाता है, यह इसका मतलब है, अब last example, आपका एक program है भाई, आप यह कर रहे हैं, एक और चीज, sort का time complexity n login होता है, ठीक है, अब यह क्यों होता है, यह recursion से math से होता है, बात में सिखाएंगे, अभी के लिए याद रखिए, print, hello,
+[1804s] ठीक है, for
+[1806s] i is equal to 0
+[1807s] i less than n, i plus
+[1809s] plus, और यह कर रहा है
+[1811s] print
+[1813s] hello
+[1815s] बहुत अच्छी बात है, अब
+[1816s] sort, अगर हम
+[1819s] array को sort कर रहे हैं, a dot begin
+[1822s] a dot end
+[1824s] array का length
+[1825s] n है, यह आपका program है
+[1827s] आप ऐसा program लिखे
+[1829s] जो कि हम लोग लिखे भी थे
+[1830s] तू सम में याद करिया ऐसा ही, similar as exact यही program था उसमें, था कि नहीं था, sort और loop और बागी चीज़, अब बताइए, सबसे पहले section identify कर लो, सबसे पहला काम करो, क्या यह section independent है, क्या यह section किसी और से related है, नहीं, तो यह आपका section 1 हो गया, यह क्या एक section है, क्या for loop और sort related है, नहीं है
+[1852s] for loop चला और खतम हो गया, print करके खतम हो गया, उसके बाद sorting हो रहा है, यह आपका section 2 है, क्या यह sorting का line किसी से related है, नहीं, अपना line है, यह आपका 3 हो गया, अब क्या बोले थे, हर section का time complexity निकाल लो, section 1 का time complexity क्या है, print hello, print hello का कुछ नहीं होता है, order of 1, section 2 का complexity क्या है, अभी सीखे थ
+[1874s] आई n टाइम्स चल रहा है, हर बार 1 काम हो रहा है, order of n, section 3 क्या है, short में n log n लगता है, अब यादर कर लिजे, देड़े देड़े बताएंगे, अब total time को हम गिती टी, sum कर दो, 1 प्लस n प्लस n log n, क्या बोले थे, अब कोई बोलेगा कि इसमें n का power कहा है,
+[1894s] तो n का power n log n को लिखते है n into n 1 by 2
+[1900s] ठीक है n by 2 इसका होता है n 3 by 2
+[1903s] log n को जो लोग नहीं जानते है n to the power
+[1906s] अच्छा ऐसा नहीं होता है क्या
+[1907s] अच्छा root का हम सोचे square root है
+[1909s] कोई बात नहीं समझने के लिए ठीक है
+[1913s] अभी यह आपके total program
+[1915s] इसमें सबसे बड़ा element, सबसे बड़ा क्या है, क्या 1 बड़ा है, नहीं, n, n log n, सबसे बड़ा क्या है, n log n सबसे बड़ा है, क्योंकि ये सिर्फ n है, ये आप n में कुछ into भी कर रहे हैं, n log n, तो इस total program का time complexity आ गया, n log n, ऐसे हम लो time complexity, क्या फिर से revise करा देते हैं,
+[1935s] तीन सेक्शन लिए, तीनों का लिखे, तीनों को सम में लिखे, मैक्सिमम ले लिए
+[1940s] तो ये होता है भाई सहा टाइम कॉंपलेक्सिटी
+[1945s] समझ में आया कि जब N, M, order of N, log N, square यह सब बोलता है जो उसका मतलब क्या होता है
+[1951s] अब आपको इतना time complexity आ गया है कि आप अपने जो जिस भी college में पढ़ रहे हैं उस teacher को आप पढ़ा सकते हैं
+[1957s] अपके college के किसी teacher को इतना नहीं आता होगा यह मेरा guarantee है
+[1960s] सब लोग याद करवा देता है कि order of n मतलब big o होता है big omega होता है यह नहीं
+[1967s] उसका mathematical derivation और समझना उसको ऐसे होता है
+[1971s] आज आपको time complexity समझ में आ गया है
+[1973s] आगे जब भी हम लोग बात करेंगे तो आपको समझ में आएगा कि
+[1976s] अच्छा n square बोल रहा है तो क्यों बोल रहा है
+[1978s] n square और n log n बोल रहा है तो total time complexity n square कैसे आ गया
+[1982s] n square n log n
+[1985s] कभी-कभी आपको हो सकता, आपको देखने से ना पता चलिए कि दोनों में बड़ा कौन है
+[1989s] इसका सबसे अच्छा एक्जामपल है, n का value कोई 3 ले लीजिए, दोनों का value निकाल लीजिए
+[1994s] 3 square कितना होता है? 9, और n log n मतलब 3 into log 3, log 3 और में सा base 2 में
+[2003s] इसका answer आएगा 3 point कुछ
+[2006s] दोनों में बड़ा कौन है? 9 बड़ा है
+[2007s] N square बड़ा है, N square दे दीजिए
+[2009s] कभी भी समझ में ना है, value लेके देख लिजिए
+[2011s] समझ में आ गया? अगर आप को नहीं समझ में आ रहा है कि N
+[2015s] और N square में क्या है? value दे लिजिए
+[2017s] 2 है इसका value 2 आ जाएगा इसका value 4 आ जाएगा तो यह बड़ा है
+[2021s] simple value लेकर देख लेना है समझ में आया तो उमीद करते हैं कि बहुत अच्छा लगा हूँ आप लोगको
+[2026s] यह बहुत important वीडियो था और एक announcement कि कल दिवाली है तो कल हम travel कर रहे हैं तो कल का वीडियो शायद ना आए अब ये वीडियो हम दिवाली के दिन पहले बना रहे हैं हमको मालूम नहीं है कब live जाएगा कब नहीं जाएगा लेकिन दिवाली के दिन वीडियो तो नहीं बनाएं�
+[2044s] कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर दो कर �

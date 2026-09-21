@@ -1,0 +1,230 @@
+[0s] Hello, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you, how are you
+[30s] सही है, कोशिश करेंगे कि जल्दी से जल्दी summarize हो जाए कि होता क्या है और आपको जल्दी बना चल जाए, चलिए, सबसे पहले हम पढ़े थे कि prefix हम कब लगता है, किस तरीके के question में, तो एक बात आई थी कि जब भी sub array के question होंगे, array plus sub array के question होंगे, तो लग सकता है, तो देख
+[60s] समझना तो देखिए सबसे पहले बात कर लेते हैं कि आप सब एरे के
+[64s] question में तो तीनों लग सकते हैं तो आपको मालूब कैसे चलेगा कि prefix sum ही लगाना है
+[67s] तो देखिए सबसे पहले बात करते हैं prefix sum and cadence की क्या and cadence की
+[75s] तो दोनों के question में
+[76s] difference होंगे
+[79s] एक में हो सकता है कि आपको
+[80s] वैसा पूछा जाए कि
+[83s] sub-ary निकालो
+[84s] maximum sub-ary निकालो
+[87s] जिसमें कोई condition हो
+[90s] sum less than k हो
+[91s] या sum greater than k हो
+[92s] ऐसी कोई condition दी रहीगी
+[95s] इसका आपको shortest या longest
+[96s] निकालना पड़ेगा
+[97s] shortest या longest ऐसा कुछ करके
+[100s] निकालना पड़ेगा या तो count of sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub sub
+[117s] उसका sum या तो maximum होता था, या तो minimum of all sub-arrays होता था,
+[126s] या तो इसका product minimum या maximum होता था, ऐसा होता था,
+[131s] तो number of sub-arrays दोनों में निकालने सकते हैं, maximum length भी दोनों में निकालने पड़ सकते हैं,
+[135s] लेकिन sum array का जो condition होता था वो सबसे array में maximum होता था
+[139s] या तो minimum होता था, ऐसा कुछ होता था, इसमें maximum या minimum नहीं है,
+[143s] इसमें prefix sum में, prefix sum आपको बोलता है कि कुछ ऐसा निकालो जिसमें कोई condition हो,
+[147s] sum, modulus k equal equal to 0 हो जाए, sum equals to k हो जाए,
+[152s] number of 1 is equal to number of 0, तो कोई बहुत specific condition होगी,
+[155s] cadence generally, generally 90% of time
+[157s] इस तरीके के चीज़ों में निकाला जाता है
+[159s] कि जब उसका sum maximum हो जाए
+[162s] कब उसका sum minimum हो जाएगा
+[163s] कब उसका product maximum इस तरीके में
+[165s] अच्छा
+[166s] और अब तो ये तो हो गई prefix sum और cadence की की कब लगाना है
+[170s] prefix sum और sliding window
+[173s] prefix sum और sliding window
+[175s] sliding window
+[177s] दोनो
+[179s] same question solve करते हैं
+[180s] उनों क्या? same, exactly same question
+[182s] solve करते हैं, आप एक question में प्रिरी एक
+[184s] सम्भी लगा सकते हैं, sliding window भी, लेकिन
+[186s] दोनों में से लगाना कब है, कभी
+[189s] भी, कभी भी negative हो array में
+[191s] negative हो
+[192s] array में, उस case में
+[196s] sliding नहीं
+[197s] लगेगा, नहीं लगेगा, sliding
+[198s] नहीं लग सकता है, sliding window
+[201s] के questions, खास करके ऐसे
+[202s] question वे इसमें sum या कुछ ऐसा निकालना है
+[204s] वो सिर्फ positive में काम करते हैं
+[207s] negative में sliding window fail हो जाता है
+[208s] तो सबसे पहले तो आपको देखना है कि
+[210s] किस तरीके का question है
+[211s] अगर कोई बहुत specific condition दी गई है
+[213s] तो या तो वो question prefix sum से बनेगा
+[215s] या तो वो sliding window से बनेगा
+[216s] अगर कुछ longest maximum sum
+[219s] minimum sum की बात की गई है, तो वो cadence से मनेगा, कोई इसमें दो राएं नहीं है, अच्छा, अब अगर आपको पता चला कि
+[225s] वो cadence से नहीं मनेगा, तो वो prefix से मनेगा कि sliding से मनेगा, अगर उसमें negative है, अगर उसमें negative है, तो वो किस से मनेगा, prefix sum से ही मनेगा, sliding से नहीं
+[233s] बन सकता है, ठीके, इसके बाद हम लोग आ गए थे template पे, template पर हम लोग क्या आ गए थे, की देखिए, prefix sum एक concept होता है, क्या होता है, एक concept होता है, prefix sum is nothing but a concept, prefix sum को store करने के लिए data structure अलग-अलग हो सकता है, इस information को store करने के लिए data structure अलग-अलग हो सकता है, या तो ये single variable हो सकता है
+[256s] या तो एक simple array हो सकता है
+[259s] या तो ये cache map हो सकता है
+[261s] या तो ये dq हो सकता है
+[263s] या तो ये fenwick tree हो सकता है
+[265s] कुछ भी हो सकता है
+[266s] store करने के लिए data structure अलग अलग हो सकते है
+[269s] तो general rule
+[270s] general rule यही होता है
+[272s] किसी भी prefix some question को solve करने के लिए
+[274s] आप बाकी के चार वीडियो देखेंगे तो आपको जादा एडिया लगए लेकिन जन्रेल टेंपलेट यही होता है
+[279s] आपको हर इंडेक्स आई
+[281s] हर इंडेक्स आई पे एंडिंग होने वाले
+[284s] एंडिंग होने वाले
+[286s] एंडिंग होने वाले सब एरे
+[289s] सब एरे
+[291s] इसका answer निकालना है हर बार
+[293s] इसका एक answer निकालना है
+[296s] मतलब आपको
+[296s] i की एक loop चलानी है 0 से 9 तक
+[298s] i पे end होने वाले सारे sub-airay का आपको
+[300s] answer निकालना है तो ऐसे जब आप करेंगे
+[303s] तो आप जब पूरा array cross कर देंगे
+[305s] तो आपको एक best answer automatically मिल जाएगा
+[306s] क्योंकि हर सबैरे किसी न किसी इंडेक्स पर खतम होता होगा
+[309s] अपने हर इंडेक्स पर खतम होने वाले सारे सबैरे का अच्छा अंसर निकाल दिया
+[312s] मतलब उसका best answer
+[313s] अगर वो बुलता है count तो अपने count निकाल दिया
+[316s] maximum बुलता है तो maximum निकाल दिया
+[319s] shortest length बुलता है तो shortest length निकाल दिया
+[321s] ऐसा जब आप हर i के लिए कर देंगे तो आप concern मिल जाएगा
+[324s] अच्छा
+[325s] लेकिन इसको करते कैसे है
+[326s] कैसे लिए करते है
+[328s] सबसे पहले माल लीजिए आप यहाँ पर i पे है
+[330s] माल लीजिए यह sum का question है
+[332s] आप इसका sum is equal to कुछ समाया होगा, किसका sum, 0 से लेके I तक का sum, कुछ समाया होगा, अपने हिसाब से आप ए ग्रीन पार्ट चुन लीजी, ये क्या है, ग्रीन पार्ट है, ग्रीन पार्ट आपको क्या बोलता है, ये आपका अच्छा सबैरे है, अच्छा सबैरे का क्या मतलब ह
+[352s] कि question में जो condition बोली गई है
+[354s] question में जो condition बताई गई है
+[357s] वो उसको satisfy करे
+[359s] satisfy करे
+[360s] for example अगर question में बोलता है कि
+[362s] find the number of subarrows
+[363s] find the number of subarrows where
+[365s] the sum of each subarrows equal to k
+[367s] exactly equal to k
+[368s] आप मान के चलिए कि जो मेरा green part का sum है
+[371s] इसका नाम है green, green sum
+[373s] green sum
+[374s] जो कि यहां से यहां तक है
+[375s] कहीं से शुरूओ कि आई तक लास में जाता है
+[378s] इसका sum
+[379s] इसका sum exactly क्या है
+[380s] तब ही तो यह अच्छा होगा न मैं
+[382s] question के हिसाब से अच्छा होगा
+[384s] इसके बाद जो भी बचा अभी तक सबैरे भी
+[386s] उसको हम बोलेंगे red part
+[387s] उसको क्या हम बोलेंगे यह
+[389s] red part
+[390s] अब आपको एक चीज निकालनी है कि अगर green का कुछ sum है
+[394s] और पूरे array का sum मतलब 0 से आई पूरे array का sum है
+[397s] red का sum क्या होगा
+[399s] red sum क्या होगा
+[402s] आपको देखने से पता चलेगा कि अगर पूरे चीज यहां से यहां तक का sum sum है
+[407s] और यहां से यहां तक का sum आपने बोला है कि k है क्योंकि यह green part है
+[410s] automatically यहां से यहां तक का sum होगा sum minus k
+[413s] sum minus k तो clear बात है
+[415s] आपको मिल जाता है कि red का sum होगा sum minus k
+[419s] अब अब अब अब यही question आपको पूछना है
+[422s] हर आई पे आपको यही question पूछना है
+[425s] हर i पर जब आप जाते हैं तो आपको क्या question पूछना है
+[430s] आज से पहले, मतलब i से पहले
+[433s] अगर ये count का question है
+[436s] कितने, कितने sub array
+[439s] या कितने red part आएथ है
+[441s] कितने red part आएथ है
+[445s] जिसका, जिसका sum is equal to sum minus के हो
+[450s] ये question आपको पूछना है और इस question का आपको answer निकालना है
+[453s] कितने हम लोग का पूछेंगे जब count का question होता था तो कितने पूछते थे
+[456s] जब longest का question था तो पूछते थे कि सबसे पहला index कौन था था जब इसका यह समाया था तो उससे आप से पूछेंगे
+[462s] जब आप यह पूछेंगे
+[463s] for example
+[464s] for example अगर आप यहां तक है
+[467s] अगर यहां आपका i है
+[469s] अगर आप यह question पुछने हैं कि आप से पहले कितने red part आये थे
+[472s] जिनका sum sum minus k था
+[473s] for example आपको कोई बताता है कि ऐसे 3 red part आये थे
+[476s] एक red part ये था, इसका नाम था r1
+[479s] इसका sum भी sum minus k था
+[481s] एक ये वाला red part था, जिसका नाम था r2
+[484s] इसका sum भी sum minus k था
+[485s] एक और red part आया था जिसका नाम था R3
+[489s] आप ये notice करेंगे
+[490s] हर red part के लिए एक green part बनेगा
+[492s] हर red part के लिए green part बनेगा
+[494s] R1 के लिए ये green part बनेगा
+[496s] एक answer तो ये हो गया
+[498s] इसका sum क्या होगा exactly k
+[499s] क्योंकि हम लोग उल्टा चल रहे हैं
+[500s] हम लोग पहले green part को assume कर लिए
+[503s] उसे हिसाब से red part की calculation IT की red part में ढूढ़ना क्या है?
+[506s] खोजना क्या है? कुछना क्या है?
+[508s] R1 के लिए एक green part पक्का बनेगा अपने answer में जोड लिए
+[512s] R2 के लिए भी एक green part बनेगा ये वाला अपने answer में जोड लिए
+[515s] R3 के लिए भी green part बनेगा ये वाला अपने answer में जोड दिये
+[519s] तो अगर आपको कोई बताता है कि आज से पहले sum minus k कितनी बार आया था
+[523s] कितने सारे red part हैं तो आपको कोई बोलता है कि red parts
+[526s] number of red parts is equal to 3 हैं इसका जाहिर जाहिर मतलब है
+[530s] कि number of green भी 3 होगा
+[532s] आप अपने answer में plus 3 जोड़ लेते थे
+[536s] अब
+[536s] पूछना तो समझ में आ गया
+[538s] अब जो हम लोग पूछते हैं वही तो आप store करेंगे
+[540s] कहा store करेंगे, hash map में store करेंगे
+[542s] या dq में store करेंगे, या variable में
+[544s] कहीं भी, वो store कहीं भी करिये, information कहीं
+[546s] भी store करिए, for example, आपने store किया कि, माल लीजे, किसी समय, sum minus k की जो value है, वो थी 5, आपने, हर बार hash map में store कर लिया कि 5, 3 बार आया था, आप पूछे 5 किती बार आया था, आपको मिल गया answer 3, तो, आगे जाने से पहले, आगे जाने से पहले, हम लोग क्या करते थे, ये वाला sum भी
+[564s] कहां store कर देते थे hash map में
+[565s] क्योंकि आगे हो सकता इसकी काम आईगी
+[568s] आप लोग पीछे store करते हुआ रहे थे तब न
+[569s] अभी काम आया, अभी भी store कर देंगे
+[571s] ताकि आगे काम आया, यही general format होता है
+[574s] कहने का क्या मतलब है
+[576s] हम लोग क्या पुछते हैं, हम लोग
+[577s] हम लोग सबसे पहले एक hash map बनाते हैं, हम लोग सबसे पहले एक hash map बनाते हैं, शुरू में एक हाली रहता था, हम लोग एक loop चलाते थे, कहां से कहां तक, 0 i से 0 से n तक, yes, सबसे पहले तो, अगर sum का question है, question अलग अलग तरीके हैं, बार बार बोल रहे हैं, बाकी चारो वेडिय
+[606s] satisfy करता है, for example, ऐसा पुछता है
+[608s] कि ऐसा सवैरे निकालो, जिसका sum exactly के हो
+[610s] तो green sum का sum के होगा, red sum
+[612s] का sum क्या होगा, sum minus
+[614s] के, हम लोग इसको बोलेंगे
+[616s] कि result में, क्या जोड़ दो
+[618s] आज इससे पहले जितने भी red sum
+[620s] आये थे, आज इससे पहले
+[622s] जितने भी सवैरे, ऐसा 0, 2
+[624s] तू का भी sum था, 0 to 4
+[626s] का भी sum था, 0 to 6
+[628s] सब का sum red sum के इकवल था
+[630s] सब एक एक green part आपको देंगे इस i तक के लिए
+[633s] सब को जोड़ दो, सब को जोड़ लिए
+[635s] जाने से पहले, आगे जाने से पहले
+[637s] इस वाले sum को भी आपको जोड़ना पड़ेगा
+[639s] अब ये sum d एक sum बन चुका है, जो आ चुका है, इस sum को भी अपने hash map में जोड देते थे, अपने hash map में जोड देते थे, और last में return result कर देते थे, यही template यूज हुआ, चार या पांच question की होगे, सब में same template यूज हुआ, एक question बचा हुआ है, जो कि DQ का question है, वो हम बात में पढ
+[661s] जरूरी है तो जब DQ के pattern start होंगे तो वो हम लोग पढ़ देंगे लेकिन template यही है आपको आपको यह thought process जबलब करना पड़ेगा आप कभी भी एक ऐसा रे बना लीजिए
+[670s] i को माल लीजिए
+[671s] question के हिसाब से उसका sum या product
+[673s] जो भी आपसे question पूछ रहा है अगर आपसे difference पूछ रहा है
+[675s] 0 run में difference track होता था
+[677s] sum नहीं difference track होता था
+[679s] उसका sum को sum माल लीजिए
+[680s] अपने हिसाब से green part बना लीजिए
+[682s] green part को condition satisfy करवा दीजिए
+[685s] बचे हुए देख लीज़े कि अगर मेरा green part ऐसा है तो मेरा red part क्या होगा
+[689s] red part होगा क्या
+[691s] red part जैसी है आपको पता चलता है कि क्या होगा
+[694s] यही यही आप
+[695s] hash map या कहीं भी किसी भी data structure दो भी आप use कर रहे है
+[699s] hash map में store करेंगे
+[701s] यही आप hash map में store करेंगे
+[702s] यही आद पूछेंगे
+[704s] यही आद पूछेंगे
+[706s] तो यह एक general template था
+[708s] prefix sum का, कोई भी prefix sum का question
+[710s] इसी formula से solve होता है और उसका कोई
+[712s] अलग template नहीं होता है
+[713s] simple से simple question, complex से complex question
+[716s] सब इसी से solve होता है
+[718s] तो यह एक छोटा सा revision था
+[720s] जो लोग पहले lecture देख चुके हैं
+[742s] कारण आपका फोकस शिफ्ट रगाता है एजी नहीं होता है कि पढ़ाई करना लेकिन ठीक है कोई बात नहीं एंटसम खतम हो जाए तो आज का प्रिफिक्स रिवेजन खतम हो गया है चलिए मिलते हैं

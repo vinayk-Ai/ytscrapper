@@ -1,0 +1,181 @@
+[1s] Yes, so, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes, yes
+[24s] रिविजन वीडियो में जल्दी से यह समझ लेते हैं इस question का answer की when to use two pointer क्योंकि यह पूरा series का मकसद ही है कि आप question ना याद करें आप वो मत करें कि मैंने अगर 5 question करा दिया है तो आप 5 ही question आपसे 6 वाला बनने ही ना इस series को चलाने का मकसद है कि आप अगर 5 question करते हैं तो उसक
+[53s] कोई भी lead code का question देखके कैसे पता करोगे कि उसमें two pointer लगेगा या नहीं लगेगा सबसे पहले वो array का question होना चाहिए array या link list का question होना चाहिए अभी तक हमने जितने भी question करें क्या आपने देखा कि हमने graph के question करें हो या tree के करें हो या stack के करें हो नहीं करें क्यों क्यों क्यों कि
+[83s] हो जाएगा यह होना चाहिए या फिर question में लिखा हो rearrange करो भाई
+[90s] question में लिखा हो क्या लिखा हो rearrange करो या remove duplicate करो भाई
+[96s] remove duplicate करो या merge in place करो भाई merge in place करो भाई यह तो question में लिखा हो
+[106s] या फिर
+[110s] question में हो
+[112s] find
+[113s] more than one thing
+[114s] find
+[116s] more than one thing
+[119s] find
+[119s] more than one thing
+[121s] मतलब
+[121s] pairs
+[124s] या triplets
+[127s] या quadruplets
+[131s] यह या question में रिखाओ
+[132s] तो यह देख लीजिए
+[133s] सबसे पहले तो array या link list का question हो
+[136s] उसके बाद या तो वो अल्रेडी sorted हो
+[138s] या तो sorting करने से काम आसान हो जाएगा
+[140s] अगर ऐसी situation है
+[142s] question में अगर लिखा है
+[143s] rearrange करो, remove duplicate करो
+[146s] merge in place करो
+[147s] यहां तक की sub-arrays
+[148s] sub-arrays
+[151s] sub-arrays यह भी लिखा हो question में
+[153s] या तो question में आपको
+[155s] एक से ज़ादा चीज खोज नहीं है
+[157s] मतलब आपको या तो pair खोजना है
+[158s] या तो triplets खोजना है
+[160s] या तो 4 चीज खोजनी है या 5 चीज खोजनी है
+[163s] वैसा vector खोजने की बात नहीं कर रहा हूँ
+[165s] अगर vector खोजना है तो वो अलग बात है लेकिन
+[167s] एक से जादा मतलब
+[168s] आपको एक नहीं आपको बोला है पेर खोजो भाई
+[171s] दो ही नमबर खोजो
+[172s] दो खोजो, तीन खोजो, चार खोजो
+[175s] ऐसे तो एक से ज़ाधा चीज़ा का
+[176s] खोजनी है तो इन सब में
+[179s] कहीं न कहीं two pointer
+[181s] आप सोच सकते हैं अगर इस तरीके
+[183s] का कोई भी question है
+[184s] तो 90% chance है कि उसमें 2 pointer लगेगा
+[187s] question by question आपको में समझाता हूँ
+[189s] कि कैसे लगेगा
+[190s] पहला question क्या किया था
+[192s] 2 sum
+[194s] 2 sum में क्या क्या points थे
+[196s] array का question था
+[198s] sorted था नहीं लेकिन
+[200s] sort करने से फाइदा रहता है
+[202s] जिन्होंने वीडियोस नहीं देखी है
+[203s] टाइम निकाल के प्लीज सारी वीडियो देखिए
+[206s] ठीक है तभी आपको यह समझ में आगा जो हम यह आपको बता रहे हैं
+[208s] अब सॉट करने से फाइदा होता है न और पेर खोजना था
+[213s] पेर खोजना था
+[217s] तीन चीज आप देख सकते हैं इस उपर वाले flow chart में मिली इसलिए ये 2 pointer था
+[221s] 3 sum, 3 sum क्यों था 2 pointer?
+[225s] पहली बाद तो array का question था
+[228s] sort करने से असान हो जाता
+[231s] sort करने से असान हो जाता
+[234s] और triplets खोजने थे
+[236s] yes, yes, triplets खोजने थे
+[240s] खोजने थे
+[241s] और ये just like 2 sum था
+[243s] यह था loop plus two sum
+[247s] तो अगर two sum two pointer question था
+[250s] तो three sum naturally three pointer का question था
+[252s] सारे three sum का question में हमने same algorithm
+[254s] same logic, same decision tree देखाता है ना
+[258s] फिर क्या था?
+[259s] square, sorted array
+[263s] square, अब उपर से देखने में तो आप बोलेंगे कि इसमें
+[266s] सबसे पहली बात array का question ठीक है
+[270s] sorted है
+[272s] ठीक है, लेकिन आप आप बोलेंगे कि आप तो इसमें कुछ नहीं है
+[275s] लेकिन, लेकिन, लेकिन, जिनोंने ये वीडियो देखा था, वीडियो पूरा देखा था
+[278s] उनको मालूम था कि ये question, actual में, ये question, actual में
+[282s] merge to sorted array का था, merge to sorted का था, sorted array का था, देख लीजिए
+[289s] सब इंडिकेट कर रहा है कि ये
+[291s] two pointer का question है
+[293s] two pointer का question है
+[294s] अगर आपने नहीं देखा है series तो please देखिए
+[296s] बहुत कुछ ज़्यादा miss कर रहे हैं ठीक है
+[298s] क्योंकि जितना में आ ये कुछ नहीं है
+[300s] ये 2% भी नहीं है पुरे syllabus का
+[302s] 98% काम उधर हुआ हुआ है
+[304s] अगला question क्या था?
+[306s] Remove duplicates
+[309s] Remove duplicates
+[310s] यह तो simple simple आपको बताए हुआ था
+[313s] array का question है
+[316s] array sorted भी है
+[319s] array से
+[320s] remove duplicate
+[321s] question का नाम ही है remove duplicate
+[323s] flowchart याद करिये
+[324s] simple simple पता लग रहा है
+[326s] two pointer का question है
+[328s] ठीक बात है
+[329s] और क्या है? और क्या देखे थे
+[331s] Dutch national flag
+[332s] यह अच्छा डच नैशनल फ्लाग अब यह एरे का क्वेस्चन था
+[342s] सॉर्टेट नहीं था सॉर्टेट करना है लेकिन नहीं था और रियरेंज करना है एरे को रियरेंज ही तो करना था
+[351s] सब 0, 1, 2 इस format में लाना था
+[354s] तो rearrange करना था
+[355s] and in place करना था
+[357s] in place करना था
+[358s] no space
+[361s] no space
+[362s] यह तीनों चीज मिल के आपको बताता है
+[364s] कि यह two pointer का question था
+[367s] और कुछ किये थे
+[368s] और कुछ अभी तो नहीं किये थे
+[369s] आगे करेंगे तो आप देखिए
+[371s] सारे जो हमने question किये हैं
+[373s] यह ऐसा नहीं कि मेरे मन में आया था कि यह two pointer का question है, इसलिए इनको रखेंगे, यह जो सारा question है, सारा question है, इन सब में, क्या क्या common है, array common है, देखिए, सारे array के question है, कुछ sort करने से फाइदा है, कुछ sort करने से आसान होते हैं, कुछ already sorted है, कुछ already sorted है, कुछ को sorted करना है, तो array, �
+[394s] एक बाद हमेशा याद रखिए, array और क्या नाम है, sorting, array और sorting, array और sorting, array प्लस sorting, यह बहुत बड़ा इंडिकेशन है, यह सबसे one of the biggest indication, array प्लस sorting है two-pointed में, ठीक है, अगर sorted नहीं होता है, तो rearrange,
+[415s] रिएरेंज, रिमूव, मर्ज, इनके साथ ये आपको बोला जाए, इन प्लेस करना है, मतलब नो एक्स्ट्रा स्पेस, तो ये दूसरा सबसे बड़ा इंडिकेशन है, ये आपको common, तो ये दोनों पॉइंट, ये दोनों पॉइंट, ये दोनों पॉइंट, ये पॉइंट और �
+[433s] आपको common मिलेगा हर type के question में
+[435s] हमने 5 से जादा
+[437s] 5 से लगता 7-8 question होंगे total
+[438s] हर question में आपको same चीज common मिलेगी
+[441s] तो अब मेरे ही उमीद से आप लोग समझ गए होंगे
+[443s] कि two pointer use कब होता है
+[444s] ठीक है और हाँ
+[446s] सारे question में सारे तरीके के movement हमने देखे हैं
+[450s] two pointer का मतलब क्या होता है
+[462s] two sum, three sum,
+[464s] दोनों में यह होता था,
+[465s] हमने ऐसे भी question देखे हैं,
+[467s] जहां low plus plus होता था,
+[469s] high भी plus plus होता था,
+[471s] यह किसकी बात कर रहे हैं,
+[472s] remove duplicates, yes,
+[474s] CM और officer एक साथ आगे बढ़ते थे,
+[476s] कि नहीं बढ़ते थे,
+[477s] remove duplicates and merge sorted areas में,
+[482s] merge sorted areas में,
+[483s] दोनों अपना अपना बढ़ता है
+[486s] हमने ऐसे भी question देखे जहाँ पे
+[488s] तीन pointer थे
+[489s] low, mid, high
+[492s] इसमें किसकी बात कर रहे हैं
+[494s] Dutch, Dutch, Dutch
+[495s] Dutch national flag
+[496s] Dutch national flag
+[499s] हर तरीके का movement हम लोग देख चुके हैं
+[502s] इस playlist में ठीक है
+[504s] अब आपको क्या करना है
+[506s] अगर आपका revision हो गया है
+[507s] कल का आपका क्या काम है
+[509s] सबसे पहले तो जो भी question है
+[510s] उनको submit जरूर से कीजिएगा यार
+[512s] ठीक है सिर्फ video देखने से नहीं होगा
+[514s] उनको submit जाके जरूर कीजिए
+[516s] कल से शुरूर औरने वाला है sliding window
+[519s] sliding window
+[520s] जो की एक subset है
+[522s] जो की एक subset है
+[524s] subset of
+[526s] किसका subset है two pointer का
+[528s] sliding window में two pointer
+[530s] आपको अगर simple simple में हम बता दें तो
+[533s] two pointer का बस ये वाला case
+[535s] sorry
+[536s] ये वाला case
+[537s] इसको sliding window कहते है
+[539s] ये होता है sliding window
+[542s] उसमें एक window रहती है
+[545s] high यहाँ पे रहता है
+[547s] और low यहाँ पे रहता है
+[548s] high इस तरफ बढ़ता है
+[549s] low भी इसी तरफ बढ़ता है
+[551s] इसको window कहते है shrinking
+[555s] इतना बड़ा विंडो होगा फिर इतना बड़ा हो जाएगा फिर इतना बड़ा हो जाएगा फिर इतना बड़ा हो ऐसा ही स्लाइड करता रहता है इसके बारे में जब जानेंगे दब जानेंगे लेकिन होप करता हूं कि आपको बहुत अच्छे से समझ में हो यह टू-पॉइ
+[573s] झाल झाल

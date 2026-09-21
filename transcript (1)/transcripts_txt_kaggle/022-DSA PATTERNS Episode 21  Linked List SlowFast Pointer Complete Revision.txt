@@ -1,0 +1,133 @@
+[30s] अलग है, two pattern, two pointer
+[32s] or sliding window में हम लोग array
+[34s] मतलब array या link list देखके समझ लेते थे
+[36s] कि इसमें लग सकता है नहीं लग सकता है
+[37s] इस question में या इस pattern में या इस category में
+[40s] इसा कोई बात नहीं है, कहने का मतलब
+[42s] कि ये जो pattern है वो array में भी
+[44s] लगता है, एक single number
+[46s] पे भी लग सकता है, string में
+[48s] भी लग सकता है और और और link list में भी लग सकता है यही इस pattern को थोड़ा
+[54s] मुश्किल बना देता है पहचानने में चलिए तो सबसे पहले तो यह सब
+[58s] चीज़े देख के आपको पता करना ही नहीं है कि अगर लग सकता है कि नहीं
+[75s] कि नहीं यह cycle link list का भी cycle हो सकता है यह cycle number का भी cycle हो सकता है यह cycle array में भी cycle हो सकता है किसी भी तरीके की cycle किसी भी तरीके की practical आपको लग रहा है
+[105s] cycle का starting point
+[106s] मतलब
+[107s] वैसा वो कौन सा विक्ती
+[109s] या तो कौन सा element
+[110s] या तो कौन सा चीज है question में
+[111s] जो cycle बना देता है
+[112s] जिसके current cycle बन जाता है
+[114s] again अगर ये है आपके question में
+[117s] 100% slow and fast pointed लगेगा
+[119s] और तो और
+[120s] आपको किसी भी चीज का middle find करना है
+[123s] middle of link list
+[124s] आपको find करना है
+[126s] middle of link list, middle of link list, 100% ये pattern लगेगा ही लगेगा, इस pattern के लावा कुछ नहीं लगेगा, तो तीन ही case है वेटा, तीन case क्या-क्या है, सबसे पहला तो cycle find करना है, दूसरा है कि cycle का starting point आपको find करना है, तीसरा है कि link list का middle निकालना है,
+[144s] तीनो पैटर्ण में, तीनो तरीके के question में
+[147s] 100% guarantee के साथ क्या लगेगा?
+[150s] Slow and fast pointer
+[151s] अब देखिए
+[153s] time कम है, इसलिए मैं आप लोगो बता नहीं पाते हैं
+[155s] आपको मालूब नी कि पता चलता है कि नहीं
+[157s] लेकिन हो सकता है कि question में सीधा सीधा ना लिखा रहा है
+[175s] cycle तो बनेगा ही, मतलब कि अगर 0 है
+[177s] और 1 है, फिर 1, 2 पे जा रहा है
+[179s] और 2, 3 पे आ रहा है
+[180s] और T4 पे आ रहा है, अब 4 किसी पे भी जाए
+[183s] 4 किसी पे भी जाए
+[185s] 4 किसी पे भी जाए, 4 किसी पे भी जाए
+[186s] 4 किसी पे भी जाए, या 4 खुद पे भी आ जाए
+[189s] cycle तो बनेगा ही बनेगा
+[190s] तो question देख क्या हम लोग समझेते हैं कि cycle बनेगा
+[193s] और उसका answer क्या लोटाना है
+[195s] starting point
+[196s] अगर आप लोग ये playlist बीच में देख रहे हैं
+[198s] तो हो सकता है कि आपको कुछ चीज ना समझ में है
+[199s] playlist शुरू से देखिए
+[201s] ये वाला playlist जो अभी चल रहा है
+[219s] दो चीज़ें ले लीजिए, क्या, slow and fast, दोनों को start पे रख दीजिए, किसके start पे, आपके घर के start पे, नहीं, अगर, अगर link list है, तो आप head पे रख सकते हैं, अगर array दिया है, तो आप दोनों को index 0 पे रख सकते हैं, अगर कोई number दिया है, तो आप दोनों को number पे ही रख सकते ह
+[238s] प्लाट जहां से आपका चीज़ें हो रहे हैं वहां पर बीजिए वेरी गुड़ अब उसके बाद एक लूप चलाइए वाइल इसका
+[244s] condition अभी देखते हैं इसका condition अभी देखेंगे सबसे पहले slow को one step आगे बढ़ाईए कितना आगे one step आगे
+[252s] अगर link list है तो आप लिखेंगे next अगर array है तो हो सकता है कि आप यह लिखें कि slow is equal to array of slow
+[260s] तो यह आगे बढ़ सकता है, अगर कोई number दिया है तो आपको question में बताया होगा कि वो number एक step आगे जाके क्या बनता है, जैसे कि happy number में आपको बोला था कि number आगे जाके अपने digit का squares का sum मन जाता है, तो आपको बताया रहेगा सब सब, ठीक है, और fast को कितने step बढ़ाईए, दो step
+[276s] एक step नहीं वेटा, दो step आगे बढ़ाईए, दो step आगे बढ़ाईए, अगर, अगर, sorry, अगर, अगर, if, slow, equal, equal to fast हो जाता है, कहीं पे भी हो जाता है, क्या पता चलगे आपको, cycle है, cycle है, to return कर दीजिए, अगर खोज रहा है कि cycle है कि नहीं, to return कर दीजिए, अगर, अगर, अग
+[298s] को बताना है कि बताओ इसका starting point क्या है starting point क्या है
+[302s] तो return true की जगा क्या कीजिए slow को वापिस start पर रख दीजिए slow को वापिस start पर रख दीजिए fast जहां है उसको वहाँ पर रहने दीजिए
+[310s] अब क्या कीजिए while slow not equal to fast क्या not equal to fast अब slow को कितने step आगे बढ़ाईए एक step आगे
+[322s] fast को कितने step आगे बढ़ाईए
+[324s] एक ही step आगे, दो step नहीं
+[326s] एक step आगे, सॉरी, दो नहीं
+[327s] एक, एक, एक, एक, एक
+[329s] एक step आगे, एक step आगे
+[331s] और ये while loop बंद कर दीजिए
+[333s] जैसे ही ये while loop टूटेगा
+[334s] जैसे ही ये while loop टूटेगा
+[336s] इसका मतलब है कि यहाँ आपका
+[338s] slow equal equal to fast हो चुका है क्यों क्यों क्योंकि ये condition ही वैसी चल रही है
+[342s] बस return slow कर दीजे अगर cycle है तो बस ये काम आपको करना है
+[348s] दोनों तरीके के template में same pattern same template same blueprint है
+[352s] बस आपको क्या सोचना है आपको हर question में क्या सोचना है
+[356s] कि ये start point क्या होने वाला है और आपको क्या सोचना है
+[359s] ये एक step आगे और दो step आगे
+[361s] इसका मतलब क्या है
+[362s] ये आप कैसे करेंगे बस ये दो चीज़े आपको सोचनी है
+[365s] और आपको क्या सोचनी है
+[367s] ये condition, कौनसी condition
+[369s] ये वाली condition
+[369s] ये वाली condition क्या आपको बताती है
+[372s] कि आपका जो fast है
+[375s] वो खतम न हो जाए
+[376s] मतलब खतम नहीं हो जाएगा
+[406s] चलते चलते कहीं न कहीं बाहर
+[408s] निकल जाएगा इस बाहर निकलने की
+[410s] condition को आपको यहाँ पे लिखना है अगर link list
+[412s] होता है तो null लिखते हैं similarly array में
+[414s] लिखते हैं past question जिन्हों ने भी देखा है हमको
+[416s] इसमें कोई दिक्कत नहीं होगी ठीक है
+[435s] ठीक है
+[436s] while बाहर ना निकल जाए
+[439s] तो fast not equal to null
+[443s] and and and
+[445s] fast dot next
+[448s] not equal to null
+[450s] इसके बाद क्या करना है
+[451s] slow को एक step आगे बढ़ाना है
+[453s] एक step एक step दो step नहीं
+[456s] slow dot next
+[457s] और fast को कितने step आगे बढ़ाना है
+[458s] दो step
+[460s] fast dot next
+[463s] dot next
+[465s] बंद कर देना है
+[466s] ये लूप कब खतम होगा जब फास्ट बाहर निकल जाए
+[475s] बाहर निकल जाए
+[478s] फास्ट बाहर निकल गया है
+[479s] मतलब फास्ट ने पूरी डिस्टेंस कवर कर ली है
+[481s] तो स्लो कितना डिस्टेंस कवर कर लेगा
+[483s] स्लो आधा एक्जाक्ली आधा कवर कर लेगा
+[486s] return
+[487s] slow
+[489s] बस
+[491s] find a middle of the link list इतने में हो जाता है
+[494s] तो देखिए इस एक pattern से आप कितने सारे questions सीख गए
+[497s] कितने variety of questions आप सीख गए
+[499s] आप link list का भी question सीख गए
+[501s] आप array का भी question सीख गए
+[503s] आप number का भी question सीख गए
+[506s] number का भी question सीख गए
+[507s] इस एक pattern से तीनों तरीके question बनते हैं
+[513s] फिर से बता रहें cycle, start of cycle और middle
+[521s] तीन तरीके के question, तीन तरीके के data structure, तीनों combine हो के कहें भी भी आ सकते हैं
+[526s] तो यह क्या था? slow and fast pointer, क्या था? slow and fast
+[532s] हाँ, एक मेरे से गलती हो गई है कि pattern में एक जो dsa pattern की sheet है, उसमें एक pattern missing है
+[537s] क्या pattern missing है, cadence and prefix sum, cadence and prefix sum, prefix sum, ये pattern missing है, इसको हम क्या कर देंगे, add कर देंगे, और कल से cadence शुरू कर देंगे, cadence बहुत important pattern है, क्या है, बहुत important pattern है, कल से cadence शुरू कर देंगे,
+[561s] और कल से वीडियो थोड़ी लंबी आएगी
+[563s] कल की वीडियो इसलिए थोड़ी लंबी होने वाली
+[565s] क्योंकि एक ही वीडियो में आपको हम
+[567s] cadence और prefix हम
+[569s] दोनों का flow chart और दोनों का हर चीज बताना चाहेंगे
+[572s] चलिए आज तो वीडियो बहुत छोटी थी
+[588s] आपको पढ़ाना है, आपको पढ़ाना नहीं है, हम कुछ सोभी पढ़ सकते हैं, मेरे पढ़ने के लिए हमको YouTube चैनल की ज़रूरत नहीं बना नहीं कि, at least, ठीक है, तो इस चैनल का मकसद है कि आप सीख जाए, आप कब सीखेंगे, आप वीडियो देख के सीखेंगे, आप रि
+[616s] बच्चे हैं चलिए कल आईए कल से केडेंस पढ़ना शुरू करेंगे

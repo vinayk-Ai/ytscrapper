@@ -1,0 +1,271 @@
+[0s] Hi, hi, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye, bye
+[22s] Bipartite solve करने के लिए आपको graph coloring भी आना चाहिए, तो दोनों चीज़ इसी में आप लोग सीख जाएंगे, ठीक है?
+[28s] तो question क्या रहेगा? question से पहले तुस देखेंगे कि Bipartite होता क्या है भाई?
+[31s] बाई पार्टाइट देखिए बाई का हमेशा मतलब होता है दो
+[34s] बाई का कभी भी बाई लिखाओ न तो बाई का मतलब क्या होता है
+[37s] दो होता है अच्छा और पार्टाइट का मतलब होता है
+[39s] पार्टिशन बाई पार्टाइट का मतलब होता है
+[55s] दो भाग में divide कर सकते हैं, जिससे की आपका graph कुछ-कुछ ऐसा दिखने लगेगा, पहला एक यहाँ पे यह भाग होगा, और दूसरा यह होगा, जो लोग maths, maths पढ़े होगे न, बीटेक वगरा में भी पढ़ाया जाता है, यही use करके पढ़ाया जाता है, माल लीजिए, यहा�
+[71s] है 0 ठीक है और यहाँ पर एक और नोड है दूसरे भाग में भी दो नोड है दूसरे भाग में भी कितने नोड है दो नोड है तो 0 1 2 और 3 तो यह आपका ग्राफ यह आपका ग्राफ है ठीक है दो भाग में डिवाइट करने क्या मतलब होता है न एक भाग के सारे नोड मतलब ए
+[90s] पार्ट A है और ये पार्ट B है
+[93s] दो पार्ट distinctly दिख रहा है
+[95s] किसी भी एक पार्ट के
+[96s] nodes आपस में connected नहीं होने चाहिए
+[98s] किसी भी एक पार्ट के nodes में
+[100s] कोई edge नहीं होना चाहिए आपसे मतलब कि
+[102s] 0 और 1 के बीच में कोई edge नहीं होना चाहिए
+[104s] न, 2 और 3 के बीच में कोई edge नहीं होना चाहिए, नहीं
+[107s] दूसरे भाग के notes में हो सकता है, मतलब एक A part से B part तक edges हो सकते हैं
+[111s] उसमें कोई दिक्कत नहीं है, for example, ऐसे edges हो सकते हैं
+[114s] कि 0, 2 से connected हो, और 0, 3 से connected हो, उसी तरीके से 1 भी 3 से connected हो
+[120s] यह आपका graph हो सकता है, इसमें कहां-कहां edge है
+[123s] 0 से 2 तक edge है
+[125s] क्या यह सही है? हाँ, क्योंकि 0 part A में है
+[127s] और 2 जो है वो part B में है, तो चलता है
+[130s] 0 और 3 के बीच में edge है
+[132s] यह भी चलता है, क्यों? क्योंकि 0 इस part का है, 3 उस part का है
+[135s] लेकिन 0 और 1 के बीच में कोई edge नहीं होना चाहिए
+[138s] एक part में जितने भी nodes हैं
+[140s] जरूरी नहीं कि 2 हो
+[141s] बहुत सारे nodes हो सकते हैं
+[143s] लेकिन एक part के nodes के बीच में
+[145s] कोई edge नहीं होना चाहिए
+[146s] इसलिए इसको बोलते है bipartite
+[148s] आप इसको 2 partition में ऐसा तोड़े न
+[151s] कि same group के nodes
+[153s] आपस में बिल्कुल भी connected नहीं है, same group के notes
+[155s] आपस में बिल्कुल connected नहीं है, 2 और 3 यहां connected हो जाएगा
+[159s] तो यह bipartite graph नहीं रह जाएगा, क्यों? क्योंकि 2 और 3 एक ही भाग में है
+[163s] तो आपको ऐसा कोई करके graph दिया रहेगा, और आपसे पुछेगा कि
+[167s] क्या वो bipartite है अगर आपको exactly यह drawing नहीं दिया रहेगा आपको जो drawing दिया रहेगा वो ऐसा दिया रहेगा देखिए 0 यहां रहेगा
+[174s] 0 से 2 के बीच में एक edge है
+[176s] 0 से 3 के बीच में भी एक edge है
+[179s] और 1 से 3 के बीच में भी एक edge है
+[181s] 1 से 3 के बीच में
+[182s] यह आपका graph दिया रहाएगा
+[183s] इसमें देखे 4 edge है न
+[184s] आपसे पुछेगा क्या यह graph bipartite है
+[187s] क्या यह graph bipartite है कि नहीं
+[189s] तो हाँ यह graph bipartite है क्यों
+[191s] क्योंकि आप इसको पार्ट में तोड़ सकते हैं
+[193s] आप एक काम करिए कि 0 को पार्ट A में ले लिजिए
+[196s] 1 को पार्ट A में ले लिजिए
+[197s] तो 0 और 1 दोनों अलग अलग हो गए
+[199s] 3 को पार्ट B में ले लिजिए
+[201s] और 2 को पार्ट B में ले लिजिए
+[220s] एक customer होते हैं, आप एक customer है, हार आदमी एक customer है ना, और Amazon पे चीज़े बिखती हैं, product भी होंगे, Amazon पे product है, तो customer जाके किसको खरीदता है, product को खरीदता है, ठीक है, देखिए, customer को आप part A समझे, आप part A मतलब Amazon सारे customer को part A में रखती होगी, और सारे product को part B में रखती होगी, क्य
+[240s] क्योंकि Amazon में आप ऐसे customer मतलब हम जैसे अगर प्रत्यूश यहां पर है तो प्रत्यूश किसी भी product को देख सकता है प्रत्यूश को सारे product दिखने चाहिए प्रत्यूश को fan, ac, tv सारे product दिखने चाहिए तो प्रत्यूश से एक एच सब में जाएगा जा सकता है दिखने चाहिए �
+[256s] लेकिन अगर एक और आदमी है सुमित, तो Amazon पर क्या ऐसा कभी होता है कि आप किसी को friend request बेच सकते हैं, नहीं, Amazon कोई social media platform नहीं है, कि अगर हम दोनों लोग shopping कर रहे हैं, तो हम उनको friend request बेच दिया या वह मेरा number, नहीं, प्रत्यूश और सुमित के बीच में घूल के भी connection नहीं
+[272s] होना चाहिए प्रत्यूश और सुमित के बीच में कोई सुमित भी फैन देख सकता है सुमित का भी ऐसा हो सकता है बिल्कुल चलेगा लेकिन कोई भी
+[279s] customer एक दूसरे से कोई relationship नहीं बना सकता है कोई ऐसा friend request follow request amazon is not a social media platform
+[287s] अब देखिए, same नहीं बात, product में भी आती है, अगर fan भी करा है और AC भी करा है तो fan और AC कोई दूसरे कोई मतलब नहीं है, ऐसा नहीं होता न कि fan से AC में क्या relation, कुछ relation नहीं है, fan का customer के साथ relation होगा, fan AC TV का अपस में कोई relation नहीं है, इसलिए Amazon में customer और product दोनों दो चीज़ें है
+[307s] दो भाग में divided हैं, कोई भी एक पार्ट का इंसान या एक पार्ट का आइटम अपने पार्ट के लोगों से connection नहीं मना सकता है, क्या है, बाइपार्टाइट ग्राफ है, बाइपार्टाइट ग्राफ है, तो यह हम इसलिए बता रहे हैं, इससे कोई लेना-जेना नहीं लीट को
+[335s] लिंक लिस्ट बहुत हेविली यूज होगा, ग्राफ बहुत हेविली यूज होगा, बशरते कि आप किसी अच्छी कंपनी में जाएं, आप अगर TCS Infosys में जाके बोलता है ना कि जो DSA पढ़े तो वो कामी नहीं आ रहा है, वहां कुछ काम नहीं आता है, वहां आपको वही ब
+[363s] बताना पड़ेगा तो ठीक है जलिए अब इसको solve कैसे करते हैं देखिए हम बताते हैं इसको solve कैसे करते हैं एक graph बना लेते हैं माल लीजिए कोई इस तरीके का graph है कोई इस तरीके का graph है ठीक है देखिए 0 1 2 और 3 ठीक है इस तरीके का कोई आपको graph दिया बड़ा simple सा graph है आपस
+[393s] इस पर हम दीजेगा कि जरूरी नहीं है कि आप इसको equally बाटे है, ऐसा बिल्कुल जरूरी नहीं है कि part A में 2 हो और part B में 2 नहीं, part A में 1 हो सकता है, part B में 3 हो सकते हैं, कुछ भी, लेकिन जो division होगा वो इस तरीके से होगा कि आपस में एक division के लोग एक दूसरे से connect नहीं होने
+[409s] चाहिए ठीक है इसको solve कैसे करते हैं देखिए आपको कितने
+[413s] part में divide करना है सबसे पहले तो आपको two parts में divide
+[415s] करना है bipartite का मतलब ही होता है two parts two parts में divide
+[418s] करना है ठीक है इसके लिए coloring use होता है इसके लिए
+[422s] क्या use होता है coloring use होता है हम लोग ऐसा assume करते हैं
+[425s] कि जो भी हम लोग जो भी division करेंगे तो ऐसा लगेगा यह आपका part A होगा और यह आपका part B होगा तो ऐसा assume किया जाता है ना कि चलो एक काम करते हैं दोनों part को color दे देते हैं दोनों part को क्या दे देते हैं color दे देते हैं
+[438s] माल लिया जाए कि हम ना part A को red color देना चाहते हैं और part B को green color देना चाहते हैं ठीक बात है logical बात है कि आप एक division करने वाले हैं तो एक काम करिए न कि part A में जो जो notes कोई भी note जा सकता है part A में और कोई भी note जा सकता है part B में तो part A में जो होगा उसको red color दे देंगे और part B में जो
+[461s] भी जाएगा, वो ऐसे red लोग दिखेंगे
+[463s] आपको, और part B में जो जाएंगे
+[465s] वो आपको हरे हरे दिखेंगे, तो very good
+[467s] हो जाएगा division, तो very good, हम लोग क्या
+[469s] करते हैं, किसी भी note से शुरू करिए, किसी भी note से
+[471s] शुरू कर दीजिए, और
+[474s] माल लीजे हम 0 से शुरू करते हैं
+[475s] और इसको अपने मन से कोई भी
+[477s] red से शुरू करना चाते हैं, green से शुरू करना चाते हैं
+[479s] हम क्या करते हैं, इसको red color दे देते हैं
+[483s] यह red हो गया, मतलब कि
+[485s] हम decide कर लिए, अब कहीं न कहीं से शुरू करना है
+[487s] ना तो 0 को हम part A में डालना
+[489s] चाहते हैं, यह मेरा choice है, आप green
+[491s] में डाल सकते हैं, कुछ भी कर सकते हैं, जरूरी
+[493s] में नहीं है कि आप 0 से शुरू कर हैं, आप किसी सभी शुरू कर
+[495s] सकते हैं, ठीक है, लेकिन
+[497s] जैसे ही आप 0 को red color से रंगते हैं
+[501s] मतलब यह आपका zero यहाँ पे आ गया
+[503s] आपका zero red वाले में आ गया
+[506s] अब bipartite graph क्या बोलता है
+[508s] zero जिससे जिससे connected है
+[511s] zero जिससे जिससे भी connected है
+[514s] वो दोनो अभी zero किससे connected है
+[516s] one से और two से
+[518s] ध्याम दीजेगा कि आपको एक undirected graph दिया है
+[521s] यहां पर आपको undirected graph बोला गया है
+[523s] तो zero जो दो लोगों से connected है
+[526s] क्या ये दो लोग red color के हो सकते हैं
+[529s] फिर से सुनिए मेरी बात
+[530s] अगर आप zero को red color से रग दिये हैं
+[532s] zero को आप ऐसा करके red कर दिये
+[534s] तो क्या zero जिन दो लोगों से connected है
+[537s] या zero जिससे इससे भी connected है
+[539s] 0 के जो neighbors है, क्या वो red color के हो सकते हैं, नहीं हो सकते हैं, क्यों, क्योंकि अगर आप बोलेंगे कि 1 को भी हम red color करेंगे, तो 1 यहां आ जाएगा, लेकिन 0 और 1 के बीज में edge है, यह नहीं allowed है, कोई भी 2 red color के लोग आपस में connected नहीं हो सकते हैं, red का अगर कहीं connection होगा, तो green जे हो
+[569s] नहीं रंगे हैं उसको आपको किस से color करना पड़ेगा
+[572s] green color से करना पड़ेगा किसे green color से
+[575s] क्योंकि bipartite यही बोलता है red लोग आपस में
+[579s] connect नहीं हो सकते हैं green लोग आपस में
+[581s] connect नहीं हो सकते हैं red और green आपस में
+[584s] red और green का connection हो सकता है तो zero के
+[587s] जितने भी uncolored neighbors हैं
+[589s] उनको आपको green color से रगना पड़ेगा
+[591s] इसके लिए उनको क्या use करेंगे
+[593s] DFS use करेंगे
+[594s] माल लिजे कि 0 पे पहले आप 1 को देखते हैं
+[597s] और 1 को आप किस color से करेंगे
+[599s] green से 1 को
+[600s] आप green से कर दिये तो 1 green हो गया
+[605s] same यही बात
+[606s] same यही बात
+[607s] one के लिए लागू होगी अब one green हो गया है one green हो गया है one के कौन कौन है neighbor one के दो neighbor है zero और three अब zero तो already colored है zero तो uncolored नहीं है zero का neighbor one था तो one uncolored था लेकिन अब जब आप one पे आये हैं तो one का neighbor zero है zero uncolored नहीं है तो आपको check करना पड़ेगा कि अगर मेरा neighbor uncolored नहीं है तो क्या वो म
+[636s] अभी ऐसा uncolored neighbor होता जो कि green में होता तो ये grab bipartite नहीं हो सकता था वो आगे वाले example में आपको और clear हो जाएगा लेकिन one के दो neighbor है एक neighbor already colored है किस color में red color में तो क्या ये allowed है हाँ बिल्कुल allowed है क्योंकि one खुद green color में colored है इसका एक neighbor है जो कि red color में है अच्छी बात है green और red का हो स
+[665s] पते हैं नहीं green का उल्टा red, red में रगना होगा, तो आप किस में आ जाएंगे, three में और three को red color से color कर देंगे, very good, same चीज three पर करिये, three के दो neighbor, one और two, एक neighbor one है जो की already colored है, क्या वो three से उल्टे color में colored है, yes, अगर three red है तो वो green है, बिल्कुल सही बात है, three का एक uncolored neighbor है, कौन,
+[690s] 2, क्या 2 uncolored है
+[692s] हाँ 2 uncolored है
+[693s] तो 2 में आपको किस color से करना पड़ेगा
+[696s] क्या आपके पास red color से करने का option है
+[698s] बिल्कुल नहीं है
+[700s] क्यों, क्योंकि 3 red है
+[701s] किस color से आपको 2 को रगना पड़ेगा
+[703s] green color से, 2 को आपको
+[705s] green color से रगना पड़ेगा
+[708s] आप two में आए, आप two में आप same चीज़ करेंगे, तो two के दो neighbor हैं, जो कि already colored है, लेकिन, क्या ये two से opposite colored है, हाँ, दोनों red color है, तो ये देखिए, जो graph है, ये bipartite graph है, आपको कहीं भी कोई contradiction नहीं मिला, contradiction का क्या मतलब होता है, कि मेरा एक already colored neighbor हो, मेरा एक already colored neighbor हो, okay, already colored neighbor हो, और वो
+[733s] same color का हो, मेरे से same color का हो
+[735s] जैसे ही यह आया
+[737s] यह क्या हो जाएगा, contradiction
+[739s] इसका मतलब कि आपका जो graph है न
+[741s] वो bipartite नहीं, आप उसको कुछ भी कर लीजेगा
+[743s] तो आप उसको divide नहीं कर पाईएगा
+[745s] इस graph में आपको इस तरीके का
+[747s] contradiction कभी नहीं मिला, कैसे
+[749s] नहीं मिला क्योंकि एक ग्राफ बाइपार्टाइट है ग्राफ कैसे है बाइपार्टाइट अगर हम
+[753s] दो पार्ट इसमें डिवाइड करें न हम एक पार्ट में क्या क्या रख सकते हैं
+[758s] 0 और 3 एक पार्ट में हम 0 और 3 और दूसरे पार्ट में हम क्या
+[763s] रख सकते हैं 1 और
+[765s] 2 1 और 2 इसको हम
+[767s] हरे color से कर देते हैं 1 और
+[770s] 2 edges कहां कहां है
+[771s] 0 से 1 के बीच में edge है
+[773s] 0 से 1 के बीच में edge है
+[775s] और 0 से 3 के बीच में भी edge है
+[777s] तो very good नहीं sorry 0 से 3 के बीच में कोई edge नहीं
+[779s] 0 से 2 के बीच में edge है yes
+[781s] 0 से 2 के बीच में edge है हो गया
+[783s] और 1 से 0 के बीच में edge है, हो गया, और किसके किसके, 1 से 3 के बीच में edge है, 1 से 3 के बीच में edge है, और 3 से 2 के बीच में edge है, यह देखे, जितने भी edges हैं, वो एक red से एक green में है, red और red के बीच में कोई edge नहीं है, green और green के बीच में कोई edge नहीं है, तो यह graph क्या है, this is a bipartite graph, अब
+[811s] ग्राफ बनाते हैं, सेम ग्राफ बनाएंगे, 0, 1, 2, 3, एक स्क्वेर बना देते हैं, ऐसे ऐसे करके, यह लिजे एक स्क्वेर, और एक और एज डे देते हैं, यह क्या जो हो गया, ठीक है, सेम काम करना शुरू करिए, 0 को
+[824s] red color से कर दिये, ये हो गया red
+[826s] 0 के कितने neighbor है, 0 के 3 neighbor है
+[828s] तो चलिए 1 पे चलते हैं, जो uncolored है
+[830s] क्या 0 का कोई already colored neighbor है
+[832s] नहीं, अभी कोई colored neighbor नहीं है
+[834s] ठीक है, uncolored वाले पे चलिए
+[835s] 1 पे आई है और 1 को, इस color से कर दिए
+[838s] red के opposite color से, green से कर दीजे
+[841s] इसको green से कर दिए
+[843s] ठीक है, क्या 1 का कोई already colored neighbor है, yes, कौन सा, 0, तो क्या 0 इस से opposite है, हाँ 0 इस से opposite है, अभी तक आप सही चल रहे हैं, 1 का एक non colored neighbor भी है, तो उसको जाके color कर दीजिए, उसको जाके क्या कर दीजिए, color कर दीजिए, ओके, तो 1 का non colored neighbor है 3, 3 को हम लोग red color से रम देंगे, 3 को हम लोग red
+[862s] color से कर देंगे, अब देखिए, यहाँ पे हो गया गलती, यहाँ पे क्या हो गया गलती, क्या, 3 का कोई
+[868s] already colored neighbor है, हाँ, 3 का already colored neighbor है, कौन, 0, क्या 0, 3 के opposite
+[876s] color का है, क्या, नहीं, 0, 3 के same color का है, इसका मतलब क्या हो गया, not a by
+[885s] इस ग्राफ को आपको जो मनहें करते रहिए आप इसको कभी भी नहीं कर पाएंगे, क्यों नहीं कर पाएंगे, बहुत सिंपल से आपको बताते हैं, कभी भी आप इसको दो पार्ट में नहीं कर पाईएगा, देखिए, पार्ट A, पार्ट B, ठीक है, कभी भी नहीं कर पाईए
+[912s] तो पहला choice आपको यही लेना पड़ेगा कि 0 को part A में रखिए, बाकी 3 को part B में रखिए, यह minimum requirement है, तो माल लिजे कि 0 इससे connected है, अभी तक सही चल रहे हैं अभी तक आप बिल्कुल सही चल रहे हैं, लेकिन अब देखिए 1 और 3 के बीच में भी तो edge है, 1 और 3 के बीच में यह �
+[927s] देखे, 1 और 3 के बीच में edge है, 3 और 2 के बीच में भी तो edge है, यह लिजी, क्या यह graph है bipartite? नहीं है, नहीं है ना, part B देखे, part B पुरा गज़त हो गया है, part B को सही करने के लिए आपको एक चीज़ को यहाँ लाना पड़ेगा, जैसे ही आप किसी ना किसी को यहाँ लाएंगे
+[941s] 0 उससे एजबना देगा, तो ये graph
+[943s] impossible है, आप इसको bipartite नहीं
+[945s] कर सकते है partition, इसलिए क्या है
+[947s] not a bipartite graph, तो ये
+[949s] जो भी चीज हम समझाए है न, इसको
+[951s] क्या बोले दता है, graph
+[953s] coloring, क्या, graph coloring
+[955s] coloring के मदद से हम
+[957s] identify करते हैं कि ठीक है, एक को color कर
+[959s] दूसरे को देख लेंगे, इसका code कैसे होगा, simple code होगा, जो भी red और green हम यूज किये हैं, red और green के जगा हम क्या use करेंगे, color is equal to 0, एक color है मेरे पास 0, और एक color है 1, 0 और 1, अगर आप किसी node को 0 से color करते हैं, तो उसके सारे non-colored neighbor को आपको 1 से color करना पड़ेगा, अगर आपको को
+[979s] यसा neighbor मिल जाता है जिसका same color है,
+[981s] जो color हो चुका है और आप दोनों का color same हो गया है,
+[984s] तुरांत महीं से bipartite graph नहीं हो पाएगा,
+[986s] तो ठीक है, इसमें हम लोग क्या करेंगे,
+[988s] code बड़ा असान है, एक DFS करेंगे,
+[991s] DFS करेंगे, इसमें एक चीज और अच्छी है,
+[994s] कि इसमें जो lead code का question है
+[995s] उसमें graph का adjacency list आपको
+[998s] already बना के दिया हुआ है तो वो आपको नहीं करना पड़ेगा
+[1000s] ठीक है तो ये वाला adjacency
+[1002s] आपको already दिया हुआ है अगर नहीं भी दिया होता है
+[1004s] तो आप लोग बना लेते
+[1006s] int node अभी आप किस node को color करने
+[1010s] वाले हैं. int c
+[1011s] किस color से करने वाले हैं? c या तो
+[1014s] 0 होगा या तो 1 होगा. 0 है तो
+[1016s] 0 का opposite 1, 1 है तो 1 का opposite
+[1017s] 0. और एक visited की
+[1020s] जगा ना हमें एक vector int
+[1023s] colors कर देंगे.
+[1024s] colors मतलब कौन सा node किस
+[1025s] color का है?
+[1027s] DFS में आम तोर पर हम लोग एक visited
+[1029s] array करते हैं लेकिन इसमें हम लोग क्या करेंगे ना एक colored कर देंगे
+[1032s] तो colored सेम काम कर रहा है अगर कोई node non-color है तब ही आप उसको
+[1036s] color करने के लिए जाएंगे ना अगर वो colored है तो बस एक बार
+[1039s] check करके उसको छोड़ देंगे तो visited का काम colors करेगा कैसे करेगा
+[1043s] देखिए, शुरू में सारे node का color क्या कर देंगे हम लोग, minus 1, minus 1 मतलब not colored, ओके, तो जब आप किसी node पे आए हैं, आप इस node पे आए हैं, आप क्या बोलेते हैं, शुरू किसे करिए, 0 से किसी से भी कर दीजी, सबसे पहले तो, इस node का colors of node is equal to C, colors of node is equal to C, C कोई भी color हो सकता है,
+[1062s] 0 या 1, ओके, अब इसके नेवर देखना शुरू करिए, अब इसके नेवर देखना शुरू करिए, नेवर कैसे देखते हैं, अभी तक आप लोग को याद होना चाहिए, syntax, एकदम, एकदम याद होना चाहिए, ठीक है, अभी तक इसमें कोई confusion नहीं रहना चाहिए, int neighbor, int neighbor is equal to array
+[1080s] of node and j
+[1082s] okay
+[1083s] सबसे पहले contradiction देख लीजिए
+[1086s] if
+[1088s] colors of
+[1090s] neighbor
+[1092s] not equal to minus 1
+[1093s] मतलब कि already colored हो चुका है
+[1095s] कभी न कभी हो चुका है
+[1096s] and
+[1098s] colors of
+[1101s] neighbor
+[1103s] equal equal to c
+[1105s] मतलब कि c क्या था
+[1107s] इस node को आप कौम सा color दिये है
+[1109s] यहाँ पे, अगर equal equal to c है, rest is equal to false, rest is equal to false, rest क्या है, global variable, यहाँ पे, boolean, शुरू में हम लोग assume करेंगे कि आपका bipartite है, शुरू में assume कर लेंगे कि benefit of doubt से कि चलो है, अगर मिल गया, तो यह क्या है आपका, यह आपका क्या है, contradiction, जो हम बोले थे, contradiction, अगर contradiction है, rest is equal to false, अगर ऐसा
+[1133s] अगर ऐसा नहीं है, अगर ऐसा नहीं है, तो मतलब कि या तो वो same color का होगा, अब देख लीजे कि अगर colors of neighbor, मतलब कि अगर neighbor आपका non-colored है, equal equal to minus 1, अगर वो non-colored है, तो आपको उसको color करना पड़ेगा, किस color से color करेंगे, जो भी C है न, अगर C यहाँ पे 0 है, तो आपको उसक
+[1163s] अगर c 0 है, तो आप वहाँ पर 1 भेजना चाहते हैं, अगर c 1 है, तो आप वहाँ पर 0 भेजना चाहते हैं, यह आप क्या है, मतलब उल्टा करना चाहते हैं, आप वहाँ पर 1-c भेज दीजिए, 1-c भेज दीजिए, इससे क्या होगा देखिए, अगर इस node का c 0 होगा, आप व
+[1192s] बना तो आप ऐसे भी कर सकते हैं कि अगर C 0 है तो 1 भेज हो 1 है तो 0 अत्ता जों बन करें
+[1196s] लेकिन अगर वो non-colored है तो आपको उसको color करना पड़ेगा कैसे color करना पड़ेगा
+[1200s] DFS call करके A node के जगा neighbor अब आप neighbor को color करना चाहते हैं किस color से
+[1206s] 1-C, 1-C, bracket के जरूरत नहीं है, 1-C, node को color किये थे C से neighbor को किसे करेंगे, 1-C और colors, और colors हो गया, इसको बंद कर दीजे और return कर जाएए, इसको return कर जाएए, यह आपका DFS खतम हो गया, यह DFS, शारे nodes को देखेगा, अगर कहीं भी आपको contradiction मिलेगा, तो आपका यह result is equal to false हो जाए
+[1231s] इसको call कैसे करना है mean method से बड़ा simple है आपको एक boolean यह है lead code वाला function bipartite इसमें आपको already वो adjacency बनाके दिया हुआ है
+[1242s] already वो adjacency बनाके दिया हुआ है vector int ऐसा ऐसा a ठीक है सबसे पहले तो number of nodes निकाल लीजिए a.size
+[1254s] A dot size से आप number of nodes निकाल सकते हैं
+[1257s] मेरा pencil थोड़ा खराब हो गया क्या
+[1259s] A dot size से आप number of nodes निकाल सकते हैं
+[1262s] खेर
+[1262s] उसके बाद एक colors का vector बना लीजिए
+[1264s] colors का vector बना लीजिए
+[1267s] कितने size का? N size का
+[1268s] और सब को minus 1 से initialize कर लिए
+[1270s] सब minus 1 okay
+[1271s] अब आपको दिया है ना कि graph
+[1274s] maybe पुरा graph में
+[1284s] multiple component हो सकते हैं, जो लोग पहली की वेडियो देख रहे होंगे कि हम क्या बोल रहे हैं,
+[1288s] multiple component का मतलब, आपका graph ऐसा हो सकता है, आपको ऐसा कोई graph दिया रहेगा,
+[1293s] माल लीजे, 0, 1 और 2, ये graph हो, 3, 4, ये पूरा graph हो, इसमें, आपको एक बार आप 0 से अगर शुरू करेंगे,
+[1302s] DFS, 0 को 0 देके शुरू करेंगे
+[1304s] आपको फिर 3 से भी शुरू करना पड़ेगा
+[1306s] आपको 3 से भी शुरू करना पड़ेगा, क्यों? क्योंकि
+[1308s] आप 0 से शुरू करके, आप ये पूरा
+[1310s] cover कर लिए DFS से, हो जाएगा cover
+[1312s] लेकिन इसको भी तो चेक करना पड़ेगा, ये भी graph का
+[1327s] करना है graph के multiple components है तो आप क्या करते थे जो भी visited जिसका भी visited 0 रहता था उस पर DFS call कर देते थे
+[1334s] same काम करेंगे एक loop चला लेंगे i is equal to 0 i less than n i plus plus जैसे ही कोई uncolored graph है
+[1344s] uncolored का क्या मतलब है colors i equal equal to minus 1 मतलब यह uncolored है इस पर DFS call कर दीजिए
+[1350s] कैसे, dfs, a, i, इसको आप किस color से रगना चाहते हैं, आपकी मर्जी किस color से, आप इसमें 1 भी pass कर सकते हैं, 0 भी, 1 और 0 है क्या, 1 और 0 आपका red और green है, आपकी मर्जी, आप शुरू red से करना चाहते हैं, शुरू green से, कोई फर्क नहीं पड़ेगा, हम यहाप इस 0 pass कर देते हैं
+[1367s] और colors pass कर देते हैं, चीप बात है, इसको बंद कर दीजे, last में return rest कर दीजे, return rest, अगर कहीं दी contradiction होगा, तो यह जो आपका DFS है न, यह जो आपका DFS है न, यह उसको पकड़ लेगा, यह उसको जल्दी से पकड़ लेगा, किसी भी contradiction हो, इस वीडियो में आप लोग, यह आपका code
+[1385s] यह देख लीजे, यह आपका main code है और यह आपका
+[1387s] छोटा सा DFS code है, आप लोग
+[1389s] bipartite graph के master बन चुके हैं
+[1391s] bipartite graph में इस स्यादा कुछ नहीं होता है
+[1393s] यह होता है, और graph coloring
+[1395s] भी यही चीज होती है, graph coloring या bipartite
+[1397s] कोई भी चीज होती है, वो यही चीज होती है
+[1412s] अपलो जेनरली स्पिकिंग सारे बेसिक ग्राफ कॉंसेट्स सीख चुके हैं तो मिली अगले लेक्चर में इसको कोड़ करना ना भूलें चलिए बहुत बहुत

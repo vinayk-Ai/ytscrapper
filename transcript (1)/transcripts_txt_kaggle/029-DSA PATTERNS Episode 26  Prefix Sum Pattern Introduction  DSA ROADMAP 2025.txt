@@ -1,0 +1,720 @@
+[0s] Welcome, episode 26-26 में सबका, इसके prefix some DSR patterns, बहुत requested pattern था, इस वीडियो के अंतर तक आप आप लोग सब सीख जाएंगे, आप लोग पूरा flowchart सीख जाएंगे, कौन सा data structure लगा के prefix sum solve किया जाता है, कैसे solve किया जाता है, 4-5 ही तरीके के उसमे pattern होते हैं, और आप लोग उसका template भी सीख �
+[17s] कि यह यह काम करते हैं जैसे हम लोग sliding window में सीखे थे उससे पहले जिसको इसको sheet नहीं मिली है, description में है, pattern updated है, question updated है, जो लोग पहली बार आ रहे हैं, मेरा नाम प्रत्यूश है, आकमाई में है, dsa pattern सिखाते हैं, रटवाते नहीं है, चलिए, prefix हम जो है, बहुत पसंदीदा pattern है,
+[34s] इंटर्विवर्स का और बच्चों का वे क्योंकि बहुत सारा इसमें question बनता है
+[37s] कहने को concept बहुत simple होता है लेकिन इस concept से कितना hard hard question बन जाएगा आप खुद देखेंगे
+[41s] चलिए तो भीना time waste किए
+[44s] यह सब flow chart और template का ग्यान देने से पहले तो आपको समझाना जरूरी है कि prefix sum होता क्या है
+[49s] है ना सही बात है
+[51s] देखिए prefix का मतलब होता है पहले
+[53s] पहला मतलब पहले
+[55s] और sum का मतलब होता है sum
+[57s] तो prefix sum मतलब पहला sum
+[59s] एक तरीके से आप मानके चलिए कि ये जो पूरा टेंपलेट है न ये सिर्फ एरे पे ही लगता है
+[66s] बहुत आसान दाशा में अगर prefix sum आपको समझाया जाए
+[69s] तो अगर आपसे कोई पुछता है कि हम अगर index 2 पे खड़े हैं
+[74s] हमको बताओ कि index 2 के पहले इस array में क्या sum चल रहा था
+[77s] अभी तक क्या sum मतलब अभी तक इसमें array of 0 प्लस array of 1 में क्या था
+[83s] इसी को क्या करते हैं prefix sum
+[85s] prefix मतलब पहले i is equal to 2 के पहले क्या चल रहा था
+[88s] इसको क्या बोलते हैं prefix sum
+[91s] हो सकता है i is equal to 2 इसको use करके
+[93s] कुछ decision लेना चाहता हो
+[94s] और जब आप यहां पे आएंगे
+[96s] i is equal to 3 पे आएंगे आप फिर से यह सवाल पूछेंगे
+[99s] कि आप बताओ
+[100s] array of 0 plus array of 1 plus array of 2 में क्या चल रहा था
+[103s] हो सकता है array of 3 इसको use करके
+[105s] कुछ decision लेना चाहता हो
+[106s] इसी concept को कहते है prefix sum
+[108s] तो यह कोई algorithm नहीं है
+[110s] यह क्या है concept है
+[112s] इसको algorithm नहीं कह सकते है
+[114s] concept है या एक डिये से pattern है
+[117s] pattern है जिस पे कुछ तरीके के question बनते हैं
+[119s] बहुत special question बनते हैं जो इसी pattern से solve होंगे
+[121s] और कभी solve नहीं होंगे
+[124s] चलिए
+[125s] तो flowchart देख लिए तब ही आप लोगों को जादा interest आता है
+[128s] flowchart देख लिएजी, flowchart में क्या है
+[130s] सबसे पहली बात है कि यह array और subarray का question
+[133s] यह array और subarray का question होना चाहिए, पक्की होनी चाहिए
+[137s] उसमें दो तरीके की चीज़े हो सकती है
+[138s] या तो आपको sum of sub-arrays पुछाओ, किसी भी तरीके से sum of sub-arrays, number of sub-arrays with sum, count of sub-arrays with sum, sub-arrays having maximum sum, sub-arrays having minimum sum, ऐसा कुछ पुछाओ
+[150s] या फिर आपको sum of left-right पुछाओ, left-right का क्या मतलब है, आपको बोलाओ कि array भाई, array के हर index पर जाओ
+[157s] और 0 से लेकि उस index के पहले तक का sum को left बोल दिया
+[161s] उस index के बाद से लेकि अन्त तक के sum को right बोल दिया
+[164s] और उन दोनों में कुछ ऐसा pivot या equilibrium या ऐसा कुछ fight करने कोशिश करो
+[168s] मतलब कि left और right के दीच में कुछ condition खोज नहीं कोशिश करो
+[172s] इस तरीके question हो सकता है
+[173s] अगर इस तरीके का question है
+[175s] अगर इस तरीका question है तो आप बहुत अच्छे लख में है
+[178s] इसमें आपको बहुत कुछ नहीं करना है
+[179s] कोई special data structure आपको नहीं चाहिए होता है
+[181s] simple इसको variable से या तो array से कर सकते हैं
+[183s] हम लोग सीखें के कैसे कर सकते हैं
+[185s] बहुत लगी है, अगर ऐसा question मिलता तो very good, यह prefix हमका question है, बदाई हो, नहीं तो, अगर sum of sub-arrays का question है, और और एक बहुत important बात, array में negative numbers भी है, array में negative, क्योंकि आप देखिया, याद करिए, जो लोग शुरू से पढ़ रहे हैं, हम लोग already है, sub-array बगेर का बात कर चुके हैं,
+[201s] बहुत डीप में, किसमें, sliding window में, sliding window की पूरी चर्चा जो थी, इसी पे तो थी, कि सब आरे कैसे निकालते हैं, window कैसे निकालते हैं, तो अब यह क्यों पढ़ना पढ़ रहा है, जब sliding window इतने अच्छे से पढ़े थे, तो यह किया, तो बार बार अलग अलग चीज पढ़ा रह
+[229s] बताएंगे क्यों नहीं करता है चोटा सा बता देंगे तो आरे में negative number होना चाहिए क्योंकि positive है तो sliding window आप लगा सकते है
+[235s] sliding window हर तरीके question कर लेता अच्छे से लेकिन आरे में negative है अच्छा उसके बाद अगर आपसे कोई exact चीज पूछी गई है देखिए यह जो sum है
+[245s] sum i j
+[247s] इसका मतलब किसी एक sub array
+[248s] कोई दो index उनके बीच का sub array
+[250s] उनका बीच का sub array उसका sum
+[251s] अगर आपसे या तो equal equal to k
+[253s] मतलब exact पूछा गया है
+[255s] या फिर आपसे modulus k is equal to equal to 0
+[257s] मतलब कि जो sum होगा
+[259s] या तो वो exact किसी k हो
+[261s] ऐसा number of sub array बताओ
+[262s] या तो कुछ ऐसा बताओ
+[263s] जो इसको हम k से mod करें तो 0 आ जाए, मतलब जो k का multiple हो, वैसा बताओ, इस condition में आपको hash map यूज करना पड़ता है, किसके लिए, as a prefix sum data structure, देखिए prefix sum हम क्या बूल रहे बार बार, prefix sum एक concept है, prefix sum को use करने के लिए आपको कुछ data structure चाहिए, आपको sum store करने के लिए कुछ चाहिए,
+[281s] आपको या तो एक variable चाहिए, या तो एक hatch map चाहिए, या तो एक tree चाहिए, या तो q चाहिए, कुछ भी चाहिए, तो data structures आपको चाहिए, अगर ऐसी condition है कि आपको equal डोड़ना है, या तो module के equal equal to zero डोड़ना है, आपको hatch map से काम बन जाएगा आपका, अभी भी वहाँ अच्छी �
+[296s] बात है अगर आपको shortest window with some greater than equal to k यह हम बोल रहे थे यह देखिए यह exact question हम लोग sliding window में पढ़ किया है यह exact question sliding window पढ़ किया है इसमें क्या है इसमें negative भी है sliding window negative में नहीं चल सकता है तो अगर यह question आपको मिले with negative आपको एक DQ यूज करना पड़ेगा घबराईए गमत हमको वाल�
+[320s] मतलब आज खल में question होगा पढ़ा देंगे और तो तीसरा category होता है यह बहुत hard category है बहुत कम chance है कि आपसे interview पुछा जाए लेकिन अगर आप माल लीजे Google बगर का interview देते हैं तो पूछ सकता है बिल्कुल पूछ सकता है
+[331s] range sum
+[332s] range sum आपको find करना है कि
+[334s] left और right एक range दिया हो
+[336s] उसके बीच का कुछ sum ऐसा कुछ question में wording हो
+[339s] उस समय आपको merge sort on prefix array
+[341s] बहुत पेचीदा concept है
+[343s] इसको एक दिट time लेके पढ़ाएंगे
+[345s] इसको अभी आज या कल या परसो
+[347s] एक घंटे इसको time लेके question बताया जाएगा
+[349s] बहराल यह बहुत hard है
+[351s] यह बहुत hard है यह तो बहुत easy है
+[354s] आपको खुद पता चल जाया कितना easy है
+[355s] यह भी easy है यह medium है
+[358s] यह hard है ऐसा करके
+[360s] इसका flow chart होता है यही गिंचुन के कितने हैं
+[362s] 1, 2, 3, 4
+[364s] 4 categories of questions होते हैं
+[366s] इसके अलावा इसके बाहर से कोई question नहीं आता है
+[369s] इसके बाहर नहीं आएगा, चलिए, टेम्टेट पर बात करेंगे, पहले हम लोग कुछ important बाते कर लिए हैं, सबसे पहला, sliding window, negative पर काम क्यों नहीं करता है,
+[381s] sliding window negative पे काम क्यों नहीं करता है
+[386s] क्योंकि sliding window में हम लोग करते क्या थे
+[390s] 0, 1, 2, 3, 4
+[392s] हम लोग high को include करते थे अपने result में
+[395s] high को हम लोग result में include करते थे
+[397s] और low को अपने result से बाहर निकालते थे
+[399s] तो कभी भी हमारा जो sum होता था न
+[402s] उसको अगर हमको कम करना होता था
+[404s] उसको अगर कम करना होता था तो हम लोग लोग को श्रिंक करते थे, लोग को श्रिंक करते थे, अगर हमको कम करना होता था, कभी भी हमको सम को अगर बढ़ाना होता था, तो हम लोग हाई को एक्स्पैंड करते थे, तब ही तो बढ़ेगा, लेकिन ये बस positive number है possible है, for example, अगर negative number
+[422s] पर आने लगे, माल लिए यहाँ minus 1 है और यहाँ पर low है और यहाँ पर high है तो आप देखिए आप जब low को shrink करेंगे ना इसका मतलब आप अपने sum से minus 1 को हटा रहे हैं मतलब negative number हटा रहे हैं तो भी आपका sum बढ़ जाएगा तो भी आपका sum बढ़ जाएगा उसी तरीके से अ�
+[443s] तो आपका sum कम हो जाएगा
+[446s] तो पूरी decision making power
+[448s] उलट गई आपकी
+[449s] कि हम लोग sum को बढ़ाने के लिए
+[451s] high को expand करते थे
+[452s] sum को गटाने के लिए low को shrink करते थे
+[453s] लेकिन negative number आने से
+[455s] low को shrink करेंगे हो सकता आपका sum बढ़ जाए
+[458s] high को expand करेंगे हो सकता
+[459s] sum कम हो जाए
+[460s] तो sliding window पूरी तरीके से fail कर जाता है
+[462s] कि इसमें negative case में
+[463s] बहुत important question है, interview में पुछा जा सकते हैं आपसे
+[466s] याद रखिएगा, चले
+[468s] अब आजाएगे, अब आजाएगे कि prefix sum होता क्या है
+[471s] prefix sum होता क्या है
+[473s] जैसा कि हम पहले ही बता चुके है
+[474s] prefix sum मतलब array के
+[476s] पीछे वाले element का sum, इतना ही होता है
+[478s] array के बाद वाले element को sum को क्या बोलेंगे
+[480s] suffix sum, suffix मतलब होता है बाद में
+[483s] suffix sum
+[484s] ठीक है, array बहुत simple होता है
+[487s] for example, अगर आपको एक array दे
+[490s] आपको हम बोलें कि array में ऐसा
+[491s] element है, 1 है, 2 है
+[493s] 3 है, 4 है, और 5
+[495s] 0, 1, 2, 3, 4
+[497s] तो किसी भी index का
+[499s] किसी भी index का prefix sum क्या होगा
+[503s] किसी भी index का prefix sum क्या होगा
+[505s] उस index के पहले तक का sum
+[508s] मतलब की अगर हम i is equal to 2 की बात करें
+[511s] इसका prefix sum होगा
+[512s] array of 0 plus array of 1
+[515s] simple बात है उस index के पीछे तर
+[516s] अगर हम i is equal to 4 की बात करें
+[518s] तो इसका prefix sum होगा array of 0
+[520s] plus array of 1
+[522s] plus array of 2 plus array of 3
+[525s] simple
+[526s] लेकिन हमें अगर i is equal to 0 की बात करें, इसका prefix sum क्या होगा, इसका prefix sum कुछ नहीं होगा, इसका prefix sum 0 होगा, क्योंकि i is equal to 0 के आगे कुछ है ही नहीं,
+[536s] मतलब पीछे कुछ है यही नहीं, i is equal to 0
+[538s] start हो रहा है, उसी तरीके से
+[539s] i is equal to 1 का prefix sum क्या होगा, सिर्फ
+[542s] i a 0 होगा, और कुछ नहीं होगा
+[545s] इंडेक्स के पहले वाले sum को
+[546s] prefix sum बोलते हैं, यही concept होता है
+[548s] अब इसमें हम data structure का बात
+[550s] क्योंकि एतना बड़ा-बड़ा dq और pq
+[566s] एक array से बात नहीं बनेगी, आपको इस sum, यह क्या है, यह पीछे का sum है, यह पीछे का sum है, यह एक information है, यह information है, आप इस information को कैसे store करेंगा, कि आपको जादा से जादा फायदा हो सके, उस काम के लिए data structure, जो flowchart में लिखा हुआ है, यह सब, यह सब काम आता है, उस ही काम के ल
+[591s] प्रोग्राम कर लेते हैं यह शीट पर नहीं है लेकिन जरूरी है समझना जरूरी है अगर हम बोलते हैं यह एक आपका एरे हैं
+[598s] 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, हम आपसे question पूछे हैं कि सारे left values print करो left values मतलब हर index का prefix sum
+[611s] prefix sum print करो
+[613s] ठीक है, i is equal to 0 के लिए कुछ मत करो
+[615s] i is equal to 0 के लिए 0 print कर दो
+[616s] बाकी के लिए तू उसके पीछे-पीछे का sum print करो
+[619s] तो इसका सबसे basic तरीका क्या है
+[621s] sorry
+[622s] सबसे basic तरीका क्या है
+[624s] आप एक और array बना लिजी
+[626s] या, एक और array बना लिजी
+[627s] उसी size का, उसी size का, जो आपका original आ रहे है, 0, 1, 2, 3, 4, इसका हम नाम देंगे prefix, prefix, शुरुवात के लिए sum में 0 डाल दीजे, शुरुवात के लिए sum में 0 डाल दीजे, ठीक है, अब, अब, i is equal to 0 के लिए तो कुछ करना है नहीं, i is equal to 0 के लिए वो 0 ही रहेगा, i is equal to 1, i is equal to 1 मे
+[648s] prefix array में क्या रहना चाहिए
+[650s] a0
+[651s] a0 रहना चाहिए
+[652s] अब मानते हैं इस बात को
+[653s] i is equal to 2 के लिए क्या है
+[655s] a0 plus a1
+[658s] ठीक
+[659s] i is equal to 3 में क्या रहना चाहिए
+[662s] a0 plus a1
+[663s] plus a2
+[666s] यही होना चाहिए
+[666s] i is equal to 4 के लिए क्या होना चाहिए
+[669s] a0 plus a1
+[671s] plus a2
+[673s] plus a3
+[675s] यही होना चाहिए न भैया
+[678s] कोई pattern दिख रहा होगा आपको a0 a0 plus a1 a0 plus a1 plus a2 a0 plus a1 plus a2 plus a3 कुछ pattern दिख रहा होगा आईए इसको हम prefix array के index में लेखते हैं तो और ज्यादा दिखने लगेगा
+[693s] प्रिफिक्स
+[695s] यह है 0
+[696s] is equal to array of 0
+[698s] यह है
+[699s] array of 0 plus array of 1
+[702s] प्रिफिक्स 0 नहीं
+[703s] प्रिफिक्स 1
+[705s] क्योंकि prefix 0 कुछ नहीं होगा
+[707s] prefix 0 मतलब prefix 0 denote करता है
+[710s] कि 0 से पहले वाले सारे sum
+[711s] 0 से पहले कोई index नहीं है तो वो 0 होगा
+[713s] अच्छा
+[715s] और यह हो जाएगा 0
+[717s] plus array of 1
+[719s] प्लस अरे अफ टू
+[721s] ये क्या हो जाएगा?
+[722s] अरे अफ जीरो प्लस अरे अफ वन
+[725s] प्लस अरे अफ टू
+[727s] प्लस अरे अफ टू
+[729s] ठीक है? यही होगा ना भाई
+[730s] प्रिफिक्स आपको वही तो प्रिफिक्स बोनता है
+[732s] यही तो करना है तो यह कर लिजिए
+[735s] prefix 3
+[736s] और prefix 4
+[739s] तो एक तरीका तो यह है कि आप ऐसे करके अपना अरे बिलकुर बना सकते हैं
+[743s] आप यह algorithm यूज करके अपना अरे बना सकते हैं
+[745s] ने इस्टर डूप चलाई है और बनाते रहे
+[746s] लेकिन एक गौर करने की बात क्या है
+[750s] prefix 2
+[750s] prefix 2 को हम लोग लिख सकते हैं
+[753s] prefix 2 को
+[755s] prefix 2 क्या है
+[756s] prefix 2 है array of 0 plus array of 1
+[758s] array of 0
+[760s] already आपके prefix 1 में stored है न
+[762s] array of 0 की value put कर दिजे
+[764s] array of 0 की value put कर दिजे
+[766s] prefix के term में
+[766s] prefix 2 क्या बन जाएगा आपका
+[769s] prefix 2 क्या बन जाएगा
+[772s] prefix 1
+[773s] yes
+[774s] plus plus
+[775s] बचा क्या array of 1
+[779s] simple बात है
+[779s] यह prefix 2 बन गया, अच्छी बात
+[781s] prefix 3 क्या बनेगा
+[783s] prefix 3 में same काम कीजिए
+[786s] prefix 3 देखिए
+[787s] array of 0 plus array of 1
+[789s] array of 0 plus array of 1 plus array of 2
+[791s] array of 0 plus array of 1
+[793s] आपका prefix 2 है, देखिए, same है
+[795s] same है दोनों, यह देखिए
+[796s] value पुट कर दीजिए, value पुट करके देख लीजिए
+[799s] यह बन जाएगा prefix of
+[802s] 2
+[803s] plus array of 2
+[806s] इसकी value हम put कर दे prefix of 2
+[809s] prefix of 2
+[811s] prefix 4 की value लिखिए
+[813s] prefix 4
+[814s] same काम करिए
+[815s] same काम कीजिए
+[817s] array of 0, array of 1, array of 2
+[819s] array of 0, array of 1, array of 2
+[821s] पूरा, ये पूरा क्या है?
+[822s] prefix 3, बचा क्या?
+[824s] array of 3, लिख दिजिए
+[826s] prefix
+[827s] prefix of 3
+[829s] plus array of 3
+[831s] कोई pattern लग रहा है? अब देखिए, अब pattern पता चलेगा
+[835s] prefix of 2 क्या था prefix of 1 plus area of 1
+[838s] prefix of 3 क्या था prefix of 2 plus area of 2
+[842s] prefix of 4 क्या था prefix of 3 plus area of 3
+[845s] मतलाब मतलाब मतलाब
+[847s] prefix of i is equal to prefix of i minus 1 plus a minus i minus 1
+[858s] यह देखेंगे यह बन गया आपका
+[860s] यह बन गया equation
+[861s] यह ही equation होती है prefix हम की
+[863s] prefix of i is equal to prefix of i minus 1
+[866s] plus ai minus 1
+[867s] यही equation है, सम में fit बैठ जाएगए
+[869s] सम में, हाँ, prefix of 1 कैसे निकालेंगे?
+[872s] निकालेंगे
+[873s] prefix of 1 है क्या?
+[874s] prefix of 1 है array of 0
+[876s] prefix of 1 है array of 0
+[877s] prefix of 0 क्या है? prefix of 0, 0 है
+[880s] हम लोग बुलें इसको 0 ही छोड़ देंगे
+[882s] तो उसी तरीके से prefix of 1 क्या हो जाएगा?
+[886s] prefix of 1
+[887s] is equal to, आप लिख सकते हैं 0 plus array of
+[889s] 0
+[891s] is equal to
+[893s] prefix of 1
+[895s] is equal to prefix of 0
+[897s] prefix of 0
+[898s] plus area of 0
+[900s] देखे, same equation आ गई जो
+[902s] prefix of i is equal to prefix of i minus 1
+[904s] plus ai minus 1
+[905s] बस आईए, इसको code करके अगर हम लिखना चाहें
+[908s] हम क्या करेंगे
+[909s] सबसे पहले एक vector बनाएंगे
+[911s] सबसे पहले एक vector बनाएंगे
+[913s] vector int
+[915s] prefix
+[916s] अब देखिए, जो महानुभाव उनको लग रहा हुआ कि
+[918s] अरे सर ऐसे नहीं करते हैं, वो आप्टिमाइज चरीका भी आपको नहीं आता है, हमको सब आता है, हम आपको बताने के लिए बता दें, ठीक है?
+[925s] तो मेरा चिंता मत करी, हमको आता है, आप लोग को बताने के लिए हम बता दें, बस,
+[930s] for i is equal to 1
+[932s] क्योंकि 1 से start करना है
+[933s] 1 से लेना है
+[934s] and i++
+[939s] prefix of
+[941s] i is equal to
+[944s] prefix of
+[944s] i-1
+[946s] plus area of i-1
+[948s] simple
+[949s] और इसको return कर गीए
+[951s] return अगर आप prefix करेंगे तो आपको area मिल जाएगा
+[954s] बस इतना सा code में आपका prefix हम होगे
+[956s] किसी भी area का prefix हम कैसे निकालना पता चल गए
+[959s] क्यों निकालना है ऐसे, सही बात है, अब इसी तरीके से, इसी तरीके से, इसी तरीके से,
+[967s] suffix sum भी निकाला जा सकता है, क्या, suffix sum, suffix sum, suffix sum अलग से कोई concept नहीं है, इसको prefix sum के साथ ही पढ़ाता है, क्योंकि prefix suffix same है,
+[977s] मतलब एक ही concept पर काम करता है, suffix हम क्या बोलता है ना, अगर आपका एक आरे है, 0, 1, 2, 3, 4, और आपका एक suffix है रहे है, ये, 0, 1, 2, 3, 4, just ultra काम करेगा, prefix है रहे क्या बोलता था, I के पहले का सारा sum, suffix बोलता है, I के बाद का सारा sum, right का सारा sum, इसको right, right, right का सारा sum,
+[1001s] obvious सी बात है कि जो हमारा suffix of 4 है उसमें 0 रहेगा
+[1007s] क्योंकि 4 के बाद और कोई index अवेलेबल नहीं है अच्छा
+[1010s] suffix of suffix of 3 क्या होगा array of 4
+[1016s] यह होगा न suffix of 3 array of 4 होगा
+[1019s] suffix of 2 क्या होगा array of 3 plus array of 4
+[1026s] suffix of 1 क्या होगा वाई
+[1028s] यह होगा array of 2
+[1030s] plus array of 3
+[1031s] plus array of 4
+[1033s] वही pattern आप लोग दिख रहा होगा
+[1035s] जो लोग तेज बच्चे हैं, जो लोग प्यारे बच्चे हैं
+[1036s] उनको pattern दिख गया होगा
+[1038s] सारे प्यारे बच्चों को अच्छा सा एक pattern अभी दिख गया होगा
+[1042s] दिख गया है तो pause करिये और
+[1044s] खुद बनाईए च्छापने में मत रहिए ठीक है जिनको पैटर्ण पता चल गया है क्या होगा वो यह वाली एक्वेशन खुद से लिखिए यह जो एक्वेशन थी न यह खुद से लिखिए वीडियो पॉस कर दीजिए और जिनको पैटर्ण नहीं समझ में है तो आईए मिलक
+[1057s] चपें, क्या हो रहा है यहां पर, same हो रहा है, suffix 3 is equal to a4, इसमें जो equation बनेगी न, suffix of i is equal to, suffix of i plus 1, i plus 1, plus ai plus 1, एकदम उल्टा, prefix, एकदम उल्टा, prefix क्या बोलता था, prefix i is equal to prefix i minus 1 plus ai minus 1,
+[1084s] suffix एकदम उल्टा बोलता है
+[1086s] suffix i is equal to suffix i plus 1
+[1088s] plus ai plus 1
+[1089s] एकदम उल्टा हो गया
+[1090s] ऐसे करके आप देखेंगा तो आपका suffix
+[1092s] आरे बन जाएगा
+[1092s] simple बात है
+[1094s] तो आप prefix आरे बनाना सिख गए
+[1095s] suffix आरे भी बनाना सिख गए
+[1096s] दोनों denote क्या करते है
+[1098s] कोई भी prefix i क्या denote करता है
+[1103s] 0 से लेके
+[1104s] i-1 तक का sum
+[1108s] 0 index है
+[1109s] i-1 index तक का sum
+[1111s] कोई भी suffix i क्या denote करता है
+[1115s] i plus 1 से लेके
+[1116s] n-1
+[1117s] इसका sum
+[1120s] मतलब i पर है तो i plus 1 से last
+[1122s] right वाला sum
+[1123s] तो किसी भी आरे को अगर आप देखेंगे
+[1126s] आप किसी भी एक index को देख लेंगे
+[1129s] यहाँ पर i है
+[1130s] इधर वाले को हम लोग बोलते हैं left part
+[1132s] या फिर prefix sum
+[1134s] या फिर prefix sum
+[1136s] और इधर वाले part को हम लोग बोलते हैं right part
+[1139s] और हम लोग बोलते हैं suffix sum
+[1143s] suffix sum
+[1143s] suffix sum
+[1145s] ठीक बात है
+[1147s] इसी से, इसी से
+[1148s] हम लोग सेग्वे, सेग्वे का मतलब समझते हैं क्या होता है सेग्वे
+[1152s] सेगवे का मतलब कि हम जो बात कर रहे थे
+[1154s] वो बहुत इसली अब ट्रांजिशन होने वाला है
+[1156s] हमारे पहले सवाल में
+[1157s] हमारा पहला सवाल
+[1160s] हमारा पहला सवाल क्या है
+[1161s] find pivot index
+[1163s] lead code 724
+[1166s] find
+[1168s] pivot
+[1169s] index
+[1171s] find pivot index
+[1173s] बहुत ध्यान से देखिएगा
+[1174s] प्लीज बहुत ध्यान से देखिएगा, जो लोग यहां तक देख लिये हैं, तो देखिए, आप लोग अल्रेटी 19 मिनट तो बरबाद कर दिये, मतलब 19 मिनट बरबाद कर दिये, और 19 मिनट बरबाद करके देख लिजे, चलिए,
+[1184s] find pivot index
+[1186s] question आपको क्या बोलता है
+[1187s] आपको एक array दिया है
+[1189s] आपको एक array दिया है ऐसा करके
+[1191s] array दिया है
+[1192s] 1, 7, 3, 6, 5, 6
+[1197s] 0, 1, 2
+[1199s] आपको एक index बताना है
+[1201s] कोई भी ऐसा index बताना है
+[1203s] जिसमें जो भी उसका
+[1205s] left वाला sum है strictly equal
+[1207s] to the right वाला sum
+[1208s] left मतलब prefix sum
+[1210s] right मतलब suffix sum
+[1212s] आपको एक ऐसा index बताना है जिसमें
+[1215s] prefix of i
+[1217s] prefix of i is equal equal to suffix of i
+[1220s] suffix of i
+[1221s] यह बताना आपको
+[1223s] यह बताना है
+[1224s] ऐसा एक index बताना है बस
+[1225s] तो हम लोग जो पढ़के आए हैं
+[1227s] उससे तो एक question ऐसा चुटकी बजाते हो जाएगा
+[1229s] prefix आरे आप लोग बनाना जानते हैं
+[1231s] suffix आरे बनाना जानते हैं
+[1232s] तो आईए एक बर देख लेते हैं कि उससे कैसे होगा
+[1234s] उससे होगा कैसे
+[1235s] आईए
+[1237s] तो यह हमारा आरे है
+[1239s] हमारा आरे 173
+[1242s] और 656
+[1245s] 656
+[1248s] 012345
+[1249s] जल्दी से prefix आरे बना लेते हैं
+[1251s] जल्दी से prefix आरे बना लेते हैं
+[1253s] same size का आरे बनाए
+[1256s] यह हमारा prefix है
+[1259s] prefix 0 क्या होता है?
+[1261s] उसके बाद क्या होता है?
+[1262s] prefix i is equal to prefix i-1
+[1264s] पिछे का value plus a i-1
+[1266s] दोनों का sum
+[1266s] तो पिछे का value plus 1
+[1269s] 1 और 7, 8, 8 और 3, 11, 11 plus 3
+[1272s] 17
+[1273s] 17 plus 5, 22
+[1275s] यह अपका prefix आरे बन गया है
+[1277s] suffix आरे बना लिए
+[1278s] suffix आरे को उल्टा बनाना start करी
+[1282s] 0, 1, 2
+[1285s] हाँ, देखिए, इसलिए मोलते हैं वीडियो पूरा देखा करिए न, जो लोग आता है कि निकल गए, उनको suffix r a गलोथ हो जाएगा, उनको कुछ नहीं कर पाएगा जिंद्गी में, जो लोग अभी तक देखके निकल गया है, कि अप्छोड़ो अब तो बोलते रहता है, उनक
+[1297s] प्रिफिक्स आरे को हम जोग बनाना कोड कैसे लिखे थे
+[1300s] प्रिफिक्स आरे का कोड कैसे लिखे थे
+[1301s] i is equal to 1 से i less than n i plus plus
+[1306s] क्यूंकि prefix i को prefix i minus 1
+[1309s] पीछे की value चाहिए थी
+[1310s] suffix को क्या पीछे की value चाहिए
+[1312s] नहीं suffix को आगे की value चाहिए
+[1314s] तो suffix आप बनाना कहां से चुरू करेंगे, आगे से की पीछे से, पीछे से, क्योंकि आगे से अगर बनाएंगे, अगर इसमें देखिये, बहुत बड़ी, बहुत बड़ा है, इसलिए हम बोलते हैं, वीडियो पुरा देखा करो, क्योंकि हम script नहीं लिखके बढ़ाते हैं, द
+[1344s] suffix of n-1 तो 0 होता है
+[1347s] यह तो सब लोग जानते हैं
+[1348s] उसके बाद suffix n-2 बनेगा
+[1350s] क्यों? क्योंकि इसको आगे वाला value चाहिए
+[1352s] n-2 को अपने आगे वाला value चाहिए
+[1354s] उसके बाद यह बनेगा
+[1355s] फिर suffix n-3 बनेगा
+[1358s] मतलब कि अगर 5 length काय रहे है
+[1360s] तो सबसे पहले तो सफ 4 हम लोग लिख देंगे कि ये तो 0 है, इसके आगे कुछ है नहीं, उसके बाद सफ of 3 बनेगा, उसके बाद सफ of 2 बनेगा, उसके बाद जाके सफ of 1 बनेगा और last में सफ of 0 बनेगा, उल्टा बन रहा है, तो ये कैसे बनेगा, i is equal to n minus 2, क्योंकि n minus 1 already 0 ह
+[1379s] आई greater than equal to 0
+[1381s] आई minus minus
+[1384s] अब आप यहाँ पे लिख सकते हैं
+[1385s] sub of i is equal to
+[1387s] sub of i plus 1
+[1390s] plus array of i plus 1
+[1392s] उल्टा लूप चलेगा
+[1394s] सिधा लूप चलाएंग ग्राश कर जाएंगे ऐसे
+[1395s] क्योंकि आगे का value पता हो तब तो बनाएंगे
+[1397s] आप sub of 0 के लिए use कर रहे हैं
+[1400s] लेकिन अब पहले बना रहे हैं
+[1401s] सफ़ जीरो को तो use किसको करिएगा
+[1404s] जही बात है, पुरा देखा कि रहे वीडियो
+[1405s] ठीक है, चलिए
+[1408s] हाँ, आपको क्वेस्टिन क्या बोलता है
+[1409s] कि कोई ऐसा इंडेक्स खोजो जिसमें prefix
+[1411s] i is equal to suffix of i हो, तो दोनों बना लीजिए
+[1414s] चलिए, suffix आ रहे, पीछे से बनाईए, पहला तो 0 होगा, लास्ट वाला तो 0 होगा, फिर 6, 11, 17, 20, नहीं, 6, 5, 6 आया पहले, फिर 5, 11 आ गया, फिर 17 आ गया, फिर 20 आ गया, और फिर 15, अब कुछ नहीं करना है, हर इंडेक्स पे देख लीजिए कि जिस पे prefix of आई और suffix of आई
+[1436s] इक्वल है कि नहीं क्या जीरो इंडेक्स पीक्वल है क्या यह जीरो इंडेक्स पीक्वल है ना वन इंडेक्स पे ना टू इंडेक्स पे ना हां थ्री इंडेक्स पीक्वल थ्री इंडेक्स पीक्वल थ्री इंडेक्स पीक्वल थ्री इंडेक्स पीक्वल मिल गया है तो आई �
+[1463s] बात दो सबसे पहली बात आपको प्रिफिक्स सम और सफिक्स सम के लिए अलग-अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अलग अल
+[1491s] तो दो एरे बनाना बहुत मुश्किल है, दो एरे क्यों बना रहे है, मतलब दो एरे बनाने का मज़ा नहीं आ रहे है दो एरे बनाने में, अच्छा, देखिए, आपको हर आई पे, आपको हर आई पे, चहिए कि, आपको बस चेक करना है न, कि जो मेरा prefix of i है, equal equal to मेरा suffix of i है,
+[1508s] suffix of i है
+[1511s] यह चेक करना है
+[1512s] prefix of i is equal to suffix of i है
+[1514s] ठीक है
+[1515s] देखिए
+[1517s] माली जी यह आपका array होता
+[1519s] यह आपका array है
+[1521s] 0, 1, 2, 3, 4, 5
+[1524s] तो यह है 1, 7, 3, 6, 5 और 6
+[1529s] आपको हर i पे
+[1532s] सबसे पहले तो prefix of i चाहिए
+[1535s] prefix of i चाहिए
+[1536s] prefix of i क्या होता है
+[1538s] i is equal to 0 पे prefix of i क्या होगा
+[1541s] 0 होगा prefix of 0 0 होगा
+[1544s] i is equal to 1 पे prefix of i क्या होगा
+[1548s] array of 0 होगा
+[1550s] i is equal to 2 पे array of 0
+[1553s] plus array of 1 होगा
+[1554s] i is equal to 3 पे यह चीज array of 0
+[1558s] plus array of 1 plus array of 2 होगा
+[1561s] तो देखिए यह एक एक एक element से बढ़ता जा रहा है
+[1564s] एक एक element से बढ़ता जा रहा है
+[1565s] तो पूरा array की जरूरत नहीं है
+[1568s] array तो हम लोग किये था कि
+[1569s] सहूल यह पहले ही array बना के रख लिए
+[1571s] ताकि क्या हो convenience हो
+[1574s] लेकिन जरूरत नहीं है
+[1575s] जरूरत कैसे नहीं है
+[1576s] आप एक variable assign कर सकते हैं
+[1579s] आप एक अगर variable assign कर लिए
+[1580s] left is equal to 0
+[1581s] for example
+[1583s] left is equal to 0
+[1584s] हर i पे आप left को update कर दीजे
+[1586s] हर i पे पहले आप क्या कर रहे थे
+[1588s] पहले आप prefix आरे तयार कर रहे थे
+[1590s] हर i पे left को update कर दीजे
+[1592s] कैसे करेंगे देखिए
+[1594s] जब आप i is equal to 1 पे आते हैं
+[1596s] क्योंकि हमारा program i is equal to 1 से शुरू होना चाहिए
+[1598s] और i n minus 2 तक खतम हो जाना चाहिए
+[1601s] क्योंकि i is equal to 0 पे left की कोई भूमिका नहीं रखती है
+[1604s] रख भी सकते हैं कोई problem नहीं है छोड़ देजे
+[1606s] i is equal to 1 जब आप i is equal to 1 पे आते हैं न
+[1611s] जब आप i is equal to 1 पे आते हैं न तो क्या होता है
+[1614s] आपका left आपका left 0 है
+[1617s] आपका left 0 है आप क्या कीजिए
+[1620s] left में न
+[1621s] plus is equal to array of 0
+[1624s] जोड़ दीज़े
+[1625s] बस इतना काम करिए
+[1626s] हम क्या बोल रहे हैं
+[1628s] जब आप i is equal to 1 पे आए
+[1629s] आप अपने left में पहला वाल element जोड़ दीए
+[1631s] उससे पहला वाल element जोड़ दीए
+[1632s] अब आपका 1 बन गया
+[1634s] left 1 बन गया कहां i is equal to 1 पे
+[1636s] prefix आरे में भी देख लीजिए i is equal to यही होगा
+[1639s] prefix आरे में भी 1 था
+[1642s] इसको आप कुछ रख लीजिए
+[1643s] right का बात में बात करेंगे
+[1644s] left का देख लीजिए
+[1645s] prefix आरे को कैसे हम लोग एक variable में कर देंगे
+[1647s] पूरा array को कैसे एक variable में funnel कर रहे है
+[1650s] जब भी आप i is equal to 2 पे जाते हैं
+[1653s] क्या कीजिए, left में पुराना वला element जोड दीजिए, a1 जोड दीजिए, left plus is equal to a1 कर दीजिए, क्या, left पहले ही 1 था, 1 में आप a1 जोड दीए, 1 plus 7 कर दीए, 8 हो गया, यह आपका prefix है, देख लिजिए, prefix to 8 होगा, देखिए, prefix to 8 था, similarly, similarly, i is equal to 3 पे जब जाएंगे न, left में क्या
+[1674s] जोड़ दीजिए, array of
+[1676s] two जोड़ दीजिए, देखिए, array of two जोड़ेंगे
+[1679s] three, ये eleven
+[1680s] बन गया होगा, prefix of three भी
+[1682s] eleven होगा, देख लीजेगा, prefix of three भी eleven
+[1684s] होगा, देखिए, तो
+[1686s] prefix of i के कोई ज़रूद नहीं रही, हम लोग
+[1688s] variable बना के prefix निकाल सकते हैं
+[1691s] तो ये तो हो गई prefix की बात, suffix कैसे निकालिएगा, suffix के लिए तो array बनाना पड़ेगा, क्योंकि वो तो पीछे से निकलता है, नहीं, देखे, left अकर समझ में आ गया हो, हम लोग क्या कहिए, पूरा जो prefix array था ना, हम लोग पहले prefix array पूरा बना रहे थे, फिर उसको use कर रहे थे
+[1708s] यहां हम लोग साथ साथ बनाते हुए चल रहे हैं
+[1710s] हर आई के लिए left को update करके left बना ले रहे हैं
+[1713s] कि चलो left में तुम पूरा sum हो
+[1714s] होता क्या? left मतब sum होता है
+[1715s] उसको हम array से पढ़े हैं, उसको हम hash map से पढ़े हैं
+[1718s] इसलिए हम बोल रहे हैं कि data structure का महत्व है
+[1721s] prefix हम same concept
+[1722s] यहां भी आप same concept कर रहे हैं, prefix array बनाने में भी same concept था, array यूज करना है, कि variable यूज करना है, कि क्या यूज करना है, उस पर फर्क पड़ता है, एक बात हम लोगों पता चल गई, कि left टो हम लोग बना लेंगे, left टो हम लोग बना पा रहे हैं, हम लोग क्या कर रहे हैं, left plus is equal to array of i
+[1738s] माइनस वन यह हम लोग कर दे रहे हैं तो हमारा क्या बन जा रहा है बन जा रहा है अच्छा चलिए अब क्या करेंगे अब देखिए अब राइट की दरकार
+[1750s] right part हमारा कहां से आता था
+[1751s] suffix of i से left लो बना लिए right कैसे आएगा
+[1754s] चलिए आईए देखातें कैसे आएगा
+[1759s] 173
+[1760s] 173
+[1762s] 656
+[1764s] 656
+[1766s] 012
+[1767s] 345
+[1770s] इसका एक बार prefix और suffix आरे लिख लेते हैं चल दी से
+[1773s] just for explaining prefix को तो हम लोग left बना चुके हैं
+[1775s] लेकिन तब भी समझाने के लिए कि suffix आरे कैसे निकाल सकते हैं
+[1778s] 0, 1, 2, 3, 4, 5
+[1780s] इसका क्या था? 0 था, 1 था, 8 बना, 11 बना, 17 बना, 22 बना
+[1785s] ये prefix था
+[1787s] suffix क्या बना था?
+[1789s] suffix क्या बना था?
+[1791s] 0, 1, 2, 3, 4, 5
+[1794s] suffix यहां से बना था 0, फिर 6, फिर 11 बना था
+[1797s] फिर ये, एक मिनट, 6, 5, 11, और 6, 17, 20 और 27, ऐसा ही बना था, अच्छा, अब एक आप गौर से चीज़ देखिए, सफिक सारे यही था न, जी, हाँ जी यही था, ठीक है, अब एक आप गौर से चीज़ देखिए, पूरे अरे का सम क्या है, पूरे अरे का सम क्या है, 7 plus 1, 3, 11, 17
+[1819s] ट्विंटीटू, ट्विंटीएट, ट्विंटीएट, पूरे अर्यकासम 28 है, अब देखिए, यह आपका ओरिजनल आ रहे है, यह आपका प्रिफिक्स आ रहे है, यह आपका सफिक्स आ रहे है, आप जब तीनों वैल्यू को एक इंडेक्स वाले को जोड़ेंगा ना, हमेशा �
+[1835s] आपका एलेका सम मिलेगा, देखिए, 1 प्लस 0, 1 प्लस 27, 28, सम है, हाँ, 7 प्लस 1, 7 प्लस 1, प्लस 20, 28, 3 प्लस 8, 11 प्लस 17, 28, 6 प्लस 11, 17 प्लस 11, 28, 5 प्लस 17, प्लस 6, 28, 6 प्लस 22, प्लस 0, 28,
+[1862s] देखे हर i पे
+[1864s] तीनों जब हम लोग sum कर दे रहे हैं
+[1866s] हमेशा हमको sum of array मिल रहा है
+[1868s] ऐसा क्यों मिल रहा है जादू से नहीं मिल रहा है
+[1872s] किसी भी index i पे
+[1874s] किसी भी index i पे
+[1877s] किसी भी index i पे
+[1878s] आपको हमेशा left क्या बताता था
+[1881s] array of 0
+[1882s] plus array of 1
+[1884s] plus dot dot dot dot
+[1885s] array of i minus 1 उसके पहले रुख जाता था और आपको right क्या बताता था
+[1890s] array of i plus 1 plus array of i plus 2 dot dot dot dot array of n minus 1 last तक
+[1899s] और इसके बीच में आप अगर array of i को जोड़ दें तो यही तो होता है array of sum
+[1905s] 0, 1, 2 से last तक अब पूरा बना कि इसका आपको क्या मिल गया?
+[1910s] array का sum
+[1911s] तो इससे हम लोग को एक क्या चीज़ समझ आई
+[1913s] हम लोग पहले ही देख लिए थे कि left
+[1915s] prefix array को left कैसे बनाना है
+[1917s] अगर आपके पास left है तो क्या आप right निकाल सकते हैं
+[1920s] हाँ आप right निकाल सकते हैं
+[1921s] क्योंकि आप जैसे ही
+[1924s] आपका equation क्या है
+[1927s] left
+[1928s] plus array of i
+[1930s] plus right
+[1932s] is equal to sum
+[1934s] right की value हमेशा क्या हो जाएगी
+[1937s] sum
+[1938s] minus left
+[1940s] minus area of value
+[1942s] यह देखिए
+[1944s] यह आपका खेल खतम हो गया
+[1946s] right भी मिल गया
+[1947s] left तो मिली जाएगा, दोनों area खतम हो गया
+[1950s] आईए, इसको code भी लिखेंगे
+[1952s] इसको dry run भी करेंगे, हमको बहुत लोग बोल रहें कि
+[1953s] अब dry run नहीं करते हैं, आप साथ कुछ गलते बता के छोड़ बते हैं, ना, आईए, इसको अच्छे से dry run करेंगे भी, 1, 7, 3, 6, 5, 6, पूरा clear हो जाएगा, एक dry run देखेंगे, पूरा clear हो जाएगा, हम लोग क्या बोले थे, left क्या denote करता है, left आपका हमेशा prefix हम denote करता है, left हमे�
+[1980s] हमेशा left को 0 रख लीजिए 0 ही से शुरू होगा अच्छा
+[1985s] अरे का सम निकाल लीजिए अरे का सम निकाल लीजिए कैसे निकालता है लूप चला के अरे का सम तो
+[1989s] sum is equal to 28.
+[1991s] हम लोग क्या बोल रहे हैं?
+[1993s] हम लोग एक int right भी रखे हुआ हैं.
+[1995s] चलिए बात में, लूप में निकालेंगे.
+[1997s] अब हमारा लूप कहां से शुरू होना चाहिए?
+[1999s] हमारा लूप 1 से ही शुरू होना चाहिए मेरे साब से.
+[2000s] क्योंकि array of 0 का कोई left
+[2004s] possible नहीं है.
+[2004s] मतलब array of 0 का क्या left होगा, वो कुछ नहीं है
+[2006s] तुमारा loop मेरे इसाब से 1 से चलना चाहिए
+[2009s] i है
+[2010s] i less than n
+[2012s] i plus plus, ठीक है
+[2013s] अब array of i पे left कैसे बनेगा
+[2016s] array of i पे left बनेगा पिछला वाला array का element जोड़के
+[2019s] अभी left 0 है
+[2020s] जब आप यहाँ पे आए हैं तो आपका क्या होना चाहिए left
+[2023s] आपका left होना चाहिए array of 0 की value
+[2024s] तो left में जो भी array of 0 की value जोड़ दीजी
+[2027s] सबसे पहले हम लोग करेंगे
+[2028s] left plus is equal to array of i minus 1
+[2031s] minus 1 इचले वाला इसको नहीं
+[2033s] left आ गया आपके पास already sum है
+[2036s] right ताम लोग formula क्या देखे थे
+[2039s] sum minus
+[2040s] array of i minus left
+[2044s] क्योंकि left, right
+[2045s] और array of i, तीनों मिला क्यों क्या बन जाता है
+[2047s] हमेशा array का sum बन जाता है
+[2048s] हमेशा array of sum बन जाता है
+[2050s] इस तरीके question में हमेशा इस point को याद रखिए
+[2052s] left, array of i और right
+[2054s] सब को मिलाएंगे नो तो array का sum बन जाएगा
+[2056s] आ गया, आपको check क्या करना है
+[2058s] आपको left और right यह चेक करना है
+[2059s] prefix i और suffix i यही तो मिला रहे थे
+[2062s] बस मिला लिजिए
+[2062s] if
+[2064s] sorry prefix लिख देगा थे
+[2066s] if
+[2068s] left
+[2069s] equal equal to right
+[2071s] equal equal to right
+[2073s] return
+[2074s] यह वाले index return करना है
+[2076s] बंद कर दिए
+[2077s] अगर कुछ नहीं मिला
+[2078s] तो यहाँ पर return
+[2080s] minus one कर दिए
+[2081s] simple बात है
+[2082s] आई यह इसको driving करते है
+[2084s] शुरुगात में left is equal to 0
+[2087s] sum is equal to 0
+[2088s] sorry, sum is equal to 28
+[2090s] sum array का पूरे array का sum है 28
+[2092s] ठीक
+[2092s] i is equal to 0 पे तो कुछ होगा नहीं
+[2096s] i is equal to 1 क्या है
+[2098s] सबसे पहले left को update कीजिए
+[2100s] left is equal to left plus array of 0
+[2102s] 1
+[2103s] right क्या होगा
+[2105s] right होगा 28
+[2107s] minus array of i जो की है 7
+[2109s] minus left जो की है 1
+[2110s] तो 20, क्या left और right equal है, ना, आगे बढ़ जाएगे, आगे बढ़ जाएगे, नो, नो, अब left की value बढ़ चुकी है, left की value 1 हो चुकी है, अच्छा, फिर से left में क्या जोड़िये, array of 1 जोड़ दीजे, 8 जोड़ दीजे, right क्या होगा, right होगा, 28 minus array of i, जो की है 3, minus 8, 17, क्या 8 और 17 equal
+[2133s] वाल है? ना, no, no, no, left को update कर दीजे, I is equal to 3 प्याइए, left में क्या करिए, array of 2 के वैले जोड दीजे, पहले वैले के जोड दीजे न, भाई, 8 और 3, 11, right is equal to, right is equal to, 28, minus, minus, array of 3 क्या होता है, 6, ठीक है, minus 6, minus, minus, left, इसका answer क्या हैगा, 22 minus 11, yes, left और right आपका equal हो गया, इसका मतलब क्य
+[2159s] है कि यह जो इंडेक्ष ना इसका लेफ्क मतलब पहले का सारा भाग और आगे का सारा भाग पूरा सेंग है
+[2165s] खटाक से क्या return कर दिये
+[2169s] यह आप लोग prefix आ रहे
+[2170s] अब सीखें अब पूरा आप लोग prefix आ रहे का
+[2172s] आप लोग क्या सीख गए
+[2173s] फ्लोचाट याद करिए
+[2174s] आप लोग कौन सा category सीख गए
+[2176s] कहा गया जी
+[2178s] अरे भुला गया क्या
+[2189s] अब इसका टेंपलेट एक बार देख लेगते हैं
+[2197s] बहुत बहुत बदाई हो, आने वाले दिनों में आप लोग सब सीख जाएंगे, जतने तरहे के pattern, जतने तरहे के template possible है, सब सीख जाएंगे, अब इसका template एक बार देख लगते हैं, template एक बार देख लिजिए, template यह होता है, सबसे पहले तो आपको जो prefix का data structure है, उसको initialize करना है,
+[2214s] इस case में हमारा variable था left, उसको initialize किये थे, अगर आपका array है तो array बना लीजिए, अगर आपको array बनाने का मान है तो अपना prefix या suffix array बना लीजिए, अगर आप hash map यूज़ करेंगे तो hash map को कर लीजिए, उसके बाद loop over array हम लोग से इंकाम किये, loop over array किये, update prefix, update prefix मतलब left को update किये, ह
+[2243s] हम लोग check condition किये, check condition अलग-अलग तरीके सो सकता है, यहां पे हम लोग left निकाले, left के बाद हम लोगो right भी निकालना पड़ा, फिर हम लोगो condition check करना पड़ा, और हो किये, सारा prefix हम इसी template पर द्राप करता है, simple template होता है, 4 step का, चलिए, तो अब आप लोग जाके prefix हम सीख चुके ह
+[2261s] at least the pivot and equilibrium question
+[2264s] आने वाले दिनों में
+[2265s] आने वाले दिनों में हम लोग 5 और question करेंगे
+[2267s] हर question से आप
+[2269s] एक नया pattern सीखेंगे
+[2270s] अभी आप लोग simple वाला सीख गए
+[2274s] आने वाले 2 question में
+[2275s] आप लोग hash map वाला सीख जाएंगे
+[2278s] उसके अगले question में
+[2279s] आप लोग DQ सीख जाएंगे
+[2280s] उसके अगले question में आप लोग sum of range सिख जाएगे
+[2283s] ये चार question आप सिख गये न तो आप से 400 question होने लगएगा prefix sum का
+[2287s] ये मेरी personal guarantee है
+[2289s] तो consistent रहेगा prefix sum बहुत important concept है इंटर्वीवे
+[2293s] prefix sum, sliding, cadence ये सब ना intermediate concepts है
+[2297s] ये लोग array की तरह बहुत आसान नहीं है
+[2299s] ये लोग मतलब two pointer के तरह उतने आसान नहीं है
+[2301s] ये लोग dynamic programming graph के तरह difficult नहीं है
+[2304s] middle में आते हैं
+[2305s] और इसे बहुत सारा question बनता है
+[2307s] 60% of question इनी patterns पर बनता है
+[2310s] जो कि middle वाले patterns है
+[2311s] हम लोग जो intermediate patterns हैं इस पर बन रहा है
+[2313s] ये miss मत करिएगा
+[2315s] टू पॉइंटर पढ़ लिए बहुत अच्छी बात है
+[2317s] इंतजार मत किजिए कि डाइनमिक प्रोग्रामिंग ये पढ़ेंगे सीदे
+[2319s] इस तरीके के पैटर्ण्स को पढ़ना बहुत जरूरी
+[2321s] अगर आप तो गोल इंटर्व्यू है तो
+[2323s] सही है चलिए फिर कल मिलते हैं
+[2325s] झालाई आइमसे

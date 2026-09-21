@@ -1,0 +1,27 @@
+[project]
+name = "ytscrapper"
+version = "0.1.0"
+description = "DSA transcript scraper and RAG project"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "dotenv>=0.9.9",
+    "fastapi>=0.115.0",
+    "ffmpeg>=1.4",
+    "groq>=1.7.0",
+    "kaggle>=2.2.4",
+    "mlx-whisper>=0.4.3",
+    "pathlib>=1.0.1",
+    "pydantic>=2.13.5",
+    "qdrant-client>=1.14.2",
+    "sentence-transformers>=5.0.0",
+    "uvicorn>=0.30.0",
+    "yt-dlp>=2026.8.19",
+]
+
+[project.scripts]
+ytscrapper = "ytscrapper:main"
+
+[build-system]
+requires = ["uv_build>=0.12.16,<0.13.0"]
+build-backend = "uv_build"
