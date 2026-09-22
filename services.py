@@ -2,8 +2,9 @@ import json
 import os
 import re
 from pathlib import Path
+import requests
 from typing import Any
-
+from huggingface_hub import InferenceClient
 from dotenv import load_dotenv
 from groq import Groq
 from pydantic import BaseModel, Field
@@ -23,24 +24,30 @@ GROQ_FALLBACK_MODELS = [
     "openai/gpt-oss-20b",
     "openai/gpt-oss-120b",
 ]
-
-_EMBEDDING_MODEL_CACHE: dict[str, Any] = {}
-
-
+_client = None
 class QueryInput(BaseModel):
     question: str = Field(..., min_length=3, max_length=2000)
 
 
-
-def get_embedding_model(model_name: str = MODEL_NAME):
-    if model_name not in _EMBEDDING_MODEL_CACHE:
-        _EMBEDDING_MODEL_CACHE[model_name] = SentenceTransformer(model_name)
-    return _EMBEDDING_MODEL_CACHE[model_name]
-
+_client = None
+def get_client():
+    global _client
+    if _client is None:
+        hf_token = os.getenv("HF_API_KEY") or os.getenv("HF_TOKEN")
+        if not hf_token:
+            raise ValueError("HF_API_KEY is missing in .env")
+        _client = InferenceClient(token=hf_token)
+    return _client
 
 def embed_query(text: str, model_name: str = MODEL_NAME):
-    model = get_embedding_model(model_name)
-    return model.encode(text, normalize_embeddings=True).tolist()
+    client = get_client()
+    embedding = client.feature_extraction(text, model=model_name)
+    
+    # normalize
+    import numpy as np
+    vec = np.array(embedding)
+    norm = vec / np.linalg.norm(vec)
+    return norm.tolist()
 
 
 def get_qdrant_client(url: str | None = None, api_key: str | None = None):

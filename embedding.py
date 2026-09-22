@@ -3,8 +3,9 @@ import os
 import re
 from pathlib import Path
 from typing import Any, Iterable
-
+from huggingface_hub import InferenceClient
 from dotenv import load_dotenv
+from sentence_transformers import SentenceTransformer
 
 load_dotenv(Path(__file__).resolve().parent / ".env")
 
@@ -12,15 +13,26 @@ MODEL_NAME = os.getenv("EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v
 QDRANT_URL = os.getenv("QDRANT_URL")
 QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
 QDRANT_COLLECTION = os.getenv("QDRANT_COLLECTION", "dsa_lectures")
-_EMBEDDING_MODEL_CACHE: dict[str, Any] = {}
 
+_client = None
+def get_client():
+    global _client
+    if _client is None:
+        hf_token = os.getenv("HF_API_KEY") or os.getenv("HF_TOKEN")
+        if not hf_token:
+            raise ValueError("HF_API_KEY is missing in .env")
+        _client = InferenceClient(token=hf_token)
+    return _client
 
-def get_embedding_model(model_name: str = MODEL_NAME):
-    """Return a cached sentence-transformer model instance."""
-    if model_name not in _EMBEDDING_MODEL_CACHE:
-        from sentence_transformers import SentenceTransformer
-        _EMBEDDING_MODEL_CACHE[model_name] = SentenceTransformer(model_name)
-    return _EMBEDDING_MODEL_CACHE[model_name]
+def embed_query(text: str, model_name: str = MODEL_NAME):
+    client = get_client()
+    embedding = client.feature_extraction(text, model=model_name)
+    
+    # normalize
+    import numpy as np
+    vec = np.array(embedding)
+    norm = vec / np.linalg.norm(vec)
+    return norm.tolist()
 
 
 def get_transcript_dir() -> Path:
@@ -216,17 +228,11 @@ def build_vector_text_with_timestamps(segments: list[dict[str, Any]]) -> str:
 
 
 def create_embedding(text: str, model_name: str = MODEL_NAME):
-    try:
-        model = get_embedding_model(model_name)
-        embedding = model.encode(text, normalize_embeddings=True)
-        return embedding.tolist()
-    except ImportError:
-        return [0.0] * 384
+    return embed_query(text, model_name=model_name)
 
 
 def build_vector_records(transcript_records: Iterable[dict[str, Any]], window_seconds: float = 75.0, overlap_seconds: float = 3.0):
     vector_records = []
-    model = get_embedding_model(MODEL_NAME)
 
     for record in transcript_records:
         video_number = record.get("video_number")
@@ -249,7 +255,7 @@ def build_vector_records(transcript_records: Iterable[dict[str, Any]], window_se
                 "end": chunk.get("end"),
                 "text": text,
                 "text_with_timestamp": build_vector_text_with_timestamps(chunk.get("segments", [])),
-                "vector": model.encode(text, normalize_embeddings=True).tolist(),
+                "vector": create_embedding(text, model_name=MODEL_NAME),
             })
 
     return vector_records
