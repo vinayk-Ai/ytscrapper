@@ -10,7 +10,7 @@ from groq import Groq
 from pydantic import BaseModel, Field
 from qdrant_client import QdrantClient
 from qdrant_client.models import FieldCondition, Filter, MatchValue
-from sentence_transformers import SentenceTransformer
+# from sentence_transformers import SentenceTransformer
 
 load_dotenv(Path(__file__).resolve().parent / ".env")
 

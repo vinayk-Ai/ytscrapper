@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Any, Iterable
 from huggingface_hub import InferenceClient
 from dotenv import load_dotenv
-from sentence_transformers import SentenceTransformer
+
 
 load_dotenv(Path(__file__).resolve().parent / ".env")
 
