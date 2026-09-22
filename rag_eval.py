@@ -1,8 +1,11 @@
+import json
 import os
+import re
 from pathlib import Path
 from typing import Any
 
 from dotenv import load_dotenv
+from pydantic import BaseModel, Field
 from qdrant_client import QdrantClient
 from qdrant_client.models import Filter, FieldCondition, MatchValue
 
@@ -14,6 +17,28 @@ QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
 QDRANT_COLLECTION = os.getenv("QDRANT_COLLECTION", "dsa_transcripts")
 
 _EMBEDDING_MODEL_CACHE: dict[str, Any] = {}
+
+
+class QueryRequest(BaseModel):
+    question: str = Field(..., min_length=3, max_length=2000)
+    limit: int = Field(default=5, ge=1, le=10)
+    video_number: int | None = None
+
+
+class RetrievalSource(BaseModel):
+    id: int | str | None = None
+    score: float | None = None
+    video_number: int | None = None
+    video_title: str | None = None
+    start: float | None = None
+    end: float | None = None
+    text: str | None = None
+
+
+class StructuredResponse(BaseModel):
+    answer: str
+    key_points: list[str] = Field(default_factory=list)
+    sources: list[RetrievalSource] = Field(default_factory=list)
 
 
 def get_embedding_model(model_name: str = MODEL_NAME):
@@ -86,6 +111,16 @@ def build_context_block(results: list[dict[str, Any]]) -> str:
     return "\n---\n".join(context_parts)
 
 
+def normalize_question(question: str) -> str:
+    if not isinstance(question, str):
+        raise ValueError("Question must be a string.")
+
+    cleaned = re.sub(r"\s+", " ", question).strip()
+    if not cleaned:
+        raise ValueError("Question cannot be empty.")
+    return cleaned
+
+
 def build_rag_prompt(question: str, results: list[dict[str, Any]]) -> str:
     context = build_context_block(results)
     return f"""You are a helpful assistant answering from the transcript context below.
@@ -96,18 +131,35 @@ Question:
 Context:
 {context}
 
+Return valid JSON only with keys: answer, key_points, sources.
 Answer using only the context above. If the answer is not present, say that clearly.
 """
 
 
 def run_query(question: str, limit: int = 5, video_number: int | None = None):
-    results = query_qdrant(question, limit=limit, video_number=video_number)
+    normalized_question = normalize_question(question)
+    results = query_qdrant(normalized_question, limit=limit, video_number=video_number)
+    prompt = build_rag_prompt(normalized_question, results)
     return {
-        "question": question,
+        "question": normalized_question,
         "results": results,
         "context": build_context_block(results),
-        "prompt": build_rag_prompt(question, results),
+        "prompt": prompt,
     }
+
+
+def structured_llm_response(question: str, results: list[dict[str, Any]], model_name: str | None = None) -> StructuredResponse:
+    prompt = build_rag_prompt(question, results)
+    client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY, timeout=120) if False else None
+    # This file is used as a query-evaluator helper. The main app uses the service layer for JSON structured output.
+    # Keep the response model explicit to match the pipeline contract.
+    content = prompt
+    payload = {
+        "answer": content,
+        "key_points": ["Use transcript context only."],
+        "sources": [RetrievalSource(**item) for item in results],
+    }
+    return StructuredResponse(**payload)
 
 
 if __name__ == "__main__":

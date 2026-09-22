@@ -1,35 +1,16 @@
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.middleware.cors import CORSMiddleware
 
-from services import answer_question
-
-
-class AskRequest(BaseModel):
-    question: str = Field(..., min_length=3, max_length=2000)
-    limit: int = Field(default=5, ge=1, le=10)
-    video_number: int | None = None
-
-
-class SourceItem(BaseModel):
-    id: int | str | None = None
-    score: float | None = None
-    video_number: int | None = None
-    video_title: str | None = None
-    start: float | None = None
-    end: float | None = None
-    text: str | None = None
-
-
-class AskResponse(BaseModel):
-    question: str
-    answer: str
-    context: str
-    sources: list[SourceItem] = []
-    model: str
-    used_video_filter: bool = False
-
+from services import ask_llm, retrieve_top_results, validate_dsa_query
 
 app = FastAPI(title="DSA Lecture RAG", version="1.0.0")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/health")
@@ -42,15 +23,80 @@ def root():
     return {"message": "DSA Lecture RAG API is running", "docs": "/docs"}
 
 
-@app.post("/ask", response_model=AskResponse)
-def ask_question(payload: AskRequest):
+@app.post("/ask")
+async def ask_question(request: Request):
     try:
-        result = answer_question(
-            question=payload.question,
-            limit=payload.limit,
-            video_number=payload.video_number,
+        raw_body = await request.body()
+        if not raw_body:
+            raise ValueError("Question cannot be empty.")
+
+        try:
+            payload = await request.json()
+        except Exception:
+            payload = None
+
+        if isinstance(payload, dict):
+            question_value = payload.get("question")
+        elif isinstance(payload, str):
+            question_value = payload
+        else:
+            question_value = None
+
+        if question_value is None:
+            try:
+                question_value = raw_body.decode("utf-8").strip()
+            except Exception:
+                question_value = None
+
+        cleaned = (question_value or "").strip()
+        if not cleaned:
+            raise ValueError("Question cannot be empty.")
+
+        is_dsa = validate_dsa_query(cleaned)
+        if not is_dsa:
+            return {
+                "question": cleaned,
+                "answer": "This system only supports DSA and algorithm-related questions. Please ask about data structures, algorithms, complexity, patterns, or coding interview problems.",
+                "relevant_vectors": [],
+                "allowed": False,
+                "model": "qwen/qwen3.8-27b",
+            }
+
+        results = retrieve_top_results(cleaned, limit=5)
+        if not results:
+            return {
+                "question": cleaned,
+                "answer": "I could not find relevant transcript context for this question.",
+                "relevant_vectors": [],
+                "allowed": True,
+                "model": "qwen/qwen3.8-27b",
+            }
+
+        context = "\n\n---\n\n".join(
+            f"Video: {item.get('video_title') or 'Unknown video'} | Time: {item.get('start')}s - {item.get('end')}s\n{item.get('text') or ''}"
+            for item in results
         )
-        return AskResponse(**result)
+        answer = ask_llm(cleaned, context)
+
+        return {
+            "question": cleaned,
+            "answer": answer,
+            "relevant_vectors": [
+                {
+                    "id": item.get("id"),
+                    "score": item.get("score"),
+                    "cosine_similarity": item.get("cosine_similarity"),
+                    "video_number": item.get("video_number"),
+                    "video_title": item.get("video_title"),
+                    "start": item.get("start"),
+                    "end": item.get("end"),
+                    "text": item.get("text"),
+                }
+                for item in results
+            ],
+            "allowed": True,
+            "model": "qwen/qwen3.8-27b",
+        }
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     except Exception as exc:

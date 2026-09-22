@@ -6,6 +6,7 @@ from typing import Any
 
 from dotenv import load_dotenv
 from groq import Groq
+from pydantic import BaseModel, Field
 from qdrant_client import QdrantClient
 from qdrant_client.models import FieldCondition, Filter, MatchValue
 from sentence_transformers import SentenceTransformer
@@ -24,7 +25,11 @@ GROQ_FALLBACK_MODELS = [
 ]
 
 _EMBEDDING_MODEL_CACHE: dict[str, Any] = {}
-LOCAL_VECTOR_DB = Path(__file__).resolve().parent / "vector_db" / "transcripts_vector_db.json"
+
+
+class QueryInput(BaseModel):
+    question: str = Field(..., min_length=3, max_length=2000)
+
 
 
 def get_embedding_model(model_name: str = MODEL_NAME):
@@ -46,6 +51,51 @@ def get_qdrant_client(url: str | None = None, api_key: str | None = None):
     return QdrantClient(url=qdrant_url, api_key=qdrant_api_key, timeout=120)
 
 
+def validate_dsa_query(question: str) -> bool:
+    cleaned = (question or "").strip()
+    if not cleaned:
+        return False
+
+    if not os.getenv("GROQ_API_KEY"):
+        raise ValueError("GROQ_API_KEY is missing in .env")
+
+    client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+    prompt = (
+        "You are a strict DSA relevance classifier. "
+        "Return exactly one word: YES or NO.\n\n"
+        "YES only if the message is clearly about DSA, data structures, algorithms, coding interview problems, "
+        "time complexity, pointers, trees, graphs, arrays, recursion, DP, hashing, patterns, or other technical programming topics.\n"
+        "NO for general life, geography, food, travel, business, personal conversation, or anything unrelated to programming or DSA.\n\n"
+        f"Query: {cleaned}"
+    )
+
+    candidates = []
+    for candidate in GROQ_FALLBACK_MODELS:
+        if candidate and candidate not in candidates:
+            candidates.append(candidate)
+
+    last_error = None
+    for candidate in candidates:
+        try:
+            completion = client.chat.completions.create(
+                model=candidate,
+                messages=[
+                    {"role": "system", "content": "Return only YES or NO."},
+                    {"role": "user", "content": prompt},
+                ],
+                temperature=0.0,
+                max_tokens=10,
+            )
+            result = (completion.choices[0].message.content or "").strip().upper()
+            return result == "YES"
+        except Exception as exc:  # pragma: no cover - guards against stale model names
+            last_error = exc
+
+    if last_error is not None:
+        raise last_error
+    return False
+
+
 def query_qdrant(question: str, limit: int = 5, video_number: int | None = None, collection_name: str = QDRANT_COLLECTION):
     client = get_qdrant_client()
     query_vector = embed_query(question)
@@ -64,74 +114,29 @@ def query_qdrant(question: str, limit: int = 5, video_number: int | None = None,
         with_vectors=False,
     ).points
 
-    return [
-        {
+    records = []
+    for hit in results:
+        score = float(hit.score) if hit.score is not None else None
+        records.append({
             "id": hit.id,
-            "score": hit.score,
+            "score": score,
+            "cosine_similarity": score,
             "video_number": hit.payload.get("video_number"),
             "video_title": hit.payload.get("video_title"),
             "start": hit.payload.get("start"),
             "end": hit.payload.get("end"),
             "text": hit.payload.get("text"),
             "text_with_timestamp": hit.payload.get("text_with_timestamp"),
-        }
-        for hit in results
-    ]
+        })
+    return records
 
 
-def local_fallback_search(question: str, limit: int = 5, video_number: int | None = None):
-    if not LOCAL_VECTOR_DB.exists():
-        return []
+def retrieve_top_results(question: str, limit: int = 5, video_number: int | None = None) -> list[dict[str, Any]]:
+    cleaned_question = str(question or "").strip()
+    if not cleaned_question:
+        raise ValueError("Question cannot be empty.")
 
-    with LOCAL_VECTOR_DB.open("r", encoding="utf-8") as handle:
-        records = json.load(handle)
-
-    tokens = [token.lower() for token in re.findall(r"[A-Za-z0-9\u0900-\u097F]+", question)]
-    if not tokens:
-        return []
-
-    scored = []
-    for idx, record in enumerate(records):
-        if not isinstance(record, dict):
-            continue
-        if video_number is not None and record.get("video_number") != video_number:
-            continue
-
-        text_blob = " ".join([
-            str(record.get("text") or ""),
-            str(record.get("text_with_timestamp") or ""),
-        ]).lower()
-        score = sum(1 for token in tokens if token in text_blob)
-        if score > 0:
-            scored.append({
-                "id": idx,
-                "score": float(score),
-                "video_number": record.get("video_number"),
-                "video_title": record.get("video_title"),
-                "start": record.get("start"),
-                "end": record.get("end"),
-                "text": record.get("text"),
-                "text_with_timestamp": record.get("text_with_timestamp"),
-            })
-
-    scored.sort(key=lambda item: item["score"], reverse=True)
-    return scored[:limit]
-
-
-def build_context(results: list[dict[str, Any]]) -> str:
-    if not results:
-        return "No relevant transcript context found."
-
-    parts = []
-    for item in results:
-        title = item.get("video_title") or "Unknown video"
-        start = item.get("start")
-        end = item.get("end")
-        text = item.get("text") or ""
-        parts.append(f"Video: {title} | Time: {start}s - {end}s\n{text}")
-
-    return "\n\n---\n\n".join(parts)
-
+    return query_qdrant(question=cleaned_question, limit=limit, video_number=video_number)
 
 def ask_llm(question: str, context: str, model_name: str | None = None) -> str:
     if not os.getenv("GROQ_API_KEY"):
@@ -172,37 +177,39 @@ def ask_llm(question: str, context: str, model_name: str | None = None) -> str:
     raise RuntimeError("No Groq model candidates were available for generation.")
 
 
-def answer_question(question: str, limit: int = 5, video_number: int | None = None):
-    if not question or not question.strip():
-        raise ValueError("Question cannot be empty.")
+# def answer_question(question: str, limit: int = 5, video_number: int | None = None):
+#     cleaned_question = str(question or "").strip()
+#     if not cleaned_question:
+#         raise ValueError("Question cannot be empty.")
 
-    try:
-        results = query_qdrant(question=question, limit=limit, video_number=video_number)
-    except Exception:
-        results = local_fallback_search(question=question, limit=limit, video_number=video_number)
+#     results = retrieve_top_results(cleaned_question, limit=limit, video_number=video_number)
 
-    context = build_context(results)
-    if not results:
-        answer = "I could not find relevant transcript context for this question."
-    else:
-        answer = ask_llm(question, context)
+#     if not results:
+#         answer = "I could not find relevant transcript context for this question."
+#         context = "No relevant transcript context found."
+#     else:
+#         context = "\n\n---\n\n".join(
+#             f"Video: {item.get('video_title') or 'Unknown video'} | Time: {item.get('start')}s - {item.get('end')}s\n{item.get('text') or ''}"
+#             for item in results
+#         )
+#         answer = ask_llm(cleaned_question, context)
 
-    return {
-        "question": question,
-        "answer": answer,
-        "context": context,
-        "sources": [
-            {
-                "id": item.get("id"),
-                "score": item.get("score"),
-                "video_number": item.get("video_number"),
-                "video_title": item.get("video_title"),
-                "start": item.get("start"),
-                "end": item.get("end"),
-                "text": item.get("text"),
-            }
-            for item in results
-        ],
-        "model": os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile"),
-        "used_video_filter": video_number is not None,
-    }
+#     return {
+#         "question": cleaned_question,
+#         "answer": answer,
+#         "relevant_vectors": [
+#             {
+#                 "id": item.get("id"),
+#                 "score": item.get("score"),
+#                 "cosine_similarity": item.get("cosine_similarity"),
+#                 "video_number": item.get("video_number"),
+#                 "video_title": item.get("video_title"),
+#                 "start": item.get("start"),
+#                 "end": item.get("end"),
+#                 "text": item.get("text"),
+#             }
+#             for item in results
+#         ],
+#         "model": os.getenv("GROQ_MODEL", "qwen/qwen3.8-27b"),
+#         "used_video_filter": video_number is not None,
+#     }
