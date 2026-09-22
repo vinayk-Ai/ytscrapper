@@ -12,7 +12,7 @@ from qdrant_client import QdrantClient
 from qdrant_client.models import FieldCondition, Filter, MatchValue
 # from sentence_transformers import SentenceTransformer
 
-load_dotenv()
+load_dotenv(Path(__file__).resolve().parent / ".env")
 
 MODEL_NAME = os.getenv("EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
 QDRANT_URL = os.getenv("QDRANT_URL")
