@@ -4,9 +4,19 @@ from fastapi.middleware.cors import CORSMiddleware
 from services import ask_llm, retrieve_top_results, validate_dsa_query
 
 app = FastAPI(title="DSA Lecture RAG", version="1.0.0")
+
+allowed_origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://dsa-video-jump.vercel.app",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=allowed_origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
